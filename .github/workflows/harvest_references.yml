@@ -1,0 +1,62 @@
+name: Harvest & Analyze @craftee_films Reels
+
+on:
+  workflow_dispatch:
+    inputs:
+      max_reels:
+        description: "Number of new Reels to scrape & analyze in this run"
+        required: false
+        default: "5"
+  schedule:
+    # Automatically harvests new Reels every 2 days at 12:00 UTC
+    - cron: "0 12 */2 * *"
+
+permissions:
+  contents: write
+
+jobs:
+  harvest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+
+    steps:
+      - name: 1. Checkout Reference Vault Repo
+        uses: actions/checkout@v4
+
+      - name: 2. Setup Python 3.11 & FFmpeg
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install Dependencies
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+          pip install -q -r requirements.txt
+
+      - name: 3. Scrape Public Reels from @craftee_films
+        env:
+          IG_TARGET_USER: "craftee_films"
+          MAX_REELS_PER_RUN: ${{ github.event.inputs.max_reels || '5' }}
+          IG_SESSIONID: ${{ secrets.IG_SESSIONID }}
+        run: python scripts/scrape_ig.py
+
+      - name: 4. Transcribe Audio & Extract Camera Cut Keyframes
+        run: python scripts/extract_and_transcribe.py
+
+      - name: 5. Reverse-Engineer Hooks, Cameras & Outfits with Gemini Vision
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python scripts/analyze_reel.py
+
+      - name: 6. Commit Transcripts, Keyframes & Style Blueprints to Repo
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          # Keep raw MP4s out of git so repo stays fast; commit all transcripts, frames & blueprints
+          git add vault/raw_meta vault/transcripts vault/frames vault/blueprints
+          if ! git diff --cached --quiet; then
+            git commit -m "Harvested & analyzed new @craftee_films reference blueprints"
+            git push
+          else
+            echo "No new blueprints to commit."
+          fi
