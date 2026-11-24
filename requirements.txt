@@ -1,0 +1,5 @@
+faster-whisper>=1.0.3
+yt-dlp>=2024.10.22
+instaloader>=4.13.1
+Pillow>=10.0.0
+numpy>=1.26.0
