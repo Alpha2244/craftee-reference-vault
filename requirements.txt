@@ -1,6 +1,4 @@
 faster-whisper>=1.0.3
-yt-dlp>=2024.10.22
-curl_cffi>=0.7.0
+brightdata-sdk>=0.1.0
 Pillow>=10.0.0
 numpy>=1.26.0
-brightdata-sdk
