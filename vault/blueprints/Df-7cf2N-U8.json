@@ -1,0 +1,118 @@
+{
+  "reel_id": "Df-7cf2N-U8",
+  "hook_formula": "Underdog premise ('powerless kid at hero school') paired with high visual motion and rapid voiceover to hook viewers instantly.",
+  "story_arc": "Setup: Protagonist fakes powers to impress his floating crush. Escalation: Subtle power nullification anomalies occur, culminating in a giant villain attack. Twist/Payoff: He discovers his real power is area power-cancellation, saves his crush, and gets accepted.",
+  "pacing": {
+    "words_per_sec": 5.25,
+    "avg_cut_sec": 1.13,
+    "total_cuts": 34
+  },
+  "visual_style": {
+    "environments_seen": [
+      "Superhero School Courtyard",
+      "Classroom",
+      "Training Field",
+      "School Lockers Hallway",
+      "Rooftop / Park Bench"
+    ],
+    "camera_patterns": [
+      "mcu",
+      "crash_in",
+      "wide_shot",
+      "low_angle",
+      "close_up"
+    ],
+    "lighting_moods": [
+      "sunny daytime",
+      "indoor neutral",
+      "sunset warm"
+    ],
+    "character_archetypes": [
+      {
+        "role": "protagonist",
+        "outfit_style": "Green hair, black and green striped long-sleeve shirt, dark trousers",
+        "primary_colors": [
+          "#2ECC71",
+          "#111111"
+        ]
+      },
+      {
+        "role": "love_interest",
+        "outfit_style": "Long dark hair, dark school blazer, pleated skirt, white knit socks",
+        "primary_colors": [
+          "#1B1B1B",
+          "#FFFFFF"
+        ]
+      },
+      {
+        "role": "rival_hero",
+        "outfit_style": "Red and yellow fire-themed superhero suit with flame headpiece",
+        "primary_colors": [
+          "#FF4500",
+          "#FFD700"
+        ]
+      }
+    ],
+    "visual_gags_and_fx": [
+      "Flashlight eye goggles",
+      "Leaf blower propulsion visual gag",
+      "Cardboard car prop",
+      "Fire hair extinguishment effect",
+      "Character size shrinking scale effect"
+    ]
+  },
+  "shot_rhythm_template": [
+    {
+      "beat": "hook",
+      "target_sec": 1.3,
+      "cam": "mcu",
+      "move": "pan_fast",
+      "energy": "high"
+    },
+    {
+      "beat": "crush_intro",
+      "target_sec": 2.2,
+      "cam": "medium_shot",
+      "move": "static",
+      "energy": "medium"
+    },
+    {
+      "beat": "fake_powers_gag",
+      "target_sec": 3.4,
+      "cam": "close_up",
+      "move": "crash_in",
+      "energy": "high"
+    },
+    {
+      "beat": "mystery_clues",
+      "target_sec": 9.2,
+      "cam": "mcu",
+      "move": "cut",
+      "energy": "medium"
+    },
+    {
+      "beat": "villain_attack",
+      "target_sec": 16.2,
+      "cam": "wide_shot",
+      "move": "tilt_up",
+      "energy": "very_high"
+    },
+    {
+      "beat": "climax_payoff",
+      "target_sec": 25.6,
+      "cam": "low_angle",
+      "move": "zoom_in",
+      "energy": "high"
+    },
+    {
+      "beat": "resolution",
+      "target_sec": 38.4,
+      "cam": "medium_shot",
+      "move": "static",
+      "energy": "low"
+    }
+  ],
+  "model_used": "gemini-3.6-flash",
+  "source_transcript": "I'm the only kid at superhero school with no super power, so I've been faking one for a year to impress my crush. Her power is floating, and she can't turn it off. She's tied to her desk by the ankle. For laser eyes, I used two flashlights. For flying, a leaf blower. For super strength, a cardboard car. If anyone found out I'd be kicked out, but weird things kept happening. Every time I sat next to her, she stopped floating. The whole class said she liked me, and whenever I walked past the fire kid, his flames went out. Then a villain who grows as big as a building smashed through the wall. Every hero bounced off him. He snapped her rope and grabbed her. I ran straight at him. The closer I got, the smaller he got. When I reached him, he was normal size. She dropped into my arms. That's when I got it. I do have a power. Every power near me stops working. So she never liked me. It was just my power. I asked her out anyway. She said yes. Then she cut the rope off her ankle. Next to you, I don't need it.",
+  "source_words_per_sec": 5.25
+}

@@ -1,0 +1,89 @@
+{
+  "reel_id": "DgBliT3NkKM",
+  "hook_formula": "High-stakes romantic premise with extreme numbers (900 geniuses) to capture instant interest.",
+  "story_arc": "Setup: Underdog sabotages geniuses competing to marry his crush. Escalation: Personal riddles are posed during the contest. Payoff: The riddles were specifically about him, making sabotage redundant.",
+  "pacing": {
+    "words_per_sec": 4.36,
+    "avg_cut_sec": 1.2,
+    "total_cuts": 32
+  },
+  "visual_style": {
+    "environments_seen": [
+      "Bedroom desk setup",
+      "City street plaza",
+      "Outdoor town square stage"
+    ],
+    "camera_patterns": [
+      "fast_whip_pan -> static_medium -> tracking_shot -> front_close_up -> wide_crowd_pullback"
+    ],
+    "lighting_moods": [
+      "bright daylight",
+      "night interior"
+    ],
+    "character_archetypes": [
+      {
+        "role": "protagonist",
+        "outfit_style": "Green spiky hair, striped green-and-black long sleeve shirt, black pants",
+        "primary_colors": [
+          "#2E7D32",
+          "#111111"
+        ]
+      },
+      {
+        "role": "crush",
+        "outfit_style": "Dark long hair, black crop jacket, pleated skirt, white high socks",
+        "primary_colors": [
+          "#1A1A1A",
+          "#FFFFFF"
+        ]
+      }
+    ],
+    "visual_gags_and_fx": [
+      "F grade paper popup",
+      "Exploding robot",
+      "Sandwich eating animation",
+      "Number prompt cards",
+      "Blushing cheek overlays"
+    ]
+  },
+  "shot_rhythm_template": [
+    {
+      "beat": "hook",
+      "target_sec": 1.5,
+      "cam": "mcu",
+      "move": "fast_whip_pan",
+      "energy": "high"
+    },
+    {
+      "beat": "backstory",
+      "target_sec": 4.0,
+      "cam": "medium",
+      "move": "static",
+      "energy": "medium"
+    },
+    {
+      "beat": "sabotage_montage",
+      "target_sec": 7.6,
+      "cam": "medium_wide",
+      "move": "push_in",
+      "energy": "high"
+    },
+    {
+      "beat": "riddle_contest",
+      "target_sec": 18.7,
+      "cam": "mcu",
+      "move": "static",
+      "energy": "medium"
+    },
+    {
+      "beat": "climax_twist",
+      "target_sec": 29.3,
+      "cam": "wide",
+      "move": "pull_back",
+      "energy": "high"
+    }
+  ],
+  "model_used": "gemini-3.6-flash",
+  "source_transcript": "Whoever answers my crush's three riddles gets to marry her. 900 geniuses got them wrong. I failed every test this year, so I made sure they failed too. I hid the chess champion's glasses. I put the professor on the wrong bus. I spilled soda on the robot. It exploded. I never signed up. I watched from the back eating a sandwich. Every time a genius failed, she looked straight at me. First riddle. What's always hungry and never has a pencil? The last genius yelled, a pencil sharpener. Wrong. I whispered, can I borrow a pencil? 900 geniuses turned around. Me? Correct. Second riddle. Who gave me his umbrella in first grade and walked home soaked? A genius screamed, how would anyone know that? Me? Correct. Last riddle. Who am I in love with? 900 geniuses yelled, me? Wrong. The whole town turned to me. Me? She turned bright red. Correct. She walked through the crowd and took my hand. I sabotaged 900 geniuses for nothing.",
+  "source_words_per_sec": 4.36
+}

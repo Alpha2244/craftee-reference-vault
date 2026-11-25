@@ -1,0 +1,101 @@
+{
+  "reel_id": "DgBQzirBNGX",
+  "hook_formula": "Relatable high-stakes social anxiety: Kiss cam highlights MC and crush in a packed stadium.",
+  "story_arc": "Setup: Kiss cam targets MC and crush; MC awkwardly tries to dodge public pressure. Escalation: MC finds out crush paid the cameraman $20 to target them. Twist: MC pays $40 for a second attempt. Payoff: They lean in for the kiss but MC gets hit in the face by a soccer ball.",
+  "pacing": {
+    "words_per_sec": 5.26,
+    "avg_cut_sec": 1.18,
+    "total_cuts": 31
+  },
+  "visual_style": {
+    "environments_seen": [
+      "stadium grandstands",
+      "camera booth interior",
+      "soccer field view"
+    ],
+    "camera_patterns": [
+      "mcu",
+      "crash_in",
+      "ws",
+      "low_angle",
+      "panning"
+    ],
+    "lighting_moods": [
+      "bright arena stadium"
+    ],
+    "character_archetypes": [
+      {
+        "role": "protagonist",
+        "outfit_style": "green striped long-sleeve, black pants, green hair",
+        "primary_colors": [
+          "#22C55E",
+          "#09090B"
+        ]
+      },
+      {
+        "role": "crush",
+        "outfit_style": "black blazer with tie, pleated skirt, black hair",
+        "primary_colors": [
+          "#18181B",
+          "#FFFFFF"
+        ]
+      },
+      {
+        "role": "cameraman",
+        "outfit_style": "blue plaid shirt, hat, headphones",
+        "primary_colors": [
+          "#2563EB",
+          "#78350F"
+        ]
+      }
+    ],
+    "visual_gags_and_fx": [
+      "kiss cam overlay UI",
+      "hot dog prop",
+      "blushing cheeks texture",
+      "cash exchange motion",
+      "flying soccer ball strike",
+      "slow-motion big screen replay"
+    ]
+  },
+  "shot_rhythm_template": [
+    {
+      "beat": "hook",
+      "target_sec": 1.6,
+      "cam": "mcu",
+      "move": "crash_in",
+      "energy": "high"
+    },
+    {
+      "beat": "setup",
+      "target_sec": 6.0,
+      "cam": "ws",
+      "move": "static",
+      "energy": "medium"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 14.0,
+      "cam": "mcu",
+      "move": "pan",
+      "energy": "medium"
+    },
+    {
+      "beat": "twist_reversal",
+      "target_sec": 22.0,
+      "cam": "cu",
+      "move": "push_in",
+      "energy": "high"
+    },
+    {
+      "beat": "climax_payoff",
+      "target_sec": 36.4,
+      "cam": "ws",
+      "move": "tracking",
+      "energy": "very_high"
+    }
+  ],
+  "model_used": "gemini-3.6-flash",
+  "source_transcript": "The kiss cam stopped on me and my crush. 60,000 people started chanting. We'd never even talked. I held up my hot dog, the whole stadium boo. I pretended to fall asleep. They chanted louder. I tried to sneak out. The team mascot carried me back to my seat. Then the players stopped the game to watch. She was bright red, but she didn't move an inch. Finally, the camera moved on. At halftime, I went to get more hot dogs. I saw her at the camera booth handing the camera guy $20. She paid him to stop on us. She'd been too scared to talk to me all year, so she let 60,000 people do it for her. So I gave the camera guy 40. In the second half, the heart landed on us again. She looked up at the booth. The camera guy nodded at me. This time, nobody had the chance. We leaned in. The whole stadium went quiet. Then a ball flew into the stands and hit me right in the face. 60,000 people went, oh, the big screen played it again in slow motion.",
+  "source_words_per_sec": 5.26
+}

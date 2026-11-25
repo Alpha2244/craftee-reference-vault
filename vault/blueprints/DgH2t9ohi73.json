@@ -1,0 +1,93 @@
+{
+  "reel_id": "DgH2t9ohi73",
+  "hook_formula": "High-concept paradox hook ('nobody has died in 300 years') paired with aerial visual landscape to immediately build world mystery.",
+  "story_arc": "Setup: Immortal island lore & dad's missing backstory. Escalation: First dead body floats up wearing dad's coat; mom admits drowning an imposter. Climax/Payoff: Town exiles mom, but hero proves body is a wooden monster and swims deep river to rescue her.",
+  "pacing": {
+    "words_per_sec": 4.71,
+    "avg_cut_sec": 1.55,
+    "total_cuts": 98
+  },
+  "visual_style": {
+    "environments_seen": [
+      "Stillwater island aerial view",
+      "Wooden dock & shore",
+      "Blue house interior & porch",
+      "Old church interior",
+      "Dead grey forest border"
+    ],
+    "camera_patterns": [
+      "ws -> mcu -> crash_in -> close_up -> tracking_shot -> low_angle"
+    ],
+    "lighting_moods": [
+      "bright daylight",
+      "warm indoor lighting",
+      "dark dramatic night"
+    ],
+    "character_archetypes": [
+      {
+        "role": "protagonist",
+        "outfit_style": "Orange hair, white cable-knit sweater, brown trousers",
+        "primary_colors": [
+          "#E86D23",
+          "#F2EFE9",
+          "#4E3225"
+        ]
+      },
+      {
+        "role": "mother",
+        "outfit_style": "Dark brown hair, patterned knit sweater",
+        "primary_colors": [
+          "#3D251E",
+          "#6E473B"
+        ]
+      },
+      {
+        "role": "doppelganger_father",
+        "outfit_style": "Black hair, red and black plaid jacket",
+        "primary_colors": [
+          "#B81D1D",
+          "#1A1A1A"
+        ]
+      }
+    ],
+    "visual_gags_and_fx": [
+      "oozing black sap effect",
+      "muddy water splash",
+      "dramatic dynamic text overlay",
+      "rapid camera crash zooms"
+    ]
+  },
+  "shot_rhythm_template": [
+    {
+      "beat": "hook",
+      "target_sec": 2.9,
+      "cam": "ws",
+      "move": "slow_pan",
+      "energy": "medium"
+    },
+    {
+      "beat": "lore_setup",
+      "target_sec": 2.3,
+      "cam": "mcu",
+      "move": "static",
+      "energy": "medium"
+    },
+    {
+      "beat": "inciting_incident",
+      "target_sec": 1.1,
+      "cam": "close_up",
+      "move": "crash_in",
+      "energy": "high"
+    },
+    {
+      "beat": "climax",
+      "target_sec": 0.9,
+      "cam": "low_angle",
+      "move": "tracking",
+      "energy": "high"
+    }
+  ],
+  "model_used": "gemini-3.6-flash",
+  "source_transcript": "In this town, nobody has died in over 300 years. You see, our town sits on an island in the middle of a river. And as long as you're standing on the island, you can't die. People still get old, they just never stop. Nobody even gets sick. I've never had so much as a cold. The town's called Stillwater, and honestly, it's perfect. The grass stays green all year, and the river's so clear you can see the fish. We don't even have a jail. Nobody's ever needed one. The only ugly thing we've got is across the river. A forest that goes on forever, where every tree is grey and dead. Nobody ever goes over there. My dad went missing when I was six. One night he just never came home, and nobody ever found out why. Since then, it's just me and my mom in the blue house by the dock. My best friend Theo lives two houses down, and when we were kids, we had a game. We'd wade out into the river until our feet came off the bottom. Because out there, you can get hurt like anyone else. Whoever went further won. It was always me. Then one morning, Theo came banging on my door. You have to see this! There was a crowd down at the shallows, and floating face down by the dock was a man. He was dead. The first dead person anyone in Stillwater had ever seen. Someone had dragged him out past where your feet leave the bottom, and held him under. Which meant someone in Stillwater was a killer. The grown-ups carried him up to the old church, and that's when I saw his coat. Red and black plaid, with a torn pocket. It was the same coat my dad is wearing, and the only picture we have of him. I ran home to tell Mom. She was at the sink, scrubbing her boots. They were caked in river mud, and her sleeves were still dripping. Mom, where were you last night? She was quiet for a long time. I held him under. That was Dad! No, sweetheart. That was the thing that came back wearing him. The night your father disappeared. He rode into that forest. I never told you. Three nights ago, she watched him walk out of the forest and wade across the river. He looked exactly the same, but he didn't speak, and he didn't breathe. He just walked straight to my window and stood there, watching me sleep. If you don't believe me, look under his coat, then someone pounded on our door. Half the town was on our porch. Someone had seen her at the river last night. They grabbed her by both arms and dragged her down to the dock. Wait! It wasn't him! It wasn't even a person! Nobody listened. There's an old rule in Stillwater. Nobody's used in 300 years. If you ever take a life, you get rode across the river. They tied her hands, sat her in a rowboat, and shoved it out into the current toward the dead forest. So I ran the other way, straight to the church. The body was on a table, still in Dad's coat. Theo had followed me in. Together, we pulled back the coat. Under it, his whole back was grey and cracked, like the bark of a dead tree. And thick black sap was oozing out of every crack. Theo and I dragged the body out the door, all the way down to the dock. Look at him! The whole crowd went silent as the sap dripped onto the boards. But the boat was already halfway across the river. I dove in and swam, out past where my feet could touch, further than I had ever gone. I'd done this a hundred times with Theo. I knew I could go one more stroke. Then one more. Until my hand finally slapped against the side of the boat. I grabbed the rope and pulled, kicking back toward the island with everything I had. When I finally dragged it into the shallows, the whole town was waiting in the water to help. Mom climbed out, wrapped her arms around me, and wouldn't let go.",
+  "source_words_per_sec": 4.71
+}

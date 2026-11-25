@@ -1,0 +1,57 @@
+{
+  "reel_id": "Df8xaJkh3ae",
+  "hook_formula": "High-stakes conflict statement: 'Every boy who asks my crush out gets struck by lightning.' It creates an immediate 'what happens next' curiosity gap and establishes a supernatural rule.",
+  "story_arc": "Setup: Protagonist's crush is protected by a jealous lightning cloud. Escalation: Multiple failed, increasingly absurd attempts to ask her out (rubber suit, bucket, car). Twist: The cloud isn't a curse, it's in love. Resolution: Protagonist finds the cloud a girlfriend using a fog machine, successfully asking the girl out.",
+  "pacing": {
+    "words_per_sec": 5.39,
+    "avg_cut_sec": 1.12,
+    "total_cuts": 33
+  },
+  "visual_style": {
+    "environments_seen": [
+      "School exterior",
+      "School hallway",
+      "School cafeteria",
+      "Space/Orbit",
+      "Doctor's office",
+      "Rooftop"
+    ],
+    "camera_patterns": [
+      "mcu -> wide_shot -> crash_zoom -> low_angle -> tracking_shot"
+    ],
+    "lighting_moods": [
+      "Stormy/Dark",
+      "Bright/Sunny",
+      "Dramatic/Cinematic"
+    ],
+    "character_archetypes": [
+      {
+        "role": "protagonist",
+        "outfit_style": "Casual Roblox avatar with green striped shirt",
+        "primary_colors": [
+          "#00FF00",
+          "#000000"
+        ]
+      }
+    ],
+    "visual_gags_and_fx": [
+      "Lightning strike particles",
+      "Sentient raincloud with facial expressions",
+      "Fog machine smoke",
+      "Earth view from space",
+      "Umbrella prop"
+    ]
+  },
+  "shot_rhythm_template": [
+    {
+      "beat": "hook",
+      "target_sec": 1.6,
+      "cam": "mcu",
+      "move": "crash_in",
+      "energy": "high"
+    }
+  ],
+  "model_used": "gemini-3.1-flash-lite",
+  "source_transcript": "Every boy who asks my crush out gets struck by lightning. I've been struck 11 times. I'm asking her out if it kills me. It's come close. The first time I just asked. My eyebrows grew back in March, so I wore a rubber suit. It melted. I asked from inside my mom's car. Now my mom drives a convertible. I wore a metal bucket on my head. They saw that one from space. By the eighth time, the school was selling tickets. Everyone said she was cursed. She ate lunch alone. Under an umbrella. The dance was Friday. My doctor said one more bolt and my hair would stay like this forever. Then I looked up. It was the same cloud every time. When she went to camp, it cried for a week. It wasn't a curse. The cloud was in love with her. You can't beat a cloud, so I found it a girlfriend. I put my dad's fog machine on the roof. Love it first sight. I asked her again, not a single bolt. She closed her umbrella and said yes. The cloud and the fog are still together. My dad wants his fog machine back.",
+  "source_words_per_sec": 5.39
+}

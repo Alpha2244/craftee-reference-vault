@@ -1,0 +1,92 @@
+{
+  "reel_id": "Df6LaCxum6q",
+  "hook_formula": "Absurd premise hook ('A witch turned my crush into a grandma') pairing high-stakes romantic interest with visual comedy to immediately stop scrolling.",
+  "story_arc": "Setup: Crush gets turned into a 90yo grandma attending school -> Escalation: Discovering brave acts lower her age by 1 year, leading to a montage of risky stunts -> Twist/Payoff: Protagonist's ultimate brave act (asking her to the dance) instantly snaps her back to youth.",
+  "pacing": {
+    "words_per_sec": 5.22,
+    "avg_cut_sec": 1.12,
+    "total_cuts": 32
+  },
+  "visual_style": {
+    "environments_seen": [
+      "School Hallway",
+      "School Entrance",
+      "Classroom",
+      "Running Track (Night)",
+      "Courtyard",
+      "Assembly Stage",
+      "Study Desk"
+    ],
+    "camera_patterns": [
+      "mcu",
+      "mcu",
+      "cu",
+      "ws",
+      "mcu",
+      "cu"
+    ],
+    "lighting_moods": [
+      "sunny",
+      "night",
+      "stage lights"
+    ],
+    "character_archetypes": [
+      {
+        "role": "protagonist",
+        "outfit_style": "Green spiky hair with black and green striped shirt",
+        "primary_colors": [
+          "#15803D",
+          "#000000"
+        ]
+      },
+      {
+        "role": "crush_grandma",
+        "outfit_style": "Long white hair with school uniform and walking frame",
+        "primary_colors": [
+          "#FFFFFF",
+          "#1E293B"
+        ]
+      }
+    ],
+    "visual_gags_and_fx": [
+      "Medical walker prop",
+      "Purse hit attack",
+      "Age reduction numbers",
+      "Giant calculator desk pop",
+      "Stage microphone pop"
+    ]
+  },
+  "shot_rhythm_template": [
+    {
+      "beat": "hook",
+      "target_sec": 1.6,
+      "cam": "mcu",
+      "move": "crash_in",
+      "energy": "high"
+    },
+    {
+      "beat": "premise_setup",
+      "target_sec": 6.5,
+      "cam": "mcu",
+      "move": "pan",
+      "energy": "medium"
+    },
+    {
+      "beat": "escalation_montage",
+      "target_sec": 18.0,
+      "cam": "ws",
+      "move": "static",
+      "energy": "high"
+    },
+    {
+      "beat": "climax_resolution",
+      "target_sec": 35.8,
+      "cam": "cu",
+      "move": "zoom_in",
+      "energy": "peak"
+    }
+  ],
+  "model_used": "gemini-3.6-flash",
+  "source_transcript": "A witch turned my crush into a grandma. She still had to come to school. I liked her since first grade. She has no idea. She was 90 and she still had to take the math test. The teacher started calling her ma'am. She ran the mile in gym with a walker. She finished on Thursday. She fell asleep in every class and once in her suit. Then the bully called her grandma. She hit him with a purse. The next morning she looked a year younger. That night I figured it out. Every time she does something brave she gets a year younger. So I made her brave. I took her on the biggest rollercoaster in the state. 88. I signed her up to sing at the school assembly. 87. She told the lunch lady the meatloaf tasted like feet. 86. She skateboarded down the steepest hill in town. 85. At this rate she'd be young again in 70 years. So I did the bravest thing I've ever done. I asked her to the dance. She said yes and was young again in one second.",
+  "source_words_per_sec": 5.22
+}

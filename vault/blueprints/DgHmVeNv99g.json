@@ -1,0 +1,65 @@
+{
+  "reel_id": "DgHmVeNv99g",
+  "hook_formula": "High-contrast conceptual premise combined with extreme vulnerability: 'In my world, on our half of the planet, every wall is made of glass. Nobody here has a secret.' This immediately creates intrigue by subverting normal privacy norms and presenting a world of absolute exposure.",
+  "story_arc": "Setup introduces the divided world of transparent glass houses vs. opaque stone walls. Escalation follows the protagonist making secret contact through a crack in the Great Wall with a mysterious girl named Mia, while experiencing bizarre coincidences (free cereal, red lights, fireworks). Twist/payoff reveals the protagonist's entire life has actually been a live reality TV show broadcast to the stone wall side for the king and public entertainment.",
+  "pacing": {
+    "words_per_sec": 3.41,
+    "avg_cut_sec": 1.71,
+    "total_cuts": 92
+  },
+  "visual_style": {
+    "environments_seen": [
+      "glass house interior",
+      "glass street neighborhood",
+      "the Great Wall exterior",
+      "bedroom",
+      "kitchen",
+      "dark void beyond the wall"
+    ],
+    "camera_patterns": [
+      "mcu",
+      "crash_in",
+      "ws",
+      "low",
+      "ecu",
+      "tracking_shot"
+    ],
+    "lighting_moods": [
+      "sunny",
+      "sunset",
+      "storm",
+      "night"
+    ],
+    "character_archetypes": [
+      {
+        "role": "protagonist",
+        "outfit_style": "red and white casual shirt with dark hair",
+        "primary_colors": [
+          "#ff3333",
+          "#ffffff"
+        ]
+      }
+    ],
+    "visual_gags_and_fx": [
+      "crack in wall",
+      "yellow scribble drawing",
+      "red blinking smoke alarm light",
+      "free cereal box",
+      "fireworks",
+      "water leak / flooded room",
+      "crumbling stone wall climb"
+    ]
+  },
+  "shot_rhythm_template": [
+    {
+      "beat": "hook",
+      "target_sec": 1.6,
+      "cam": "mcu",
+      "move": "crash_in",
+      "energy": "high"
+    }
+  ],
+  "model_used": "gemini-3.5-flash-lite",
+  "source_transcript": "In my world, on our half of the planet, every wall is made of glass. Houses, schools, even bathrooms. Nobody here has a secret. If you dance in your pajamas, the whole street sees it. My neighbor sings in the shower. Badly. We all know the words now. Kids can't hide their report cards. Grandma can't hide her snacks. On the other half of the planet, it's the opposite. Every wall is thick stone. No windows. Nobody trusts anybody. Between us is the Great Wall. And there's one rule. Never cross it. The wall people will lock you in the dark forever, Dad says. Uncle Ray climbed it in 1999. We never saw him again. Our house is the last one before the Great Wall. And there's a tiny crack in it. The day I turned 12, a note slid through. Hi. I wrote back on my glass wall with a marker. Hi. Who are you? Mia, the next note said. For a year, we talked every day. She asked what the sun felt like. I asked what being alone felt like. She said it was quiet. She drew me the sun from what I told her. A yellow scribble. I kept it. Every night I fell asleep looking at the crack. She always knew things when I lost my first race, when I broke my arm. Lucky guess, she wrote. Sometimes she wrote, good job, before I even told her. And weird things happen here. Every glass house has a little red light in the corner. Smoke alarm, Dad says. Every week, a free box of crunchy-os shows up at our door. Dad always eats them right in front of the window. And whenever something big happens to me, I hear clapping from the other side of the wall. On my last birthday, the whole wall side set off fireworks. Coincidence, Mom said. Mia told me something else. Our king has a giant screen in his palace. It's always on. He laughs at it all day. Then my life started falling apart. Week one, our power went out. Only our house. Week two, a pipe burst and flooded my room. Week three, Dad lost his job. Mom cried in the kitchen. The whole street could see. Week four, our roof leaked right over my bed. And from over the wall, I heard people gasping. Every time something bad happened, the clapping got louder. Then a note slid through. They want you to cry, don't. Then Mia stopped writing. One day, five days, ten. So I did the one thing nobody ever does. I climbed the Great Wall. Mom screamed my name. Dad ran out in his socks. Halfway up, a stone broke under my foot. I hung on with one hand. My hands were bleeding. I reached the top. I jumped down into the dark and waited to be locked away. Nothing happened. Then I heard it. A thousand people breathing. Then I turned around. Every window on the wall side had a screen in it. And on every screen was me. The red lights were cameras. The crunchy-os were ads. My life was their number one TV show since the day I was born.",
+  "source_words_per_sec": 3.41
+}

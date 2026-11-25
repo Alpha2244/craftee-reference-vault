@@ -1,0 +1,70 @@
+{
+  "reel_id": "DgJoBIgv0_C",
+  "hook_formula": "High-concept paradox establishing immediate danger and cognitive dissonance ('The monster ate my family, then it raised me'), combined with rapid dynamic camera movement to stop the scroll.",
+  "story_arc": "Setup (living with the monster in the cave, routines and protection) -> Escalation (hunters capture the boy, return him to town, but he realizes the monster's cries were a call for its own captured babies) -> Twist/Payoff (boy frees the baby monsters, monster eats the villainous hunter, and family is reunited).",
+  "pacing": {
+    "words_per_sec": 4.71,
+    "avg_cut_sec": 1.28,
+    "total_cuts": 122
+  },
+  "visual_style": {
+    "environments_seen": [
+      "snowy mountain cave",
+      "frozen river",
+      "pine forest",
+      "frontier town with wooden houses",
+      "hunter's home interior"
+    ],
+    "camera_patterns": [
+      "mcu",
+      "crash_in",
+      "ws",
+      "low_angle",
+      "ecu",
+      "tracking_shot"
+    ],
+    "lighting_moods": [
+      "night",
+      "snowstorm",
+      "warm indoor lantern light",
+      "cold blue twilight"
+    ],
+    "character_archetypes": [
+      {
+        "role": "protagonist",
+        "outfit_style": "yellow-and-black striped long-sleeve shirt with dark pants and yellow hair",
+        "primary_colors": [
+          "#FFD700",
+          "#000000"
+        ]
+      },
+      {
+        "role": "antagonist",
+        "outfit_style": "brown winter coat with fur trim, black hat, holding crossbow",
+        "primary_colors": [
+          "#4A3B32",
+          "#1C1C1C"
+        ]
+      }
+    ],
+    "visual_gags_and_fx": [
+      "motion blur",
+      "snow particles",
+      "traps and nets",
+      "rusty cages",
+      "rapid crash zooms"
+    ]
+  },
+  "shot_rhythm_template": [
+    {
+      "beat": "hook",
+      "target_sec": 1.6,
+      "cam": "mcu",
+      "move": "crash_in",
+      "energy": "high"
+    }
+  ],
+  "model_used": "gemini-3.5-flash-lite",
+  "source_transcript": "The monster ate my family, then it raised me. I was five. I've lived in its cave for seven years, and I still don't know why it didn't eat me, too. It's as big as a barn, with gray fur, three yellow eyes, and a mouth wide enough to swallow a horse. Every morning, it brings me breakfast, apples, fish. Once, a whole beehive. I think it's fattening me up. In winter, it curls around me like a blanket. When I fell through the ice on the river, it dove in after me. When wolves came, it chased them off the mountain, and when the hunter's horns blow, it hides me inside its mouth and closes its teeth like the bars of a cage until they're gone. Every night before I sleep, it touches its nose to my forehead. Then it walks to the mouth of the cave, looks down at the town, and makes a long, low sound that shakes the whole mountain. I've never known what it means. I remember the night it came. We lived in the last house before the woods. Mom pushed me under the bed. I heard the front door break. I heard dad shouting, and then I didn't. I heard mom scream my name, and then I didn't. Then three yellow eyes looked under the bed. It picked me up in its mouth gently, the way a cat carries a kitten, and it carried me up the mountain. I tried to run away three times. Every time it found me and carried me back. I hate it. I'm also all it has. Every winter, the hunters come up the mountain with torches and nets to get rid of it and bring me home. They're led by Mr. Garrick, the town hero. He's hunted monsters for 30 years. This winter, they found me first. I was fishing by the river and a net came down over my head. They carried me into town on their shoulders. People cried. They rang the church bell. The boy who survived the monster. Mr. Garrick took me into his own house. The biggest one in town gave me a warm bed and said you're safe now son. That night, I couldn't sleep. The bed was too soft, and the house was too quiet. I missed it, and I hated that I missed it, and then I heard it all the way from the mountain. That long, low sound. For seven years, I never knew what it meant. Now I did. It was calling me. It missed me too. The front door wasn't even locked. I ran up the mountain through the snow, faster than I'd ever run. Halfway up, I heard the horns behind me. Mr. Garrick was following my tracks. For seven years, he'd never found the cave. Tonight, I was leading him straight to it. At the cave, it was waiting. And for the first time, I was happy to see it. It opened its mouth to hide me, but the nets came down first. 20 hunters burst out of the trees and threw net after net over it. It roared and tore through them like paper, and hunters went flying into the snow. But Mr. Garrick just smiled. He dragged a sled out of the trees with three cages on it under a blanket, and he pulled the blanket off. Inside were three monsters, half its size, three yellow eyes each, so thin I could see their ribs. It stopped fighting. Mr. Garrick aimed his crossbow at the smallest one. Seven years ago, I stole these three from its nest. He said, people pay a fortune to see them. It came looking for them and found your house first. Thanks for showing me the way, son. It didn't eat me because we took its kids. A kid for a kid. That sound every night was never calling me. It was calling them. I crept to the sled and pulled the pins on all three cages. The babies ran to it, and it made a sound like laughing. It ate Mr. Garrick in one bite. The other hunters ran. It looked at me for a long time, touched its nose to my forehead one last time, and walked into the storm with its babies. The monster ate my family. Then it raised me. Tonight, I gave it back its family.",
+  "source_words_per_sec": 4.71
+}

@@ -1,0 +1,88 @@
+{
+  "reel_id": "DgGaRUgNd5Z",
+  "hook_formula": "Paradoxical claim paired with immediate visual conflict creates an instant curiosity gap.",
+  "story_arc": "Setup: Accused of dating/breaking crush's heart without speaking. Escalation: School ostracizes protagonist. Confrontation: Discovers she lied to deter suitors. Payoff: Staging a dramatic public reunion.",
+  "pacing": {
+    "words_per_sec": 5.22,
+    "avg_cut_sec": 1.17,
+    "total_cuts": 31
+  },
+  "visual_style": {
+    "environments_seen": [
+      "School Hallway",
+      "Courtyard Entrance",
+      "Cafeteria",
+      "Behind Gym"
+    ],
+    "camera_patterns": [
+      "mcu -> crash_in -> ws -> low_angle -> cu"
+    ],
+    "lighting_moods": [
+      "Bright daylight high school setting"
+    ],
+    "character_archetypes": [
+      {
+        "role": "protagonist",
+        "outfit_style": "Green and black striped sweater with spiky green hair",
+        "primary_colors": [
+          "#228B22",
+          "#000000"
+        ]
+      },
+      {
+        "role": "crush",
+        "outfit_style": "Black blazer uniform with pleated skirt and knee socks",
+        "primary_colors": [
+          "#1A1A1A",
+          "#FFFFFF"
+        ]
+      }
+    ],
+    "visual_gags_and_fx": [
+      "Milkshake splash",
+      "Locker text overlay",
+      "Blushing cheek decals",
+      "Cafeteria table speech stunt"
+    ]
+  },
+  "shot_rhythm_template": [
+    {
+      "beat": "hook",
+      "target_sec": 1.4,
+      "cam": "mcu",
+      "move": "crash_in",
+      "energy": "high"
+    },
+    {
+      "beat": "inciting_incident",
+      "target_sec": 2.3,
+      "cam": "ws",
+      "move": "pan",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 10.3,
+      "cam": "mcu",
+      "move": "dolly",
+      "energy": "medium"
+    },
+    {
+      "beat": "confrontation",
+      "target_sec": 17.3,
+      "cam": "medium",
+      "move": "static",
+      "energy": "medium"
+    },
+    {
+      "beat": "payoff",
+      "target_sec": 28.0,
+      "cam": "low_angle",
+      "move": "tilt_up",
+      "energy": "high"
+    }
+  ],
+  "model_used": "gemini-3.6-flash",
+  "source_transcript": "I'm my crush's ex-boyfriend. We've never even talked. I found out on Monday when her best friend threw a milkshake in my face. Apparently we dated all summer and then I broke her heart by text. By lunch the whole school hated me. Girls hissed when I walked by. Someone wrote heartbreaker on my locker. Her three big brothers followed me home. Even the lunch lady gave me half a portion. And every time I passed my crush in the hall she wiped away a tear. I didn't even know her middle name. So on Friday I cornered her behind the gym. She went bright red. Boys kept asking me out so I told everyone I was still getting over my ex. But why me? Because you're the only boy I'd say yes to. So I did what any ex would do. At lunch I stood on a table. I made a huge mistake. Take me back. The cafeteria went silent. Her brother stood up. She made me wait three whole seconds. Then she climbed up and kissed my cheek and the room went crazy. Took you long enough.",
+  "source_words_per_sec": 5.22
+}

@@ -1,0 +1,96 @@
+{
+  "reel_id": "Df50B7nBQ6k",
+  "hook_formula": "High-stakes mystery paired with low-angle visual scale to instantly hook viewer curiosity.",
+  "story_arc": "Two kingdoms battle over a mysterious counting tower, discovering at zero that it is an escaping colony rocket.",
+  "pacing": {
+    "words_per_sec": 4.18,
+    "avg_cut_sec": 16.33,
+    "total_cuts": 11
+  },
+  "visual_style": {
+    "environments_seen": [
+      "grassy battlefield",
+      "white metallic tower base",
+      "desert wasteland",
+      "rocket entryway"
+    ],
+    "camera_patterns": [
+      "extreme low angle tilt up",
+      "cu wall detail",
+      "mcu character front view",
+      "high wide bird eye view",
+      "wide side tracking"
+    ],
+    "lighting_moods": [
+      "clear daylight",
+      "golden sunset",
+      "overcast grey",
+      "bright interior white"
+    ],
+    "character_archetypes": [
+      {
+        "role": "Red Army Captain",
+        "outfit_style": "Blocky Roblox avatar with blue shirt and red armor accents",
+        "primary_colors": [
+          "#3B82F6",
+          "#EF4444",
+          "#EAB308"
+        ]
+      },
+      {
+        "role": "Tower Survivor",
+        "outfit_style": "Clean white futuristic tunic",
+        "primary_colors": [
+          "#FFFFFF",
+          "#9CA3AF"
+        ]
+      }
+    ],
+    "visual_gags_and_fx": [
+      "glowing countdown rings",
+      "taut rope lines",
+      "catapult impact dent",
+      "rocket launch blast-off"
+    ]
+  },
+  "shot_rhythm_template": [
+    {
+      "beat": "hook",
+      "target_sec": 3.0,
+      "cam": "low_angle_extreme",
+      "move": "tilt_up",
+      "energy": "high"
+    },
+    {
+      "beat": "worldbuilding",
+      "target_sec": 12.0,
+      "cam": "cu",
+      "move": "static",
+      "energy": "medium"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 40.0,
+      "cam": "mcu",
+      "move": "forward_track",
+      "energy": "high"
+    },
+    {
+      "beat": "climax",
+      "target_sec": 120.0,
+      "cam": "ws",
+      "move": "slow_pan",
+      "energy": "very_high"
+    },
+    {
+      "beat": "payoff",
+      "target_sec": 179.0,
+      "cam": "extreme_ws",
+      "move": "crane_up",
+      "energy": "high"
+    }
+  ],
+  "model_used": "gemini-3.6-flash",
+  "source_transcript": "The armies of two kingdoms have fought for years over a tower of white iron. The priests say it fell from the sky. This morning, it started counting. Ten rings of light glow on its side, and one just went dark. Nobody on either side knows what happens when the last one does. Every dawn, ten thousand red shields and ten thousand blue shields meet at its feet. By sunset, we push them back ten steps. By the next sunset, they push us back, eleven. The blues say the tower is theirs because it leans toward them. We say it is ours because its door faces us. The priests say the gods inside will punish whoever lets go of it, so nobody lets go. The young learn to fight for it before they learn to read. At school, recess is shield wall practice, and homework is sharpening. The baker bakes for the army. The blacksmith makes nothing but swords. All of us spend our whole lives trying to take that tower. I was best in my class. Now I lead the red wall. Our shields are red, with eight corners, and one holy word no one can read. The priests say it means courage. After every battle, I carry the shields of the fallen to their doors myself. This morning, I knocked on four doors. Bram stands on my right. His shield has covered my sword arms since school. When the first ring went dark, something inside the tower started knocking. The priests said the gods were waking up angry. King Oswin had ten thousand ropes tied to it to pull it our way. When they wake, all of it will be mine. He said, lead them. I led them. At seven rings, we took the towers left foot. Nine shields for me to carry home. At five rings, the blues took it back. Thirty shields. One was going to the baker's door. Good said the king. Shields can be used again. At three rings, the blue army came with everything. Crash! Twenty thousand shields met under the tower. A blue sword came for my open side. Bram stepped out of the wall and took it on his shield. Keep going, Captain. He said he held the gap alone until the horns blew. He didn't get up. Nobody stands on my right now. One ring left. Both armies pulled back and the tower still wasn't ours. If it won't be mine, it won't be anywhere. Said King Oswin, he turned the catapults on it. Clang! The rock left a dent. Nobody throws rocks at a god. I ran to the tower with Bram's shield to beg the gods not to punish us. I cut the rope across the door and knocked three times. The door opened. A girl in white stood there. Behind her stood hundreds of people in white. Every one of them looked more afraid than I was. Storms don't knock three times. She said, forgive us. Don't let the gods punish us. What god? The ones in this tower. It's a rocket, a space rocket, and we're not gods. We're people. It fell from the sky. It has never left the ground. Our grandparents locked this door a hundred years ago. The day the world burned. The world didn't burn. I live in it. We were taught nothing with a lie out here. We were taught gods were alive in there. I held up Bram's shield. My friend fell under this today. It says courage. It says stop. It's a road sign. We learned that it's six. The gods will burn you for that. Nobody is burning anybody. We all had cities of glass. We could fly. Then came one war. Everyone who knew how things worked hit in here. Now you hit each other with road signs over the last ship. Wake up. Then why is it counting? It waited a hundred years for the world to heal. Today it leaves. To look for a world with people in it. There are people in this one. She looked past me at 20,000 shields. I can see that. Close the door. Set an old man behind her. That is not people. Nothing lives out there. They're alive. Close it. She stepped outside. The door closed behind her. We ran. The last ring went dark. The tower rose and 10,000 ropes snapped like thread. It left with everyone who knew everything. To look for us somewhere else.",
+  "source_words_per_sec": 4.18
+}

@@ -1,0 +1,88 @@
+{
+  "reel_id": "DgDRRc-sfXN",
+  "hook_formula": "Surreal existential threat paired with an extreme macro visual of a giant human thumb resting on book text.",
+  "story_arc": "Setup: Protagonist gets locked on an expiring book page at sunset. Escalation: Giant Reader begins turning the page, but stops upon seeing the protagonist. Twist/Payoff: Protagonist sacrifices freedom to keep the town safe, but ending hints the Reader is ready to turn the page.",
+  "pacing": {
+    "words_per_sec": 4.53,
+    "avg_cut_sec": 5.1,
+    "total_cuts": 26
+  },
+  "visual_style": {
+    "environments_seen": [
+      "Giant printed book page surface",
+      "Spine wooden gate",
+      "Folded paper town village",
+      "Dark interior spine gap"
+    ],
+    "camera_patterns": [
+      "macro_top_down",
+      "wide_angle",
+      "medium_close_up",
+      "low_angle_tracking",
+      "extreme_close_up"
+    ],
+    "lighting_moods": [
+      "sunset_warm",
+      "dusk_shadows",
+      "dark_night"
+    ],
+    "character_archetypes": [
+      {
+        "role": "protagonist",
+        "outfit_style": "Casual blue shirt with brown straps and blonde spiky hair",
+        "primary_colors": [
+          "#2B72B7",
+          "#E5B842"
+        ]
+      },
+      {
+        "role": "gatekeeper_tully",
+        "outfit_style": "Formal tuxedo with red bow tie and black hair",
+        "primary_colors": [
+          "#1A1A1A",
+          "#FFFFFF",
+          "#CC0000"
+        ]
+      }
+    ],
+    "visual_gags_and_fx": [
+      "giant human thumb",
+      "giant observing eye",
+      "field-sized printed letters",
+      "paper fold architecture"
+    ]
+  },
+  "shot_rhythm_template": [
+    {
+      "beat": "hook",
+      "target_sec": 14.4,
+      "cam": "macro_top_down",
+      "move": "static",
+      "energy": "high"
+    },
+    {
+      "beat": "inciting_incident",
+      "target_sec": 27.0,
+      "cam": "mcu",
+      "move": "pan",
+      "energy": "medium"
+    },
+    {
+      "beat": "climax",
+      "target_sec": 61.4,
+      "cam": "ws",
+      "move": "tilt_up",
+      "energy": "high"
+    },
+    {
+      "beat": "resolution_twist",
+      "target_sec": 132.6,
+      "cam": "mcu",
+      "move": "slow_push_in",
+      "energy": "medium"
+    }
+  ],
+  "model_used": "gemini-3.6-flash",
+  "source_transcript": "Every sunset, something turns the page we live on. Anyone still on the old page gets shut inside. At dusk, everybody I know runs for the spine. I've counted the pages we have left. Three, tonight, the gate at the spine closed early. I'm on the wrong side. I bang on the gate with both fists. The sun is still on the page. A slit opens at eye level. It's Tully, the gatekeeper's son. We grew up on the same street. Behind him, I can see tomorrow's page. Everybody I know is already on it. His hand is on the gate rope. He's the only one in town who is never out of breath. He has never had to run. Open it, I say. The sun is still up. He looks me right in the eye. Sunset is sunset. Every evening, he closes it earlier. It's safer, he says. The slit shuts. The gate only opens from his side. I turn around. The ground under me is printed letters, each as big as a field. Nobody can read them. Our houses are folded paper. You only own what you can carry at a run. Every night, I count the pages left in the spine. After the last one, the cover closes on all of us. Nobody else wants to know. We call the thing that turns them the reader. Nobody I know has ever seen it. Nobody ever stayed to watch. The sun touches the edge of the page. The far corner lifts. The page rises over the town like a wave. There's nowhere left to run. Over the top of it, I see a thumb. Then the thumb stops. The page hangs in the air. I grab a printed letter and hold on. I wait to be shut inside. Nothing happens. The corner comes back down. Then something leans down over the page. An eye, bigger than the town. It looks right at me. It doesn't blink. I'm the only one left on the page. All night, the eye stays. The thumb waits at the corner. It isn't hunting me. It's waiting for me to leave and I get it. It won't turn a page while someone is still on it. Every night we ran, we emptied the page for it. If one person stays, nobody has to run again. At sunrise, the gate opens. Tully stands in the gap. Behind him is the whole town. You're still here. Tully says, it stopped. I tell them. It saw me and stopped. I point at the corner. It hasn't moved. An old man sits down and laughs. No more running. Somebody whispers. Three pages, stay three. I step toward the gate. Tully swings at shut in my face. If you come through, it turns. The town goes quiet. Nobody tells him he's wrong. Then we swap. I say through the slit. One out, one in. Same step. One night each. Faces look past me at the old page. A man looks at his shoes. A woman pulls her kid back. Nobody steps over. You're already out there. Tully says, somebody thanks him. Not me. Tully bars the gate from his side. It's safer. He says, don't worry. I'll bring the bread myself. Tully never had to run. Now nobody does. Every morning, bread comes through the slit. At noon, they wave at me from the spine. That was nine days ago. I still count the pages. Three. They'll stay three as long as I'm here. So I stay. The reader hasn't looked away from me since. Tonight, it licks its thumb.",
+  "source_words_per_sec": 4.53
+}

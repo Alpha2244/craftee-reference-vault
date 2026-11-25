@@ -1,0 +1,90 @@
+{
+  "reel_id": "DgFYyQjBsdd",
+  "hook_formula": "High-concept worldbuilding mystery paired with stark visual contrast to drive immediate curiosity.",
+  "story_arc": "Setup: World split into frozen and normal halves; boy waves daily at frozen girl. Escalation: Boy notices yearly micro-movements, but King orders demolition of frozen zone. Twist/Payoff: Boy steps over border safely and proves via flip-book photos that victims move ultra-slowly (1 second/year).",
+  "pacing": {
+    "words_per_sec": 3.27,
+    "avg_cut_sec": 1.49,
+    "total_cuts": 103
+  },
+  "visual_style": {
+    "environments_seen": [
+      "Border line divide",
+      "Frozen village street",
+      "Living side neighborhood",
+      "Protagonist bedroom",
+      "Town hall stage"
+    ],
+    "camera_patterns": [
+      "mcu -> wide -> low_angle -> close_up -> tilt_up"
+    ],
+    "lighting_moods": [
+      "sunny",
+      "overcast ice blue",
+      "dramatic night"
+    ],
+    "character_archetypes": [
+      {
+        "role": "protagonist",
+        "outfit_style": "Yellow camera jacket with blue pants",
+        "primary_colors": [
+          "#F1C40F",
+          "#2980B9"
+        ]
+      },
+      {
+        "role": "frozen_girl",
+        "outfit_style": "Ice-encased white hair and dress",
+        "primary_colors": [
+          "#E0F7FA",
+          "#FFFFFF"
+        ]
+      }
+    ],
+    "visual_gags_and_fx": [
+      "Glowing border line",
+      "Dust cloud particles",
+      "Fast camera whip pans"
+    ]
+  },
+  "shot_rhythm_template": [
+    {
+      "beat": "hook",
+      "target_sec": 2.0,
+      "cam": "mcu",
+      "move": "push_in",
+      "energy": "high"
+    },
+    {
+      "beat": "worldbuilding",
+      "target_sec": 8.0,
+      "cam": "wide",
+      "move": "pan",
+      "energy": "medium"
+    },
+    {
+      "beat": "inciting_incident",
+      "target_sec": 25.0,
+      "cam": "close_up",
+      "move": "static",
+      "energy": "medium"
+    },
+    {
+      "beat": "climax",
+      "target_sec": 110.0,
+      "cam": "low_angle",
+      "move": "crash_in",
+      "energy": "very_high"
+    },
+    {
+      "beat": "resolution",
+      "target_sec": 150.0,
+      "cam": "mcu",
+      "move": "slow_zoom",
+      "energy": "low"
+    }
+  ],
+  "model_used": "gemini-3.6-flash",
+  "source_transcript": "In this world, half the planet froze 100 years ago. A man mid sneeze, a dog mid-jump, a girl mid-wave. Nobody knows why. Pigeons use the sneeze man as a bench. There's an ice cream cone that hasn't melted in 100 years. A cat has been mid-meow since 1924. Tourists come from everywhere to take pictures. Kids dare each other to touch the line. And there's one rule. Cross the line and you freeze too. The proof stands right at the border. A tourist, frozen mid-selfie. When I was five, I saw the girl for the first time. Right at the line, hand up. So I waved and I kept waving every day for seven years. I even gave her a name. Ivy, every year I leave a flower at the line. I take a picture of her every morning. Mom says it's weird. I have 2,500 photos. But something's off. Every year, her hand moves. One inch. It's the wind, Dad says. Every year, her mouth opens a tiny bit more. Old statues crack, Mom says. And the jumping dog? His tail is a little higher every year. Once, scientists came to measure her. The King's guards took their notes and sent them home. Then the King went on TV. The frozen half is wasting land. We'll bulldoze it and build new houses. They're just statues, he said. I went to the town meeting. I begged. The King laughed. Son, you've been waving at a rock. Everyone laughed with him. Week one, fences went up. Week two, the bulldozers came. Hundreds of them. Week three, they knocked over the sneeze man. His face didn't even change. Week four, they reached the line. People cheered. Free land. Bigger houses. Nobody cared. Except me. At school, they laughed. Leo's in love with a statue. The night before demolition day, I went to the line. I waved one last time. Bye. I whispered. I cried the whole way home. Dad sat on my bed. Some things you have to let go, buddy. The next morning, the engines roared. Vroom. Dust everywhere. The first bulldozer rolled straight toward her. Move, kid. The driver yelled. And I ran over the line. Everyone screamed. He's gonna freeze. Mom pushed through the crowd, screaming my name. I stood in front of her. Arms out. I waited to freeze. One second. Five. Ten. Nothing. The bulldozers stopped one foot from my face. The whole town went silent. The king grabbed a megaphone. Get that boy out of there. Then I pulled out my photos. All 2,500. And I flipped them. Fast. Like a flip book. Her hand moved. Her eyes turned. Toward me. Her mouth opened. She wasn't frozen. None of them were. They were moving. Just slow. One second every year. She'd been waving back for seven years. And the king knew. He just wanted their land. Ivy's been saying hi to me for seven years. Next year, I'll finally hear the itch.",
+  "source_words_per_sec": 3.27
+}

@@ -1,0 +1,82 @@
+{
+  "reel_id": "DgKDZWPJY-i",
+  "hook_formula": "High-stakes institutional rule violation presented immediately in the first 3 seconds ('If a royal guard smiles on duty, he loses his job forever') creating instant curiosity about whether he will crack.",
+  "story_arc": "Setup: Royal guard must never smile or lose his job. Escalation: Princess tries increasingly absurd antics over a whole year (feathers, 40 puppies, off-key singing, fake fainting), drawing massive tourist crowds. Twist/Payoff: Princess disappears for a week, returns, and whispers the rule's secret loophole ('they have to marry me'), causing him to smile widely and get fired/win the princess.",
+  "pacing": {
+    "words_per_sec": 4.75,
+    "avg_cut_sec": 1.14,
+    "total_cuts": 34
+  },
+  "visual_style": {
+    "environments_seen": [
+      "Royal palace gates exterior",
+      "Cobblestone town square with historic buildings",
+      "Tourist barricaded viewing area"
+    ],
+    "camera_patterns": [
+      "mcu",
+      "crash_in",
+      "ws",
+      "low_angle",
+      "ecu",
+      "push_in",
+      "over_the_shoulder"
+    ],
+    "lighting_moods": [
+      "sunny",
+      "daylight"
+    ],
+    "character_archetypes": [
+      {
+        "role": "protagonist",
+        "outfit_style": "Traditional royal guard uniform with tall black busby hat, red tunic, and black trousers",
+        "primary_colors": [
+          "#e63946",
+          "#1d3557"
+        ]
+      },
+      {
+        "role": "princess",
+        "outfit_style": "Elegant light blue ruffled gown with a silver tiara",
+        "primary_colors": [
+          "#a8dadc",
+          "#f1faee"
+        ]
+      }
+    ],
+    "visual_gags_and_fx": [
+      "feather tickle",
+      "flying hat",
+      "sleeping puppies",
+      "fainting animation",
+      "tourists taking photos with phones",
+      "crash zoom"
+    ]
+  },
+  "shot_rhythm_template": [
+    {
+      "beat": "hook",
+      "target_sec": 1.6,
+      "cam": "mcu",
+      "move": "crash_in",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.1,
+      "cam": "ws",
+      "move": "push_in",
+      "energy": "medium"
+    },
+    {
+      "beat": "twist",
+      "target_sec": 1.4,
+      "cam": "ecu",
+      "move": "static",
+      "energy": "peak"
+    }
+  ],
+  "model_used": "gemini-3.5-flash-lite",
+  "source_transcript": "If a royal guard smiles on duty, he loses his job forever. For a whole year, the princess has tried to make me smile. She tickled my face with a feather. I sneezed so hard, my hat flew off, but I didn't smile. She brought 40 puppies, one fell asleep on my boot, nothing. She sang in my ear, completely off key. Every pigeon in the palace left. She pretended to faint, I didn't move. She got up and called me rude. Soon, 3000 tourists came every day just to bet on when I cracked. Then one day, she didn't come. A week went by, then a month. The tourists stopped coming. I'd stood still for a year. It had never felt this long. Then one morning, the square was packed again. She stood right in front of me, closer than she'd ever been. She leaned in and whispered, you know why guards lose their job when they smile at me? Because they have to marry me. I smiled so wide, my face hurt. 3000 tourists screamed. She stepped back and grinned. Congratulations, you're fired.",
+  "source_words_per_sec": 4.75
+}

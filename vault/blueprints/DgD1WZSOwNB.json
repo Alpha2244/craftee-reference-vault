@@ -1,0 +1,97 @@
+{
+  "reel_id": "DgD1WZSOwNB",
+  "hook_formula": "High-stakes romantic tension + isolation hook ('stuck in a hot spring with my crush'). Stops scrolling using instant teenage relatable vulnerability.",
+  "story_arc": "Setup: Left behind at hot spring spa overnight. Escalation: Cold temperatures force physical closeness at the warm spring spot. Peak: Accidental morning trip creates face-to-face posture. Twist/Payoff: Caught by class and dad; crush claims 'it's exactly what it looks like'.",
+  "pacing": {
+    "words_per_sec": 5.42,
+    "avg_cut_sec": 1.16,
+    "total_cuts": 31
+  },
+  "visual_style": {
+    "environments_seen": [
+      "Outdoor Hot Spring Spa Pool",
+      "Spa Entrance Exterior & Street",
+      "Spa Sliding Door Deck"
+    ],
+    "camera_patterns": [
+      "mcu -> ws -> crash_in -> cu -> wide_angle -> low_angle"
+    ],
+    "lighting_moods": [
+      "Daylight",
+      "Dusk / Sunset",
+      "Nighttime",
+      "Morning Light"
+    ],
+    "character_archetypes": [
+      {
+        "role": "protagonist",
+        "outfit_style": "Dark blue yukata robe with spiky green hair",
+        "primary_colors": [
+          "#1E2A38",
+          "#3EA34C"
+        ]
+      },
+      {
+        "role": "love_interest",
+        "outfit_style": "Pink yukata robe with long dark hair",
+        "primary_colors": [
+          "#E8A5C8",
+          "#1A1A1A"
+        ]
+      }
+    ],
+    "visual_gags_and_fx": [
+      "Water bubbling particle FX",
+      "Dynamic pop-up text captions",
+      "Sliding door reveal",
+      "Crash zooms"
+    ]
+  },
+  "shot_rhythm_template": [
+    {
+      "beat": "hook",
+      "target_sec": 1.5,
+      "cam": "mcu",
+      "move": "zoom_in",
+      "energy": "high"
+    },
+    {
+      "beat": "inciting_incident",
+      "target_sec": 4.6,
+      "cam": "ws",
+      "move": "pan",
+      "energy": "medium"
+    },
+    {
+      "beat": "isolation_conflict",
+      "target_sec": 9.9,
+      "cam": "medium",
+      "move": "static",
+      "energy": "medium"
+    },
+    {
+      "beat": "romantic_closeness",
+      "target_sec": 18.1,
+      "cam": "cu",
+      "move": "slow_zoom",
+      "energy": "high"
+    },
+    {
+      "beat": "accidental_climax",
+      "target_sec": 23.7,
+      "cam": "mcu",
+      "move": "crash_down",
+      "energy": "high"
+    },
+    {
+      "beat": "twist_payoff",
+      "target_sec": 29.4,
+      "cam": "ws",
+      "move": "static",
+      "energy": "peak"
+    }
+  ],
+  "model_used": "gemini-3.6-flash",
+  "source_transcript": "My crush and I got stuck in a hot spring. On the last day of our school trip, our class went to a big hot spring spa. We were the last two in the outdoor spring, sitting as far apart as we could. Then the bus left without us with our phones on it, and the staff locked the doors for the night. She pointed at the far corner. That's your side. At midnight, the heaters shut off. The water got colder except one small spot where the hot spring bubbled in. It was only big enough for one. We crept toward it until our shoulders touched. Neither of us moved away. We talked until the lights went out. Then she grabbed my arm and she never let go. By morning, her head was on my shoulder. I got up to check the door, slipped on the wet stones, and landed right on top of her. Our faces were an inch apart. That's when the doors slid open. Our whole class was standing there. So was her dad. It's not what it looks like, I yelled. She didn't move. It's exactly what it looks like.",
+  "source_words_per_sec": 5.42
+}

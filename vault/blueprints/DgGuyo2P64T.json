@@ -1,0 +1,103 @@
+{
+  "reel_id": "DgGuyo2P64T",
+  "hook_formula": "Absurdist premise ('last boy on Earth') taken literally with immediate extreme action.",
+  "story_arc": "Setup: Protagonist ejects all boys to Mars. Escalation: Crush doesn't answer door after launch. Twist: She ejected all girls to Venus. Payoff: Mutual date achieved.",
+  "pacing": {
+    "words_per_sec": 5.18,
+    "avg_cut_sec": 1.1,
+    "total_cuts": 34
+  },
+  "visual_style": {
+    "environments_seen": [
+      "Suburban lawn",
+      "Massive rocket launchpad",
+      "Outer space",
+      "Suburban house porch",
+      "Smoking backyard fence"
+    ],
+    "camera_patterns": [
+      "mcu",
+      "crash_in",
+      "ws",
+      "low_angle",
+      "tracking_shot"
+    ],
+    "lighting_moods": [
+      "Bright daylight",
+      "Deep space dark",
+      "Warm afternoon glow"
+    ],
+    "character_archetypes": [
+      {
+        "role": "protagonist",
+        "outfit_style": "Green and black striped long-sleeve shirt with green spiky hair",
+        "primary_colors": [
+          "#2ECC71",
+          "#111111"
+        ]
+      },
+      {
+        "role": "crush",
+        "outfit_style": "Casual suburban Roblox avatar outfit",
+        "primary_colors": [
+          "#3498DB",
+          "#FFFFFF"
+        ]
+      }
+    ],
+    "visual_gags_and_fx": [
+      "Stadium-sized pink and white rocket",
+      "Endless single-file line of NPC avatars",
+      "Digital countdown screen",
+      "Fire and heavy smoke visual effects",
+      "Handwritten paper note taped to fence"
+    ]
+  },
+  "shot_rhythm_template": [
+    {
+      "beat": "hook",
+      "target_sec": 1.4,
+      "cam": "mcu",
+      "move": "crash_in",
+      "energy": "high"
+    },
+    {
+      "beat": "setup",
+      "target_sec": 2.4,
+      "cam": "medium",
+      "move": "pan_up",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 11.2,
+      "cam": "ws",
+      "move": "static",
+      "energy": "medium"
+    },
+    {
+      "beat": "climax",
+      "target_sec": 7.0,
+      "cam": "tracking",
+      "move": "follow",
+      "energy": "high"
+    },
+    {
+      "beat": "twist",
+      "target_sec": 8.0,
+      "cam": "low_angle",
+      "move": "zoom_in",
+      "energy": "medium"
+    },
+    {
+      "beat": "payoff",
+      "target_sec": 7.2,
+      "cam": "mcu",
+      "move": "static",
+      "energy": "high"
+    }
+  ],
+  "model_used": "gemini-3.6-flash",
+  "source_transcript": "My crush said she wouldn't date me if I was the last boy on Earth, so I sent every other boy to Mars. I built a rocket the size of a stadium in my backyard, and told the whole world there was free pizza on Mars. Every boy on the planet got in line. The football team. Her ex. A prince from Spain. Once those doors closed, there was no coming back. Then the countdown hit zero and they were gone. The whole world went quiet. No traffic, no noise, just me. I ran to her house and knocked. Nobody answered. I knocked for an hour. Then I sat down on her front steps. I just sent four billion boys into space, and she still wouldn't open the door. Then I smelled smoke. It was coming from her backyard. There was a second launch pad still burning. Tape to the fence was a note in her handwriting. Sent every other girl to Venus, just in case. The front door opened. She came out with two slices of pizza and sat down next to me. So, last boy on Earth. Still want that date?",
+  "source_words_per_sec": 5.18
+}

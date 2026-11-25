@@ -1,0 +1,98 @@
+{
+  "reel_id": "DgITQF5MCrQ",
+  "hook_formula": "Absurd world-building rule combined with an immediate conflict anomaly (arrows point to mom, but mine points to the teacher), grabbing attention instantly through curiosity.",
+  "story_arc": "Setup: Floating arrows always point to mothers, but protagonist's points to new sub Miss Tilly. Escalation: Protagonist rejects Miss Tilly, causing arrow to fade; finds red marker clues on spelling test. Twist/Payoff: Miss Tilly is actually mom in disguise trying to be a teacher. He accepts her, restoring the arrow.",
+  "pacing": {
+    "words_per_sec": 4.48,
+    "avg_cut_sec": 1.19,
+    "total_cuts": 105
+  },
+  "visual_style": {
+    "environments_seen": [
+      "School Classroom",
+      "Schoolyard",
+      "Main Street Crosswalk",
+      "Flower Shop Exterior",
+      "Bus Stop Bench"
+    ],
+    "camera_patterns": [
+      "mcu -> crash_in -> ws -> low_angle -> cu"
+    ],
+    "lighting_moods": [
+      "sunny daylight",
+      "bright indoor fluorescent",
+      "dramatic overcast"
+    ],
+    "character_archetypes": [
+      {
+        "role": "protagonist",
+        "outfit_style": "classic blocky Roblox avatar with red shirt and white arms",
+        "primary_colors": [
+          "#E52521",
+          "#FFFFFF"
+        ]
+      },
+      {
+        "role": "mother_miss_tilly",
+        "outfit_style": "lavender shirt, dark pants, reddish curly wig, sunglasses",
+        "primary_colors": [
+          "#B39DDB",
+          "#212121"
+        ]
+      }
+    ],
+    "visual_gags_and_fx": [
+      "glowing 3D overhead yellow arrow",
+      "arrow transparency flickers",
+      "oversized traffic stop sign",
+      "expressive face swaps"
+    ]
+  },
+  "shot_rhythm_template": [
+    {
+      "beat": "hook",
+      "target_sec": 1.2,
+      "cam": "mcu",
+      "move": "crash_in",
+      "energy": "high"
+    },
+    {
+      "beat": "world_rule_explanation",
+      "target_sec": 2.5,
+      "cam": "ws",
+      "move": "pan",
+      "energy": "medium"
+    },
+    {
+      "beat": "conflict_inciting_incident",
+      "target_sec": 1.0,
+      "cam": "cu",
+      "move": "static",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation_rejection",
+      "target_sec": 1.3,
+      "cam": "low_angle",
+      "move": "zoom_in",
+      "energy": "dramatic"
+    },
+    {
+      "beat": "climax_realization",
+      "target_sec": 1.1,
+      "cam": "ecu",
+      "move": "shake",
+      "energy": "peak"
+    },
+    {
+      "beat": "resolution",
+      "target_sec": 1.5,
+      "cam": "mcu",
+      "move": "slow_pull_back",
+      "energy": "warm"
+    }
+  ],
+  "model_used": "gemini-3.6-flash",
+  "source_transcript": "In this world, every kid has a little arrow over their head that points to their mom. And on Monday, mine pointed at my new teacher. You see, it never stops pointing, so no kid here has ever been lost. At the airport, 10,000 arrows spin around like crazy. At the Olympics, every runner's arrow points at the same row in the stands. On Mother's Day, every arrow in town points at the flower shop. Dads don't get one, they just follow the kids. There's only one way to break an arrow. Look your mom in the eye, say, you're not my mom, and mean it, then it fades. Take it back before it goes out, or you can never find her again. Nobody's ever been that dumb. Me? I've gotten a zero on every spelling test since first grade. And my mom walks every kid across Main Street, with a stop sign taller than me. She keeps a red marker in her pocket. Every sign in town that's spelled wrong, she fixes. School zone, fixed, 400 signs. Even my notes, she fixes them and draws a little smiley face. Then on Monday, we got a sub, Miss Tilly. Giant curly hair and a fancy British accent. Good morning, my darlings. And my arrow swung across the room and pointed right at her. Dexter yelled, Miss Tilly is his mom! Arrows don't break, so mine had to be the first. At recess, my arrow followed her around like a dog. At lunch, she ate a sandwich with the crusts cut off. Everybody chanted, Tilly Baby, Tilly Baby! After school, I ran to the crosswalk. There was mom with her stop sign, and my arrow pointed at her. See? Broken, one arrow, two moms, and one of them was British. On Tuesday, Dexter made a sign. Tilly Junior, then Miss Tilly bent down next to me. In front of everybody, all I could see was hair. Are you all right, love? And I yelled it. You're not my mom! I meant it. Miss Tilly stood up really slowly and walked out. My arrow flickered, then it started to fade. By the last bell, I could see through it. Then I found my spelling test, every word fixed in red marker. And a little smiley face. I stared at it. My arrow was never broken. Miss Tilly was mom. I ran outside. 3 o'clock, buses, cars, 200 kids. My arrow was blinking on, off. I couldn't tell which way it pointed. The crosswalk was empty, just the stop sign. Lying in the road. Then my arrow blinked one last time. Across the street, the bus stopped bench. A curly wig in her lap. But the cars weren't stopping. So I grabbed the stop sign and walked right into the street. Screech! Every car stopped. I looked her in the eye. You are my mom. Beep! My arrow lit up so bright, Dexter covered his eyes. Why didn't you tell me? Mom looked at the wig. I always wanted to be a teacher. So I fixed signs instead. Then your school finally said yes. And I thought you'd be embarrassed of me. Embarrassed? I got my first smiley face on a spelling test. Then on Wednesday, Dexter's arrows swung across the lunchroom. Straight to the new lunch lady. Hi, sweetie.",
+  "source_words_per_sec": 4.48
+}

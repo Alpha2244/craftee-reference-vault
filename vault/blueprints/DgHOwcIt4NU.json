@@ -1,0 +1,65 @@
+{
+  "reel_id": "DgHOwcIt4NU",
+  "hook_formula": "The hook uses a 'High-Stakes Absurdity' formula: 'My crush's dad is a dragon.' It immediately establishes a high-stakes conflict (a dangerous father figure) combined with a surreal element (dragon), creating an instant curiosity gap that forces the viewer to stay to see how the protagonist survives.",
+  "story_arc": "Setup: Protagonist arrives at a dragon's house to pick up his crush. Escalation: He faces repeated 'fire' attacks (rejections) but persists despite getting burned. Twist/Payoff: The dragon's fire is actually laughter, and the crush rewards his persistence with a new fire extinguisher, signaling approval.",
+  "pacing": {
+    "words_per_sec": 5.11,
+    "avg_cut_sec": 1.16,
+    "total_cuts": 32
+  },
+  "visual_style": {
+    "environments_seen": [
+      "Suburban street",
+      "Dragon's front porch",
+      "Upstairs window view",
+      "Interior of the dragon's house"
+    ],
+    "camera_patterns": [
+      "Medium shot (intro)",
+      "Tracking shot (fire truck)",
+      "Low angle (dragon)",
+      "Close-up (protagonist's face)",
+      "Wide shot (house shaking)"
+    ],
+    "lighting_moods": [
+      "Bright daylight",
+      "Warm interior glow"
+    ],
+    "character_archetypes": [
+      {
+        "role": "protagonist",
+        "outfit_style": "Green spiky hair, green and black striped shirt",
+        "primary_colors": [
+          "#00FF00",
+          "#000000"
+        ]
+      },
+      {
+        "role": "dragon_dad",
+        "outfit_style": "Large green dragon, wearing a blue tie",
+        "primary_colors": [
+          "#90EE90",
+          "#0000FF"
+        ]
+      }
+    ],
+    "visual_gags_and_fx": [
+      "Fire extinguisher spray",
+      "Dragon fire breath",
+      "Smoking character model",
+      "House shaking screen-shake effect"
+    ]
+  },
+  "shot_rhythm_template": [
+    {
+      "beat": "hook",
+      "target_sec": 1.6,
+      "cam": "mcu",
+      "move": "crash_in",
+      "energy": "high"
+    }
+  ],
+  "model_used": "gemini-3.1-flash-lite",
+  "source_transcript": "My crush's dad is a dragon. One roar and every boy who knocks on her door runs. Even a firefighter. He left his truck, so I knocked with a fire extinguisher. Her family has one rule. If you run, you never come back. The door opened. He was the size of a bus, and she was watching from the upstairs window. I said, Hi! I'm here to take your daughter out. Fire! My eyebrows were gone. I sprayed myself and handed him flowers. Fire! I told him my best joke. Fire! I tripped over his tail. The biggest fire yet. He slammed the door. I sat on her steps, still smoking. Every other boy got a roar. I got burned four times. He must really hate me. And she'd seen all of it. Then the whole house started shaking. Smoke poured out of every window inside. He was laughing. The door opened. She came out with a brand new fire extinguisher. Dragons only breathed fire when they laugh. He's never laughed at a boy before. She put it in my hands. So, are you taking me out or not?",
+  "source_words_per_sec": 5.11
+}

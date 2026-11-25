@@ -1,0 +1,98 @@
+{
+  "reel_id": "Df_U-EihgxF",
+  "hook_formula": "Absurd High-Concept Premise + Instant Visual Payoff: Immediately establishes a supernatural ruleset ('Every time I talk to my crush, something falls from the sky') paired with rapid visual escalation (flowerpot to piano) within 3 seconds, triggering curiosity about why it happens.",
+  "story_arc": "Setup: Confesses strange rule where speaking to crush causes objects to fall from the sky.\nEscalation: Objects grow larger (flower pot -> bathtub -> piano -> canoe -> shopping cart) as he tries workarounds (helmets, middleman, phone calls) while noting mystery clues (bell sound, scratch marks).\nTwist & Payoff: Confesses in person, spots her cat on the roof pushing a car; girl says yes to the date, prompting the cat to drop a rose instead of a car.",
+  "pacing": {
+    "words_per_sec": 5.38,
+    "avg_cut_sec": 1.12,
+    "total_cuts": 32
+  },
+  "visual_style": {
+    "environments_seen": [
+      "School courtyard with clock tower",
+      "Suburban neighborhood sidewalk",
+      "Character bedroom",
+      "House porch and rooftop"
+    ],
+    "camera_patterns": [
+      "mcu -> wide -> low_angle -> high_angle -> close_up -> tilt_up"
+    ],
+    "lighting_moods": [
+      "bright sunny daytime",
+      "warm interior lighting"
+    ],
+    "character_archetypes": [
+      {
+        "role": "protagonist",
+        "outfit_style": "Green-and-black striped long sleeve sweater with black pants and spiky green hair",
+        "primary_colors": [
+          "#1EA038",
+          "#111111"
+        ]
+      },
+      {
+        "role": "crush",
+        "outfit_style": "Black preppy blazer uniform with pleated skirt and white thigh-high socks",
+        "primary_colors": [
+          "#1C1C1E",
+          "#FFFFFF"
+        ]
+      },
+      {
+        "role": "antagonist_cat",
+        "outfit_style": "Orange striped blocky cat avatar with red collar",
+        "primary_colors": [
+          "#E67E22",
+          "#D35400"
+        ]
+      }
+    ],
+    "visual_gags_and_fx": [
+      "Objects falling from sky",
+      "3 stacked safety helmets",
+      "Scratch mark texture overlay on bathtub prop",
+      "Cat pushing full-size red sports car off roof",
+      "Falling rose ending"
+    ]
+  },
+  "shot_rhythm_template": [
+    {
+      "beat": "hook",
+      "target_sec": 1.1,
+      "cam": "mcu",
+      "move": "static",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation_montage",
+      "target_sec": 0.8,
+      "cam": "medium",
+      "move": "pan_up",
+      "energy": "high"
+    },
+    {
+      "beat": "mystery_clues",
+      "target_sec": 1.2,
+      "cam": "close_up",
+      "move": "zoom_in",
+      "energy": "medium"
+    },
+    {
+      "beat": "climax_confrontation",
+      "target_sec": 1.5,
+      "cam": "low_angle",
+      "move": "tilt_up",
+      "energy": "high"
+    },
+    {
+      "beat": "twist_resolution",
+      "target_sec": 1.1,
+      "cam": "mcu",
+      "move": "crash_in",
+      "energy": "high"
+    }
+  ],
+  "model_used": "gemini-3.6-flash",
+  "source_transcript": "Every time I talked to my crush, something falls from the sky. Yesterday it was a piano. It started small. Hi! Gotta flower pot. Can I borrow a pencil? Gotta bathtub. Then we talked about homework for one whole minute. That was the piano. She never ran away. I almost did. The longer I talked, the bigger it gets. And I still haven't asked her out. I tried wearing three helmets. I sent my best friend to ask for me. A canoe landed on him. I called her from my bedroom. A shopping cart came through my ceiling. Two things bugged me. Right before every crash I heard a tiny bell. And everything that fell had scratch marks on it. So today I went to her house and asked anyway. Will you go out with? I heard the bell. I looked up. Her cat was on the roof pushing a car toward the edge. It had been the cat all year. She looked up too. Don't! She told the cat. I'm saying yes. The cat stared at me for a long time. Then it pushed something off the roof anyway. A rose.",
+  "source_words_per_sec": 5.38
+}

@@ -1,0 +1,94 @@
+{
+  "reel_id": "DgEXh3Ouqmp",
+  "hook_formula": "High-concept sensory connection premise paired with immediate dramatic action to stop scrolling.",
+  "story_arc": "Setup: Protagonist realizes crush shares physical sensations. Escalation: Crush hunts for her mystery match across school. Payoff: She pins protagonist, kisses him, and confirms his hidden feelings.",
+  "pacing": {
+    "words_per_sec": 5.53,
+    "avg_cut_sec": 1.08,
+    "total_cuts": 31
+  },
+  "visual_style": {
+    "environments_seen": [
+      "math classroom",
+      "convenience store",
+      "school courtyard",
+      "gymnasium",
+      "hallway lockers"
+    ],
+    "camera_patterns": [
+      "mcu",
+      "medium_shot",
+      "over_the_shoulder",
+      "close_up",
+      "low_angle"
+    ],
+    "lighting_moods": [
+      "bright daytime",
+      "indoor fluorescent"
+    ],
+    "character_archetypes": [
+      {
+        "role": "protagonist",
+        "outfit_style": "Green-and-black striped sweater with dark pants and styled green hair",
+        "primary_colors": [
+          "#2B9E3A",
+          "#1A1A1A"
+        ]
+      },
+      {
+        "role": "crush",
+        "outfit_style": "Black school blazer, pleated skirt, white knee socks, long dark hair",
+        "primary_colors": [
+          "#111111",
+          "#FFFFFF"
+        ]
+      }
+    ],
+    "visual_gags_and_fx": [
+      "synchronized reaction poses",
+      "dynamic motion blur cuts",
+      "bold kinetic text popups",
+      "dramatic close-up framing"
+    ]
+  },
+  "shot_rhythm_template": [
+    {
+      "beat": "hook",
+      "target_sec": 1.3,
+      "cam": "mcu",
+      "move": "motion_blur_pan",
+      "energy": "high"
+    },
+    {
+      "beat": "inciting_incident",
+      "target_sec": 4.3,
+      "cam": "medium_shot",
+      "move": "static",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 14.2,
+      "cam": "wide_shot",
+      "move": "pan",
+      "energy": "medium"
+    },
+    {
+      "beat": "climax",
+      "target_sec": 24.5,
+      "cam": "close_up",
+      "move": "crash_in",
+      "energy": "high"
+    },
+    {
+      "beat": "payoff",
+      "target_sec": 33.4,
+      "cam": "low_angle",
+      "move": "tilt_down",
+      "energy": "medium"
+    }
+  ],
+  "model_used": "gemini-3.6-flash",
+  "source_transcript": "My crush can feel everything I do. I found out when I stubbed my toe and math, and she screamed from across the room. I sneezed. She sneezed. I drank a slushy too fast, and she grabbed her head. She had no idea it was me, and I planned to keep it that way. But you can't hide your heart. Every time I saw her, mine went crazy, and she'd press a hand to her chest. So she went hunting. She walked up to every boy in school and stood an inch from his face, waiting for her heart to lace. Nothing. Nothing. Nothing. Then she got to me. I held my breath, which was a mistake, because so did she. Found you, she whispered. I tried to run, but she pinned me against the lockers. Her face was so close, my heart was pounding, and so was hers. Then, just to be sure, she kissed my cheek. My heart went so crazy that her knees gave out. She slid down to the floor, grinning up at me. So that's how much you like me.",
+  "source_words_per_sec": 5.53
+}

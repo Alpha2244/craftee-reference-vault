@@ -1,0 +1,112 @@
+{
+  "reel_id": "DgE5b8LPVAw",
+  "hook_formula": "Forbidden rule premise setup creates instant conflict and high-stakes social tension.",
+  "story_arc": "Setup: Friends secretly date each other's sisters. Escalation: Suspicion grows, leading to a joint investigation. Twist/Payoff: Diner trap exposes their mutual secret in a funny standoff.",
+  "pacing": {
+    "words_per_sec": 5.14,
+    "avg_cut_sec": 1.19,
+    "total_cuts": 30
+  },
+  "visual_style": {
+    "environments_seen": [
+      "Outdoor Park",
+      "Store Aisle",
+      "Under Bleachers",
+      "School Courtyard",
+      "Locker Room",
+      "Retro Diner"
+    ],
+    "camera_patterns": [
+      "mcu",
+      "wide_shot",
+      "over_the_shoulder",
+      "medium_shot",
+      "close_up"
+    ],
+    "lighting_moods": [
+      "bright_daylight",
+      "indoor_store_lighting",
+      "warm_diner_lights"
+    ],
+    "character_archetypes": [
+      {
+        "role": "protagonist",
+        "outfit_style": "Green striped long-sleeve and black pants",
+        "primary_colors": [
+          "#00FF00",
+          "#000000"
+        ]
+      },
+      {
+        "role": "best_friend",
+        "outfit_style": "Red track jacket and black pants",
+        "primary_colors": [
+          "#FF0000",
+          "#000000"
+        ]
+      },
+      {
+        "role": "protagonist_sister",
+        "outfit_style": "Mint green jacket with green pigtails",
+        "primary_colors": [
+          "#98FF98",
+          "#000000"
+        ]
+      },
+      {
+        "role": "friend_sister",
+        "outfit_style": "Black blazer, skirt, and long dark hair",
+        "primary_colors": [
+          "#000000",
+          "#FFFFFF"
+        ]
+      }
+    ],
+    "visual_gags_and_fx": [
+      "blushing face overlays",
+      "heart eyes",
+      "rapid shot cuts",
+      "knuckle cracking animation"
+    ]
+  },
+  "shot_rhythm_template": [
+    {
+      "beat": "hook",
+      "target_sec": 1.3,
+      "cam": "mcu",
+      "move": "push_in",
+      "energy": "high"
+    },
+    {
+      "beat": "inciting_incident",
+      "target_sec": 2.4,
+      "cam": "ms",
+      "move": "static",
+      "energy": "medium"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 15.7,
+      "cam": "ws",
+      "move": "tracking",
+      "energy": "high"
+    },
+    {
+      "beat": "climax_setup",
+      "target_sec": 24.1,
+      "cam": "cu",
+      "move": "static",
+      "energy": "high"
+    },
+    {
+      "beat": "payoff",
+      "target_sec": 35.7,
+      "cam": "mcu",
+      "move": "static",
+      "energy": "very_high"
+    }
+  ],
+  "model_used": "gemini-3.6-flash",
+  "source_transcript": "My best friend has one rule, never date his sister. Yesterday his sister asked me out. The same day he asked out mine. Suddenly we both had dentist appointments every Friday. We both started wearing cologne. He asked me how to make a girl laugh for a friend. I asked him the same thing for a friend. Behind the bleachers his sister kissed my cheek while he walked right past us, holding my sister's hand. Neither of us saw the other. At lunch he slammed his tray down. Someone's dating my sister. Help me find him. Only if you help me find mine. So we teamed up. We questioned the whole football team. We each made a list of suspects and put each other last. Then we set a trap. We told our sisters to bring their boyfriends to the diner on Friday. Our sisters walked in alone. His sister slid in next to me. Mine slid in next to him. Very slowly we both cracked our knuckles. If you hurt her you're dead. Our sisters cracked theirs. If you hurt him you're dead.",
+  "source_words_per_sec": 5.14
+}
