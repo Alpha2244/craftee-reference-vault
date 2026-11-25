@@ -4,9 +4,9 @@ on:
   workflow_dispatch:
     inputs:
       max_reels:
-        description: "Number of new Reels to scrape & analyze in this run"
+        description: "Number of new videos to scrape & analyze in this run"
         required: false
-        default: "5"
+        default: "25"
   schedule:
     - cron: "0 12 */2 * *"
 
@@ -16,7 +16,7 @@ permissions:
 jobs:
   harvest:
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    timeout-minutes: 60
 
     steps:
       - name: 1. Checkout Reference Vault Repo
@@ -36,16 +36,16 @@ jobs:
             pip install -q "faster-whisper>=1.0.3" "yt-dlp>=2024.10.22" "curl_cffi>=0.7.0" "Pillow>=10.0.0" "numpy>=1.26.0"
           fi
 
-      - name: 3. Scrape Public Reels from @craftee_films (Cookie-Free)
+      - name: 3. Scrape Massive Batch of Reels & Shorts (Cookie-Free)
         env:
           IG_TARGET_USER: "craftee_films"
-          MAX_REELS_PER_RUN: ${{ github.event.inputs.max_reels || '5' }}
+          MAX_REELS_PER_RUN: ${{ github.event.inputs.max_reels || '25' }}
         run: |
           SCRIPT=$(find . -maxdepth 3 -name "scrape_ig.py" | head -n 1)
           test -n "$SCRIPT" || { echo "scrape_ig.py not found"; exit 1; }
           python "$SCRIPT"
 
-      - name: 4. Transcribe Audio & Extract Camera Cut Keyframes
+      - name: 4. Transcribe Audio, Extract Dense Frames & Rebuild Master Corpus
         run: |
           SCRIPT=$(find . -maxdepth 3 -name "extract_and_transcribe.py" | head -n 1)
           test -n "$SCRIPT" || { echo "extract_and_transcribe.py not found"; exit 1; }
@@ -59,15 +59,18 @@ jobs:
           test -n "$SCRIPT" || { echo "analyze_reel.py not found"; exit 1; }
           python "$SCRIPT"
 
-      - name: 6. Commit Transcripts, Keyframes & Style Blueprints to Repo
+      - name: 6. Commit Master Script Corpus, Dense Frames & Blueprints to Repo
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           mkdir -p vault/raw_meta vault/transcripts vault/frames vault/blueprints
           git add vault/raw_meta vault/transcripts vault/frames vault/blueprints
+          if [ -f vault/master_script_corpus.json ]; then
+            git add vault/master_script_corpus.json
+          fi
           if ! git diff --cached --quiet; then
-            git commit -m "Harvested & analyzed new @craftee_films reference blueprints"
+            git commit -m "Harvested & analyzed massive @craftee_films script corpus, frames & blueprints"
             git push
           else
-            echo "No new blueprints to commit."
+            echo "No new data to commit."
           fi
