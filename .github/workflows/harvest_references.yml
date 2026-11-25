@@ -8,7 +8,6 @@ on:
         required: false
         default: "5"
   schedule:
-    # Automatically harvests new Reels every 2 days at 12:00 UTC
     - cron: "0 12 */2 * *"
 
 permissions:
@@ -31,28 +30,40 @@ jobs:
       - name: Install Dependencies
         run: |
           sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
-          pip install -q -r requirements.txt
+          if [ -f requirements.txt ]; then
+            pip install -q -r requirements.txt
+          else
+            pip install -q "faster-whisper>=1.0.3" "yt-dlp>=2024.10.22" "curl_cffi>=0.7.0" "Pillow>=10.0.0" "numpy>=1.26.0"
+          fi
 
-      - name: 3. Scrape Public Reels from @craftee_films
+      - name: 3. Scrape Public Reels from @craftee_films (Cookie-Free)
         env:
           IG_TARGET_USER: "craftee_films"
           MAX_REELS_PER_RUN: ${{ github.event.inputs.max_reels || '5' }}
-          IG_SESSIONID: ${{ secrets.IG_SESSIONID }}
-        run: python scripts/scrape_ig.py
+        run: |
+          SCRIPT=$(find . -maxdepth 3 -name "scrape_ig.py" | head -n 1)
+          test -n "$SCRIPT" || { echo "scrape_ig.py not found"; exit 1; }
+          python "$SCRIPT"
 
       - name: 4. Transcribe Audio & Extract Camera Cut Keyframes
-        run: python scripts/extract_and_transcribe.py
+        run: |
+          SCRIPT=$(find . -maxdepth 3 -name "extract_and_transcribe.py" | head -n 1)
+          test -n "$SCRIPT" || { echo "extract_and_transcribe.py not found"; exit 1; }
+          python "$SCRIPT"
 
-      - name: 5. Reverse-Engineer Hooks, Cameras & Outfits with Gemini Vision
+      - name: 5. Reverse-Engineer Hooks, Cameras & Outfits (Multi-Model Defensive)
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-        run: python scripts/analyze_reel.py
+        run: |
+          SCRIPT=$(find . -maxdepth 3 -name "analyze_reel.py" | head -n 1)
+          test -n "$SCRIPT" || { echo "analyze_reel.py not found"; exit 1; }
+          python "$SCRIPT"
 
       - name: 6. Commit Transcripts, Keyframes & Style Blueprints to Repo
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          # Keep raw MP4s out of git so repo stays fast; commit all transcripts, frames & blueprints
+          mkdir -p vault/raw_meta vault/transcripts vault/frames vault/blueprints
           git add vault/raw_meta vault/transcripts vault/frames vault/blueprints
           if ! git diff --cached --quiet; then
             git commit -m "Harvested & analyzed new @craftee_films reference blueprints"
