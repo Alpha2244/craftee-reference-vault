@@ -1,5 +1,6 @@
 {
   "reel_id": "Df3ST5WhQwt",
+  "frames_analyzed_count": 143,
   "analysis_mode": "offline_deterministic_fallback",
   "hook_formula": "Immediate 0-3s high-stakes action line with crash-in zoom and rapid visual cut",
   "story_arc": "Fast hook -> rapid escalating micro-beats -> sudden twist -> comedic/dramatic payoff",
@@ -223,6 +224,7 @@
       "energy": "high"
     }
   ],
+  "sheets_analyzed_count": 6,
   "source_transcript": "A goddess got kicked out of Heaven. She can only go back when I become a good person. Heaven's list says I'm the worst kid in town. I once forgot to return a library book, so she moved into my room. She took my bed. I took the floor. She made me do my homework. It turned into a bird and flew away. She made me share my lunch with the bully. It exploded in his face. She sent me to bed early. I woke up the next afternoon. Every time I got in trouble, her halo glowed a little brighter and she smiled. She tried pizza for the first time. She ate eleven slices. She sat with me on the roof every night counting stars. I didn't want her to leave, but a goddess belongs in Heaven. So I tried my hardest. I helped every old lady cross the street. I gave my piggy bank to the dog shelter. That night I caught her turning my homework into a bird. She'd been doing it all along. She never wanted to go back. Heaven doesn't have pizza or me. Now I forget to return a library book every single week.",
   "source_words_per_sec": 5.55
 }

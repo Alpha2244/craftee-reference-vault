@@ -1,7 +1,9 @@
 {
   "reel_id": "Df92gswv6_I",
-  "hook_formula": "High-stakes dystopian rule paired with an overhead threat creates immediate mystery and visual tension.",
-  "story_arc": "Setup: A giant hand takes fast hearts, but stops over the calmest boy (52 bpm). Escalation: The town tries scaring him to force a fast heart, but a sudden noise startles the hand. Twist/Payoff: The boy realizes the hand is terrified, but his crush's presence dangerously spikes his heart rate.",
+  "frames_analyzed_count": 297,
+  "analysis_mode": "offline_deterministic_fallback",
+  "hook_formula": "Immediate 0-3s high-stakes action line with crash-in zoom and rapid visual cut",
+  "story_arc": "Fast hook -> rapid escalating micro-beats -> sudden twist -> comedic/dramatic payoff",
   "pacing": {
     "words_per_sec": 4.18,
     "avg_cut_sec": 21.24,
@@ -9,76 +11,101 @@
   },
   "visual_style": {
     "environments_seen": [
-      "Town square",
-      "Library exterior",
-      "Bakery area"
+      "MusicRow",
+      "TownPool",
+      "Gym",
+      "Street",
+      "School"
     ],
     "camera_patterns": [
-      "low_angle_ws",
-      "mcu",
-      "cu",
-      "extreme_low_angle_upward"
+      "mcu -> ins -> ws -> low -> ecu -> two"
     ],
     "lighting_moods": [
-      "daylight",
-      "shadowed overcast"
+      "sunny",
+      "bright_day",
+      "sunset"
     ],
     "character_archetypes": [
       {
         "role": "protagonist",
-        "outfit_style": "Casual cyan top with beige pants",
+        "gender": "male",
+        "outfit_style": "vibrant streetwear",
         "primary_colors": [
-          "#4AD0E8",
-          "#E5D3B3"
+          "#1e73f2",
+          "#f5c29b"
         ]
       },
       {
-        "role": "love_interest",
-        "outfit_style": "Yellow cardigan over blue collared shirt",
+        "role": "sister_or_friend",
+        "gender": "female",
+        "outfit_style": "colorful casual",
         "primary_colors": [
-          "#E0B849",
-          "#6086B1"
+          "#ff4f8b",
+          "#f7c7a3"
         ]
       }
     ],
+    "background_crowd_density": "4-6 background NPCs in wide shots",
     "visual_gags_and_fx": [
-      "Giant floating stone hand",
-      "Crashing plate physics",
-      "Dynamic text subtitles",
-      "Motion blur camera shake"
+      "crash_in",
+      "whoosh",
+      "boom",
+      "raincloud",
+      "bolt"
     ]
   },
   "shot_rhythm_template": [
     {
       "beat": "hook",
-      "target_sec": 20.16,
-      "cam": "low_angle_ws",
-      "move": "static",
-      "energy": "tense"
+      "target_sec": 2.4,
+      "cam": "mcu",
+      "move": "crash_in",
+      "energy": "high"
+    },
+    {
+      "beat": "hook",
+      "target_sec": 2.4,
+      "cam": "ins",
+      "move": "push",
+      "energy": "high"
     },
     {
       "beat": "escalation",
-      "target_sec": 68.93,
-      "cam": "mcu",
-      "move": "pan_and_scan",
-      "energy": "moderate"
+      "target_sec": 2.4,
+      "cam": "ws",
+      "move": "reveal_push",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 2.4,
+      "cam": "low",
+      "move": "creep",
+      "energy": "high"
     },
     {
       "beat": "climax",
-      "target_sec": 34.2,
-      "cam": "cu",
-      "move": "whip_pan",
+      "target_sec": 1.867,
+      "cam": "ecu",
+      "move": "drift",
       "energy": "high"
     },
     {
-      "beat": "twist",
-      "target_sec": 25.28,
-      "cam": "extreme_low_angle_upward",
-      "move": "slow_push_in",
+      "beat": "climax",
+      "target_sec": 1.2,
+      "cam": "two",
+      "move": "lock",
+      "energy": "high"
+    },
+    {
+      "beat": "climax",
+      "target_sec": 2.4,
+      "cam": "ms",
+      "move": "crash_in",
       "energy": "high"
     }
   ],
-  "model_used": "gemini-3.6-flash",
+  "sheets_analyzed_count": 12,
   "source_transcript": "The hand comes down every morning and checks our hearts. Whoever has a fast heart, it carries off for good. So we never run. We never shout. We walk out of burning houses. This morning, it stopped on my chest. My heart is slow. It still hasn't lifted. Nobody knows what it's waiting for. I'm at 52, the slowest heart in town. I'm a little famous for it. Last night, a girl smiled at me, and it went to 90. I told nobody. She's in the square right now. I'm not looking. So we stay calm about everything. A man robbed the bank last week and waited in line like everybody else. When the library caught fire, the fire watchman knocked. When you have a moment, a bear walked into the bakery. The baker said, take a number, please. When we're scared, we put two fingers on a friend's wrist and count. It slows us down. Nobody leaves the square until the hand is done. So everybody brings a chair. By noon, 500 chairs sat around me. It's angry. People whispered. It's hungry. Then Mr. Crane, the tally man, stood up. His market was still shut. It wants a fast heart. He said, let's give it one. Then we all go home. So the whole town tried to scare me politely because nobody can shout. A little boy walked up. Boo. He said, if you don't mind. I stayed at 52. An old lady leaned in. Sorry, dear. There's a spider on your neck. There wasn't. And I stayed at 53. Please be scared. A man told me, we have soup on. Try harder, everyone. Said Mr. Crane, some of us have shops to open. Then he stepped behind me and clapped right next to my ear. Nothing personal, kid. 70. And the fingers curled. They closed around my chest like a cage and the sky got smaller. It didn't lift me. I counted. 60. 55. The fingers opened. 70 is fast. It felt it. It didn't carry me off. So what is it waiting for? Get the bear, said Mr. Crane. They brought it, still holding its number. Very sorry about this. The baker told me. He's very gentle, mostly. Then it sat down on a tray of plates. Crash. Everybody jumped. Me too. And the hand jumped. Above me. The sky jerked up a foot. Its fingers shook harder than anybody's. 80. And the fingers curled tighter. Then they opened. It's angry. Somebody whispered. It's going to take us all. What kind of monster jumps at plates? I'm the only one right under it. So I looked straight up. On the inside of its wrist, passed the knuckles. There was a vein. It was beating crazy fast. Faster than any heart it ever carried off. It never chose anybody. It flinched. A fast heart scares it. Its hand shuts. Somebody is inside. Everybody had ever carried off was a flinch. It isn't waiting for anything. It's holding on. Same as us when we're scared. So I just have to stay slow. Easy. I'm famous for it. The bear, the spider, Mr. Crane, nothing moved me. Only one thing has ever gotten me to 90. Then the girl from last night stood up. Not smiling. Worry. She walked over and knelt next to me. She put two fingers on my wrist. You must be so scared. She whispered. I'll count with you. 52, 60, 70. Her eyebrows went up. Why is it going up? The whole town tried to scare me all day. Nothing worked. Then somebody tried to help. She's the only person in town who can't slow me down. 80. She said, above us, the sky is getting smaller.",
   "source_words_per_sec": 4.18
 }

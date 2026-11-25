@@ -1,8 +1,7 @@
 {
   "reel_id": "Df3nfdDBXCX",
-  "analysis_mode": "offline_deterministic_fallback",
-  "hook_formula": "Immediate 0-3s high-stakes action line with crash-in zoom and rapid visual cut",
-  "story_arc": "Fast hook -> rapid escalating micro-beats -> sudden twist -> comedic/dramatic payoff",
+  "hook_formula": "Establishes a high-stakes secret dynamic immediately ('My crush's twin brother has been my best friend for a year') using a close two-shot and snappy subtitle pacing to trigger instant curiosity about identity and deception.",
+  "story_arc": "Setup: Protagonist befriends the twin brother of his crush while struggling to talk to the girl at school. Escalation: Daily conversations about the crush reveal oddly specific inside knowledge, high voice, pulled-down cap, and dropped objects. Climax/Twist: Inviting both to a birthday party leads to the 'brother' disappearing and the crush walking out holding his cap, revealing the twin never existed and she disguised herself.",
   "pacing": {
     "words_per_sec": 5.8,
     "avg_cut_sec": 1.14,
@@ -10,219 +9,89 @@
   },
   "visual_style": {
     "environments_seen": [
-      "MusicRow",
-      "TownPool",
-      "Gym",
-      "Street",
-      "School"
+      "Suburban street outside houses",
+      "Boys' school exterior",
+      "Treehouse interior",
+      "Arcade room with neon hearts",
+      "School hallway with blue lockers",
+      "Backyard with birthday cake and fence"
     ],
+    "background_details": "Blocky Roblox style architecture featuring voxel trees, brick textures, blue lockers, arcade cabinets, birthday decorations, and polaroid photo walls.",
     "camera_patterns": [
-      "mcu -> ins -> ws -> low -> ecu -> two"
+      "mcu",
+      "ws",
+      "mcu",
+      "cu",
+      "ins",
+      "two",
+      "low_angle",
+      "ecu"
     ],
     "lighting_moods": [
-      "sunny",
       "bright_day",
-      "sunset"
+      "sunny"
     ],
     "character_archetypes": [
       {
         "role": "protagonist",
         "gender": "male",
-        "outfit_style": "vibrant streetwear",
+        "skin_hex": "#f5d6b0",
+        "hair_style": "spiky",
+        "outfit_style": "black and green striped long-sleeve shirt with dark pants",
         "primary_colors": [
-          "#1e73f2",
-          "#f5c29b"
+          "#00ff00",
+          "#000000"
         ]
       },
       {
-        "role": "sister_or_friend",
-        "gender": "female",
-        "outfit_style": "colorful casual",
+        "role": "twin brother / crush disguise",
+        "gender": "male",
+        "skin_hex": "#f5d6b0",
+        "hair_style": "blue cap pulled low",
+        "outfit_style": "grey hoodie and dark pants",
         "primary_colors": [
-          "#ff4f8b",
-          "#f7c7a3"
+          "#808080",
+          "#0000ff"
+        ]
+      },
+      {
+        "role": "crush / sister",
+        "gender": "female",
+        "skin_hex": "#f5d6b0",
+        "hair_style": "long black hair with red hair clip",
+        "outfit_style": "school uniform skirt, tie, and sweater",
+        "primary_colors": [
+          "#000000",
+          "#ffffff"
         ]
       }
     ],
-    "background_crowd_density": "4-6 background NPCs in wide shots",
+    "character_interactions": [
+      "Characters stand side by side on skateboards",
+      "Sit across each other in treehouse talking or playing video games",
+      "Hold props like polaroids, gifts, ice cream, and a blue cap",
+      "Run behind fences and swap positions to simulate absence"
+    ],
     "visual_gags_and_fx": [
-      "crash_in",
-      "whoosh",
-      "boom",
-      "raincloud",
-      "bolt"
+      "Polaroid photo walls with heart icons",
+      "Random goose appearance",
+      "Dropping items on cue",
+      "Gift box prop holding"
     ]
   },
   "shot_rhythm_template": [
     {
       "beat": "hook",
-      "target_sec": 1.2,
+      "target_sec": 1.6,
       "cam": "mcu",
       "move": "crash_in",
-      "energy": "high"
-    },
-    {
-      "beat": "hook",
-      "target_sec": 1.333,
-      "cam": "ins",
-      "move": "push",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.267,
-      "cam": "ws",
-      "move": "reveal_push",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.5,
-      "cam": "low",
-      "move": "creep",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.2,
-      "cam": "ecu",
-      "move": "drift",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.234,
-      "cam": "two",
-      "move": "lock",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.833,
-      "cam": "ms",
-      "move": "crash_in",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.2,
-      "cam": "ots",
-      "move": "push",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.3,
-      "cam": "mcu",
-      "move": "reveal_push",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.4,
-      "cam": "ins",
-      "move": "creep",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.533,
-      "cam": "ws",
-      "move": "drift",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.2,
-      "cam": "low",
-      "move": "lock",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.2,
-      "cam": "ecu",
-      "move": "crash_in",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.2,
-      "cam": "two",
-      "move": "push",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.2,
-      "cam": "ms",
-      "move": "reveal_push",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.2,
-      "cam": "ots",
-      "move": "creep",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.2,
-      "cam": "mcu",
-      "move": "drift",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.2,
-      "cam": "ins",
-      "move": "lock",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.2,
-      "cam": "ws",
-      "move": "crash_in",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.2,
-      "cam": "low",
-      "move": "push",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.467,
-      "cam": "ecu",
-      "move": "reveal_push",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.633,
-      "cam": "two",
-      "move": "creep",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.2,
-      "cam": "ms",
-      "move": "drift",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.2,
-      "cam": "ots",
-      "move": "lock",
       "energy": "high"
     }
   ],
+  "model_used": "gemini-3.5-flash-lite",
+  "vision_transport": "gemini_files_api_100pct",
+  "frames_analyzed_count": 140,
+  "sheets_analyzed_count": 6,
   "source_transcript": "My crush's twin brother has been my best friend for a year. He's the only one who knows I like her. He goes to the boys' school across town. We built a tree house. He beat me at every video game. At school, his sister never said one word to me. So I asked him about her every day. Every time he said the same thing. She likes you. Just ask her idiot. He always wore his cap pull down low. His voice was kind of high. He said it hadn't broken yet. He had the same red hair clip as her. He said he was holding it for her. He knew everything about her, even that I'm scared of geese. Every time I said her name, he dropped whatever he was holding. And I'd never seen them in the same room. So for my birthday, I invited them both. He showed up alone. He said he'd go get his sister and ran behind my house. A minute later, she walked out holding his cap. She doesn't have a twin brother. She'd been too shy to talk to me for a whole year. Then she looked at me and said, just ask me, idiot.",
   "source_words_per_sec": 5.8
 }

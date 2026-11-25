@@ -1,7 +1,7 @@
 {
   "reel_id": "Df6LaCxum6q",
-  "hook_formula": "Absurd premise hook ('A witch turned my crush into a grandma') pairing high-stakes romantic interest with visual comedy to immediately stop scrolling.",
-  "story_arc": "Setup: Crush gets turned into a 90yo grandma attending school -> Escalation: Discovering brave acts lower her age by 1 year, leading to a montage of risky stunts -> Twist/Payoff: Protagonist's ultimate brave act (asking her to the dance) instantly snaps her back to youth.",
+  "hook_formula": "Instant absurd transformation hook (witch curses crush into a 90yo grandma with a walker at school), pairing immediate visual contradiction with high-stakes teenage romance.",
+  "story_arc": "Setup: Crush is cursed into an elderly woman struggling through normal school routines. Escalation: Hero discovers brave acts subtract one year of age and sets up stunts. Payoff: Stunts are too slow, so hero takes the ultimate brave risk by asking her out, breaking the curse instantly.",
   "pacing": {
     "words_per_sec": 5.22,
     "avg_cut_sec": 1.12,
@@ -9,84 +9,138 @@
   },
   "visual_style": {
     "environments_seen": [
-      "School Hallway",
-      "School Entrance",
-      "Classroom",
-      "Running Track (Night)",
-      "Courtyard",
-      "Assembly Stage",
-      "Study Desk"
+      "school locker hallway",
+      "school front courtyard",
+      "math classroom",
+      "athletic track field",
+      "school cafeteria lunch line",
+      "outdoor school lawn",
+      "boy's bedroom study desk",
+      "amusement park roller coaster",
+      "auditorium stage assembly",
+      "suburban residential hill"
     ],
+    "background_details": "Red metal lockers, modular school desks, outdoor track fences, brick school facades, suburban houses, cafeteria trays, and event posters.",
     "camera_patterns": [
       "mcu",
-      "mcu",
-      "cu",
-      "ws",
-      "mcu",
-      "cu"
+      "two_shot",
+      "ms",
+      "ecu",
+      "low_angle",
+      "tracking",
+      "pov",
+      "medium_full"
     ],
     "lighting_moods": [
-      "sunny",
-      "night",
-      "stage lights"
+      "bright_daylight",
+      "fluorescent_interior",
+      "night_athletic_lights",
+      "saturated_sunlight",
+      "stage_spotlight"
     ],
     "character_archetypes": [
       {
         "role": "protagonist",
-        "outfit_style": "Green spiky hair with black and green striped shirt",
+        "gender": "male",
+        "skin_hex": "#FFE0BD",
+        "hair_style": "spiky",
+        "outfit_style": "striped long-sleeve sweater and dark trousers",
         "primary_colors": [
-          "#15803D",
-          "#000000"
+          "#2ecc71",
+          "#1a1a1a"
         ]
       },
       {
-        "role": "crush_grandma",
-        "outfit_style": "Long white hair with school uniform and walking frame",
+        "role": "crush / grandma",
+        "gender": "female",
+        "skin_hex": "#FFE0BD",
+        "hair_style": "long with bangs (white-grey aged, black young)",
+        "outfit_style": "prep school blazer, necktie, pleated skirt, thigh-high socks",
         "primary_colors": [
-          "#FFFFFF",
-          "#1E293B"
+          "#222222",
+          "#ffffff"
+        ]
+      },
+      {
+        "role": "school bully",
+        "gender": "male",
+        "skin_hex": "#FFE0BD",
+        "hair_style": "backwards cap",
+        "outfit_style": "varsity jacket over white tee and jeans",
+        "primary_colors": [
+          "#e74c3c",
+          "#ffffff"
+        ]
+      },
+      {
+        "role": "witch",
+        "gender": "female",
+        "skin_hex": "#FFE0BD",
+        "hair_style": "pointed witch hat",
+        "outfit_style": "dark magical robes with purple trim",
+        "primary_colors": [
+          "#8e44ad",
+          "#111111"
         ]
       }
     ],
+    "character_interactions": "Close two-shots maintaining 1-2 block grid spacing; grandma character hunching behind a silver walker frame; props passed hand-to-hand with sudden snap poses.",
     "visual_gags_and_fx": [
-      "Medical walker prop",
-      "Purse hit attack",
-      "Age reduction numbers",
-      "Giant calculator desk pop",
-      "Stage microphone pop"
+      "glowing floating age subtraction counters (-1, 88, 87, 86, 85)",
+      "slapstick faceplant into soup bowl",
+      "purse strike attack animation",
+      "supernatural yellow flash de-aging effect",
+      "flower bouquet pop-in"
     ]
   },
   "shot_rhythm_template": [
     {
-      "beat": "hook",
-      "target_sec": 1.6,
+      "beat": "hook_curse",
+      "target_sec": 1.0,
       "cam": "mcu",
-      "move": "crash_in",
-      "energy": "high"
-    },
-    {
-      "beat": "premise_setup",
-      "target_sec": 6.5,
-      "cam": "mcu",
-      "move": "pan",
-      "energy": "medium"
-    },
-    {
-      "beat": "escalation_montage",
-      "target_sec": 18.0,
-      "cam": "ws",
       "move": "static",
       "energy": "high"
     },
     {
-      "beat": "climax_resolution",
-      "target_sec": 35.8,
+      "beat": "school_routine_struggle",
+      "target_sec": 5.0,
+      "cam": "ms",
+      "move": "whip_pan",
+      "energy": "medium"
+    },
+    {
+      "beat": "bully_retaliation_discovery",
+      "target_sec": 2.5,
+      "cam": "two_shot",
+      "move": "punch_in",
+      "energy": "high"
+    },
+    {
+      "beat": "stunt_montage_countdown",
+      "target_sec": 5.5,
+      "cam": "dynamic_angles",
+      "move": "fast_cuts",
+      "energy": "very_high"
+    },
+    {
+      "beat": "math_realization",
+      "target_sec": 1.5,
       "cam": "cu",
-      "move": "zoom_in",
-      "energy": "peak"
+      "move": "crash_zoom",
+      "energy": "medium"
+    },
+    {
+      "beat": "confession_payoff",
+      "target_sec": 2.0,
+      "cam": "two_shot",
+      "move": "snap_out",
+      "energy": "high"
     }
   ],
-  "model_used": "gemini-3.6-flash",
+  "model_used": "gemini-3.8-flash",
+  "vision_transport": "gemini_files_api_100pct",
+  "frames_analyzed_count": 71,
+  "sheets_analyzed_count": 3,
   "source_transcript": "A witch turned my crush into a grandma. She still had to come to school. I liked her since first grade. She has no idea. She was 90 and she still had to take the math test. The teacher started calling her ma'am. She ran the mile in gym with a walker. She finished on Thursday. She fell asleep in every class and once in her suit. Then the bully called her grandma. She hit him with a purse. The next morning she looked a year younger. That night I figured it out. Every time she does something brave she gets a year younger. So I made her brave. I took her on the biggest rollercoaster in the state. 88. I signed her up to sing at the school assembly. 87. She told the lunch lady the meatloaf tasted like feet. 86. She skateboarded down the steepest hill in town. 85. At this rate she'd be young again in 70 years. So I did the bravest thing I've ever done. I asked her to the dance. She said yes and was young again in one second.",
   "source_words_per_sec": 5.22
 }

@@ -1,7 +1,9 @@
 {
   "reel_id": "Df5iTKUh8ZY",
-  "hook_formula": "Paradoxical high-stakes claim ('My crush cried at my funeral. I'm not dead!') triggering instant curiosity.",
-  "story_arc": "Setup: Falls overboard, returns home to find non-refundable funeral underway. Escalation: Attends disguised, hearing absurd confessions from bully, teacher, and friend. Twist/Payoff: Crush reveals long-time secret feelings, then recognizes him by his hair.",
+  "frames_analyzed_count": 69,
+  "analysis_mode": "offline_deterministic_fallback",
+  "hook_formula": "Immediate 0-3s high-stakes action line with crash-in zoom and rapid visual cut",
+  "story_arc": "Fast hook -> rapid escalating micro-beats -> sudden twist -> comedic/dramatic payoff",
   "pacing": {
     "words_per_sec": 5.59,
     "avg_cut_sec": 1.03,
@@ -9,42 +11,47 @@
   },
   "visual_style": {
     "environments_seen": [
-      "Church/Funeral Hall",
-      "Class Boat Deck",
-      "Home Kitchen",
-      "Suburban Street"
+      "MusicRow",
+      "TownPool",
+      "Gym",
+      "Street",
+      "School"
     ],
     "camera_patterns": [
-      "mcu -> crash_in -> ws -> low -> ecu"
+      "mcu -> ins -> ws -> low -> ecu -> two"
     ],
     "lighting_moods": [
-      "warm interior",
-      "bright ocean daylight",
-      "suburban daylight"
+      "sunny",
+      "bright_day",
+      "sunset"
     ],
     "character_archetypes": [
       {
         "role": "protagonist",
-        "outfit_style": "Green spiky hair, black-and-green striped shirt, fake mustache disguise.",
+        "gender": "male",
+        "outfit_style": "vibrant streetwear",
         "primary_colors": [
-          "#00FF44",
-          "#111111"
+          "#1e73f2",
+          "#f5c29b"
         ]
       },
       {
-        "role": "crush",
-        "outfit_style": "Black dark hair, black suit jacket, pleated skirt.",
+        "role": "sister_or_friend",
+        "gender": "female",
+        "outfit_style": "colorful casual",
         "primary_colors": [
-          "#222222",
-          "#FFFFFF"
+          "#ff4f8b",
+          "#f7c7a3"
         ]
       }
     ],
+    "background_crowd_density": "4-6 background NPCs in wide shots",
     "visual_gags_and_fx": [
-      "giant sandwich pile",
-      "crying tear decals",
-      "meatloaf dish",
-      "bicycle ride animation"
+      "crash_in",
+      "whoosh",
+      "boom",
+      "raincloud",
+      "bolt"
     ]
   },
   "shot_rhythm_template": [
@@ -56,35 +63,168 @@
       "energy": "high"
     },
     {
-      "beat": "backstory",
-      "target_sec": 0.6,
-      "cam": "ws",
-      "move": "static",
-      "energy": "medium"
-    },
-    {
-      "beat": "absurd_escalation",
-      "target_sec": 0.9,
-      "cam": "mcu",
-      "move": "zoom_in",
+      "beat": "hook",
+      "target_sec": 1.2,
+      "cam": "ins",
+      "move": "push",
       "energy": "high"
     },
     {
-      "beat": "confession_climax",
-      "target_sec": 1.4,
-      "cam": "cu",
-      "move": "slow_zoom",
-      "energy": "medium"
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "ws",
+      "move": "reveal_push",
+      "energy": "high"
     },
     {
-      "beat": "resolution_twist",
-      "target_sec": 1.1,
-      "cam": "mcu",
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "low",
+      "move": "creep",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "ecu",
+      "move": "drift",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "two",
+      "move": "lock",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "ms",
       "move": "crash_in",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "ots",
+      "move": "push",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "mcu",
+      "move": "reveal_push",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "ins",
+      "move": "creep",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "ws",
+      "move": "drift",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "low",
+      "move": "lock",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "ecu",
+      "move": "crash_in",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "two",
+      "move": "push",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "ms",
+      "move": "reveal_push",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "ots",
+      "move": "creep",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.633,
+      "cam": "mcu",
+      "move": "drift",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "ins",
+      "move": "lock",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.467,
+      "cam": "ws",
+      "move": "crash_in",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.4,
+      "cam": "low",
+      "move": "push",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "ecu",
+      "move": "reveal_push",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "two",
+      "move": "creep",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "ms",
+      "move": "drift",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.233,
+      "cam": "ots",
+      "move": "lock",
       "energy": "high"
     }
   ],
-  "model_used": "gemini-3.6-flash",
+  "sheets_analyzed_count": 3,
   "source_transcript": "My crush cried at my funeral. I'm not dead! On the class boat trip, I fell overboard and floated to an island. It took me three days to get home. My mom found me that morning. She said it was too late to cancel the sandwiches. So I went to my own funeral in a fake mustache and my grandpa's hat. My hair didn't fit under it. The bully cried the hardest. He said I was the only kid who never ran from him. I ran from him every day. The lunch lady cried into the meatloaf. My teacher said she loved my essays. She gave every one of them a seat. My best friend gave a speech. Then he asked if he could have my bite. Finally, my crush walked up. She never said a word to me. She said she'd like me since second grade. She said she'd been too scared to tell me, and now it was too late. I almost ripped off the mustache right there. After the funeral, she walked straight up to me. She'd spotted my green spikes the second I walked in. Then she smiled. Nice mustache, seer.",
   "source_words_per_sec": 5.59
 }

@@ -1,8 +1,7 @@
 {
   "reel_id": "Df29ivcBfK_",
-  "analysis_mode": "offline_deterministic_fallback",
-  "hook_formula": "Immediate 0-3s high-stakes action line with crash-in zoom and rapid visual cut",
-  "story_arc": "Fast hook -> rapid escalating micro-beats -> sudden twist -> comedic/dramatic payoff",
+  "hook_formula": "The hook uses a high-stakes narrative premise ('Whoever reaches the top... gets to marry the girl') combined with a visual 'failure montage' that creates immediate curiosity about the protagonist's eventual success.",
+  "story_arc": "Setup: The impossible tower challenge and the girl inside. Escalation: A series of escalating, humorous failed attempts by various archetypes (knight, prince, wizard, protagonist). Twist/Payoff: The protagonist realizes the door was never locked, subverting the 'climbing' trope with a simple, grounded solution.",
   "pacing": {
     "words_per_sec": 5.34,
     "avg_cut_sec": 1.18,
@@ -10,219 +9,70 @@
   },
   "visual_style": {
     "environments_seen": [
-      "MusicRow",
-      "TownPool",
-      "Gym",
-      "Street",
-      "School"
+      "stone tower exterior",
+      "tower interior room",
+      "moat area",
+      "meadow/field",
+      "medieval village/kingdom"
     ],
+    "background_details": "Low-poly Roblox aesthetic, stone tower with a long braid hanging down, moat with water textures, hay bales, and a simple medieval village in the distance.",
     "camera_patterns": [
-      "mcu -> ins -> ws -> low -> ecu -> two"
+      "ws -> mcu -> ws -> mcu -> ecu -> ws -> mcu -> ecu -> ws -> mcu -> ws -> mcu -> ecu -> mcu"
     ],
     "lighting_moods": [
-      "sunny",
       "bright_day",
-      "sunset"
+      "sunset",
+      "night"
     ],
     "character_archetypes": [
       {
         "role": "protagonist",
         "gender": "male",
-        "outfit_style": "vibrant streetwear",
+        "skin_hex": "#f8d08b",
+        "hair_style": "spiky",
+        "outfit_style": "striped shirt",
         "primary_colors": [
-          "#1e73f2",
-          "#f5c29b"
+          "#00ff00",
+          "#000000"
         ]
       },
       {
-        "role": "sister_or_friend",
+        "role": "girl",
         "gender": "female",
-        "outfit_style": "colorful casual",
+        "skin_hex": "#f8d08b",
+        "hair_style": "long",
+        "outfit_style": "casual",
         "primary_colors": [
-          "#ff4f8b",
-          "#f7c7a3"
+          "#000000",
+          "#ffffff"
         ]
       }
     ],
-    "background_crowd_density": "4-6 background NPCs in wide shots",
+    "character_interactions": [
+      "Characters are shown in isolation during failures, then in close proximity at the door, emphasizing the shift from struggle to connection."
+    ],
     "visual_gags_and_fx": [
-      "crash_in",
-      "whoosh",
-      "boom",
-      "raincloud",
-      "bolt"
+      "falling animation",
+      "pillow spawn",
+      "catapult launch",
+      "wizard flying/falling",
+      "doormat text reveal",
+      "door opening"
     ]
   },
   "shot_rhythm_template": [
     {
       "beat": "hook",
-      "target_sec": 1.2,
+      "target_sec": 1.6,
       "cam": "mcu",
       "move": "crash_in",
-      "energy": "high"
-    },
-    {
-      "beat": "hook",
-      "target_sec": 1.2,
-      "cam": "ins",
-      "move": "push",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.533,
-      "cam": "ws",
-      "move": "reveal_push",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.2,
-      "cam": "low",
-      "move": "creep",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.2,
-      "cam": "ecu",
-      "move": "drift",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.2,
-      "cam": "two",
-      "move": "lock",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.2,
-      "cam": "ms",
-      "move": "crash_in",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.267,
-      "cam": "ots",
-      "move": "push",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.2,
-      "cam": "mcu",
-      "move": "reveal_push",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.2,
-      "cam": "ins",
-      "move": "creep",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.2,
-      "cam": "ws",
-      "move": "drift",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.2,
-      "cam": "low",
-      "move": "lock",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.2,
-      "cam": "ecu",
-      "move": "crash_in",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.933,
-      "cam": "two",
-      "move": "push",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.2,
-      "cam": "ms",
-      "move": "reveal_push",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.734,
-      "cam": "ots",
-      "move": "creep",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.2,
-      "cam": "mcu",
-      "move": "drift",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.2,
-      "cam": "ins",
-      "move": "lock",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.3,
-      "cam": "ws",
-      "move": "crash_in",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.2,
-      "cam": "low",
-      "move": "push",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.266,
-      "cam": "ecu",
-      "move": "reveal_push",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.367,
-      "cam": "two",
-      "move": "creep",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.2,
-      "cam": "ms",
-      "move": "drift",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.2,
-      "cam": "ots",
-      "move": "lock",
       "energy": "high"
     }
   ],
+  "model_used": "gemini-3.1-flash-lite",
+  "vision_transport": "gemini_files_api_100pct",
+  "frames_analyzed_count": 141,
+  "sheets_analyzed_count": 6,
   "source_transcript": "Whoever reaches the top of the tower gets to marry the girl inside. Four hundred boys have fallen off. I can't even climb a tree. I've loved her since I was six. Every day she let her hair down for the climbers. She also used a lot of conditioner. They slid straight into the moat. A knight built a giant ladder. It was one step too short. A prince tried a catapult. He landed in the next kingdom. A wizard tried flying. He forgot how to land. So I tried to. Her hair. A kite. A pole vault. I fell every time. But every time I fell a pillow landed under me first. She never threw one for anybody else. Then we heard the strongest knight in the land was coming on Sunday. He'd never fallen off anything in his life. On Saturday night I sat down by the tower and gave up. That's when I noticed the doormat. It said please knock. Every boy had wiped his feet on it. So I knocked. She opened the door right away. It had never been locked. We took the stairs.",
   "source_words_per_sec": 5.34
 }

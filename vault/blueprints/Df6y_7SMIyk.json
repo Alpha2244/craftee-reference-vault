@@ -1,7 +1,9 @@
 {
   "reel_id": "Df6y_7SMIyk",
-  "hook_formula": "High-stakes childhood game twist: an entity takes students who get pressed during 'heads down, thumbs up' every day at 3 PM.",
-  "story_arc": "Setup: A monster takes kids during a daily classroom ritual while protagonist's friend Nico keeps them safe by holding hands. Escalation: Desk counts dwindle over months as clues point to Nico having chalk-stained fingers and controlling the picks. Twist/Payoff: Nico chooses himself on the final day, but protagonist looks up, forcing the creature to target them both.",
+  "frames_analyzed_count": 329,
+  "analysis_mode": "offline_deterministic_fallback",
+  "hook_formula": "Immediate 0-3s high-stakes action line with crash-in zoom and rapid visual cut",
+  "story_arc": "Fast hook -> rapid escalating micro-beats -> sudden twist -> comedic/dramatic payoff",
   "pacing": {
     "words_per_sec": 4.22,
     "avg_cut_sec": 1.32,
@@ -9,87 +11,220 @@
   },
   "visual_style": {
     "environments_seen": [
-      "Elementary Classroom",
-      "School Exterior Entrance",
-      "Chalkboard Station",
-      "School Yard Gate"
+      "MusicRow",
+      "TownPool",
+      "Gym",
+      "Street",
+      "School"
     ],
     "camera_patterns": [
-      "mcu",
-      "crash_in",
-      "wide_shot",
-      "high_angle",
-      "close_up"
+      "mcu -> ins -> ws -> low -> ecu -> two"
     ],
     "lighting_moods": [
-      "Bright Classroom Day",
-      "Overcast Schoolyard",
-      "Foggy Vignette"
+      "sunny",
+      "bright_day",
+      "sunset"
     ],
     "character_archetypes": [
       {
         "role": "protagonist",
-        "outfit_style": "Grey pot-hat avatar in dark casual wear",
+        "gender": "male",
+        "outfit_style": "vibrant streetwear",
         "primary_colors": [
-          "#707070",
-          "#333333"
+          "#1e73f2",
+          "#f5c29b"
         ]
       },
       {
-        "role": "Nico (deuteragonist)",
-        "outfit_style": "Brown spiky hair in green jacket",
+        "role": "sister_or_friend",
+        "gender": "female",
+        "outfit_style": "colorful casual",
         "primary_colors": [
-          "#558B55",
-          "#4A2E10"
-        ]
-      },
-      {
-        "role": "The Chalk Creature",
-        "outfit_style": "Tall silhouette with white chalk marks",
-        "primary_colors": [
-          "#000000",
-          "#FFFFFF"
+          "#ff4f8b",
+          "#f7c7a3"
         ]
       }
     ],
+    "background_crowd_density": "4-6 background NPCs in wide shots",
     "visual_gags_and_fx": [
-      "Motion blur cut transitions",
-      "Giant shadow hand extension",
-      "Chalk particle dot effect",
-      "White screen fade overlay"
+      "crash_in",
+      "whoosh",
+      "boom",
+      "raincloud",
+      "bolt"
     ]
   },
   "shot_rhythm_template": [
     {
       "beat": "hook",
-      "target_sec": 1.6,
+      "target_sec": 1.2,
       "cam": "mcu",
       "move": "crash_in",
       "energy": "high"
     },
     {
-      "beat": "rule setup",
-      "target_sec": 6.0,
-      "cam": "wide_shot",
-      "move": "pan",
-      "energy": "medium"
+      "beat": "hook",
+      "target_sec": 1.2,
+      "cam": "ins",
+      "move": "push",
+      "energy": "high"
     },
     {
       "beat": "escalation",
-      "target_sec": 40.0,
-      "cam": "close_up",
-      "move": "static",
-      "energy": "medium"
+      "target_sec": 1.2,
+      "cam": "ws",
+      "move": "reveal_push",
+      "energy": "high"
     },
     {
-      "beat": "climax twist",
-      "target_sec": 140.0,
-      "cam": "high_angle",
-      "move": "zoom_in",
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "low",
+      "move": "creep",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "ecu",
+      "move": "drift",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.233,
+      "cam": "two",
+      "move": "lock",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "ms",
+      "move": "crash_in",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "ots",
+      "move": "push",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "mcu",
+      "move": "reveal_push",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "ins",
+      "move": "creep",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "ws",
+      "move": "drift",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "low",
+      "move": "lock",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "ecu",
+      "move": "crash_in",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "two",
+      "move": "push",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "ms",
+      "move": "reveal_push",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.633,
+      "cam": "ots",
+      "move": "creep",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.767,
+      "cam": "mcu",
+      "move": "drift",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.766,
+      "cam": "ins",
+      "move": "lock",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.234,
+      "cam": "ws",
+      "move": "crash_in",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.566,
+      "cam": "low",
+      "move": "push",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.834,
+      "cam": "ecu",
+      "move": "reveal_push",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.433,
+      "cam": "two",
+      "move": "creep",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "ms",
+      "move": "drift",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "ots",
+      "move": "lock",
       "energy": "high"
     }
   ],
-  "model_used": "gemini-3.6-flash",
+  "sheets_analyzed_count": 14,
   "source_transcript": "In my school, something walks between the desks every day at three. Everybody puts their head down and their thumb up. It walks up and down the rows, and presses one thumb. Whoever it presses is gone by morning. Whoever looks up is gone right then. And on the last day of school, it always presses one more. It only ever comes for the sixth grade. Nobody knows what it is. It's tall and black like the chalkboard, and it's covered in little white marks, one for every kid it ever took. This year, I'm in sixth grade, and it has never once picked me. Not once, that's because of Nico. In kindergarten, every class practices. The teacher walks the rows, and you learn. Heads down, thumbs up, don't look, no matter what you hear. The first time, I was so scared, I almost looked. The boy at the next desk hooked his little finger around mine, under the desk. We never look, whatever we hear. Promise? And when it was over, he squeezed my finger and whispered, Okay, you can look. We've held fingers every day since. Nico is the funniest kid in school. He can make me laugh in the middle of a math test. Once, he made the whole class laugh so hard, the teacher had to leave the room. When it presses your thumb, it leaves a little white dot, like chalk. Mom's scrub all night. It never comes off. On the first day of sixth grade, the moms cried at the gate, and the dads held on too long. In September, there were 30 desks in my class, by Halloween, 22, by Christmas, 14. Every week, the janitor carried another desk out to the pile behind the school. By March, the pile was taller than the gym. Nico never cried about it. Not once. He'd just look at the empty desk and say, Better than you, that's just Nico. He always knew the exact second it was over. He said he could hear its feet stop. He always had chalk on his fingers. He was on board duty every single day. He volunteered, and some days, in the middle of it, his finger let go of mine for a minute. He said his hand got sweaty. In February, it pressed Mila's thumb. She didn't cry. She just stared at the white dot, and said the weirdest thing. It was warm, like a kid's finger. Everyone said she was just scared. The next morning, her chair was pushed in. Her backpack was still hanging on it. And at three the next day, there was one more white mark on its arm. By spring, six. Then one day in April, I felt it. Something brushed right past my thumb. I almost looked up. Nico's finger squeezed mine so hard it hurt. It pressed the kid behind me instead. That night, Nico walked me home. He didn't make one joke. At my door, he said, it's never going to pick you. I won't let it. And then it was the last day of school, one more three o'clock. Then we'd be in seventh grade, and it could never touch us again. Two desks left, mine and Nico's. The teacher didn't even look at us. Heads down, thumbs up, three o'clock. Its feet came down the aisle and stopped right between us. Nico's finger let go of mine. His chair scraped back. Then I heard him crying. And for the first time in my life, I looked up. Nico was standing in the aisle right next to it. Its long black hand was resting on his shoulder. The tip of his finger was white with chalk. It never picked anyone. Every day, it let Nico choose. As long as he never chose me. Mila, the kid behind me. Twenty-eight kids. For me. And today, there were only two thumbs left. There was a white dot on Nico's. He'd picked himself. But I had looked up. It turned its face to me. Nico grabbed my finger and smiled. The way he did every day when it was over. Okay, you can look.",
   "source_words_per_sec": 4.22
 }

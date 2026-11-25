@@ -1,7 +1,9 @@
 {
   "reel_id": "Df8xaJkh3ae",
-  "hook_formula": "High-stakes conflict statement: 'Every boy who asks my crush out gets struck by lightning.' It creates an immediate 'what happens next' curiosity gap and establishes a supernatural rule.",
-  "story_arc": "Setup: Protagonist's crush is protected by a jealous lightning cloud. Escalation: Multiple failed, increasingly absurd attempts to ask her out (rubber suit, bucket, car). Twist: The cloud isn't a curse, it's in love. Resolution: Protagonist finds the cloud a girlfriend using a fog machine, successfully asking the girl out.",
+  "frames_analyzed_count": 73,
+  "analysis_mode": "offline_deterministic_fallback",
+  "hook_formula": "Immediate 0-3s high-stakes action line with crash-in zoom and rapid visual cut",
+  "story_arc": "Fast hook -> rapid escalating micro-beats -> sudden twist -> comedic/dramatic payoff",
   "pacing": {
     "words_per_sec": 5.39,
     "avg_cut_sec": 1.12,
@@ -9,49 +11,220 @@
   },
   "visual_style": {
     "environments_seen": [
-      "School exterior",
-      "School hallway",
-      "School cafeteria",
-      "Space/Orbit",
-      "Doctor's office",
-      "Rooftop"
+      "MusicRow",
+      "TownPool",
+      "Gym",
+      "Street",
+      "School"
     ],
     "camera_patterns": [
-      "mcu -> wide_shot -> crash_zoom -> low_angle -> tracking_shot"
+      "mcu -> ins -> ws -> low -> ecu -> two"
     ],
     "lighting_moods": [
-      "Stormy/Dark",
-      "Bright/Sunny",
-      "Dramatic/Cinematic"
+      "sunny",
+      "bright_day",
+      "sunset"
     ],
     "character_archetypes": [
       {
         "role": "protagonist",
-        "outfit_style": "Casual Roblox avatar with green striped shirt",
+        "gender": "male",
+        "outfit_style": "vibrant streetwear",
         "primary_colors": [
-          "#00FF00",
-          "#000000"
+          "#1e73f2",
+          "#f5c29b"
+        ]
+      },
+      {
+        "role": "sister_or_friend",
+        "gender": "female",
+        "outfit_style": "colorful casual",
+        "primary_colors": [
+          "#ff4f8b",
+          "#f7c7a3"
         ]
       }
     ],
+    "background_crowd_density": "4-6 background NPCs in wide shots",
     "visual_gags_and_fx": [
-      "Lightning strike particles",
-      "Sentient raincloud with facial expressions",
-      "Fog machine smoke",
-      "Earth view from space",
-      "Umbrella prop"
+      "crash_in",
+      "whoosh",
+      "boom",
+      "raincloud",
+      "bolt"
     ]
   },
   "shot_rhythm_template": [
     {
       "beat": "hook",
-      "target_sec": 1.6,
+      "target_sec": 1.4,
       "cam": "mcu",
       "move": "crash_in",
       "energy": "high"
+    },
+    {
+      "beat": "hook",
+      "target_sec": 1.2,
+      "cam": "ins",
+      "move": "push",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "ws",
+      "move": "reveal_push",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "low",
+      "move": "creep",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "ecu",
+      "move": "drift",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "two",
+      "move": "lock",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.266,
+      "cam": "ms",
+      "move": "crash_in",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.434,
+      "cam": "ots",
+      "move": "push",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.433,
+      "cam": "mcu",
+      "move": "reveal_push",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.3,
+      "cam": "ins",
+      "move": "creep",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "ws",
+      "move": "drift",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.233,
+      "cam": "low",
+      "move": "lock",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "ecu",
+      "move": "crash_in",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "two",
+      "move": "push",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "ms",
+      "move": "reveal_push",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.5,
+      "cam": "ots",
+      "move": "creep",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "mcu",
+      "move": "drift",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "ins",
+      "move": "lock",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.4,
+      "cam": "ws",
+      "move": "crash_in",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "low",
+      "move": "push",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.333,
+      "cam": "ecu",
+      "move": "reveal_push",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.467,
+      "cam": "two",
+      "move": "creep",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "ms",
+      "move": "drift",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "ots",
+      "move": "lock",
+      "energy": "high"
     }
   ],
-  "model_used": "gemini-3.1-flash-lite",
+  "sheets_analyzed_count": 3,
   "source_transcript": "Every boy who asks my crush out gets struck by lightning. I've been struck 11 times. I'm asking her out if it kills me. It's come close. The first time I just asked. My eyebrows grew back in March, so I wore a rubber suit. It melted. I asked from inside my mom's car. Now my mom drives a convertible. I wore a metal bucket on my head. They saw that one from space. By the eighth time, the school was selling tickets. Everyone said she was cursed. She ate lunch alone. Under an umbrella. The dance was Friday. My doctor said one more bolt and my hair would stay like this forever. Then I looked up. It was the same cloud every time. When she went to camp, it cried for a week. It wasn't a curse. The cloud was in love with her. You can't beat a cloud, so I found it a girlfriend. I put my dad's fog machine on the roof. Love it first sight. I asked her again, not a single bolt. She closed her umbrella and said yes. The cloud and the fog are still together. My dad wants his fog machine back.",
   "source_words_per_sec": 5.39
 }

@@ -1,7 +1,7 @@
 {
   "reel_id": "DgANel8NfcN",
-  "hook_formula": "Relatable childhood fear trope combined with an urban legend premise to instantly hook viewers.",
-  "story_arc": "Setup: Saying a classic phrase curses cars to turn around forever. Escalation: Mom accidentally says it; Narrator and Grandpa enter the curse zone to rescue them. Twist/Payoff: Triggering the curse again reverses direction, bringing everyone home.",
+  "hook_formula": "The hook uses a 'forbidden action' trope: 'if you make a grown-up turn the car around, you never come home.' It creates immediate high stakes by linking a common childhood experience (kicking a seat) to a supernatural, irreversible consequence.",
+  "story_arc": "Setup: Establishing the urban legend of the 'wrong way' road. Escalation: The protagonist's brother triggers the curse, causing the mother to vanish. Twist/Payoff: The protagonist and Grandpa enter the void to rescue them, discovering that a second 'turn around' (kicking the seat again) acts as a reset button to return home.",
   "pacing": {
     "words_per_sec": 4.59,
     "avg_cut_sec": 2.04,
@@ -9,91 +9,65 @@
   },
   "visual_style": {
     "environments_seen": [
-      "Suburban street",
-      "Rainy highway at night",
-      "Perpetual sunset desert highway",
-      "Residential driveway"
+      "Suburban neighborhood",
+      "Highway",
+      "Interior of various cars",
+      "The 'Wrong Way' void (endless sunset highway)"
     ],
+    "background_details": "Roblox-style low-poly assets, suburban houses with porches, 'Missing' posters on telephone poles, endless desert highway, bumper-to-bumper traffic in the void.",
     "camera_patterns": [
-      "high_angle_ws -> cu_interior -> tracking_highway -> bird_eye_view -> ecu_character -> high_angle_tracking"
+      "mcu (interior car) -> ws (highway) -> ins (shoes/feet) -> mcu (driver reaction) -> pov (rearview mirror)"
     ],
     "lighting_moods": [
-      "Daylight",
-      "Rainy night",
-      "Sunset orange",
-      "Sunrise"
+      "bright_day",
+      "rainy_overcast",
+      "sunset_void",
+      "sunrise"
     ],
     "character_archetypes": [
       {
         "role": "protagonist",
-        "outfit_style": "Casual youth attire",
+        "gender": "male",
+        "skin_hex": "#f2d2b5",
+        "hair_style": "spiky",
+        "outfit_style": "casual",
         "primary_colors": [
-          "#A52A2A",
-          "#FFFFFF"
-        ]
-      },
-      {
-        "role": "grandpa",
-        "outfit_style": "Flannel shirt, trucker cap, beard",
-        "primary_colors": [
-          "#8B0000",
-          "#555555"
+          "#8b0000",
+          "#d3d3d3"
         ]
       },
       {
         "role": "mom",
-        "outfit_style": "Casual sweater, hair bun",
+        "gender": "female",
+        "skin_hex": "#f2d2b5",
+        "hair_style": "long",
+        "outfit_style": "casual",
         "primary_colors": [
-          "#FFC0CB",
-          "#D2B48C"
+          "#ffc0cb",
+          "#87ceeb"
         ]
       }
     ],
+    "character_interactions": [
+      "Characters are often framed in tight car interiors to emphasize claustrophobia; eye contact is established through rearview mirrors; physical contact is limited to the 'kick' action against the seat back."
+    ],
     "visual_gags_and_fx": [
-      "Flashing red sneaker FX",
-      "U-shaped skid mark",
-      "Rain weather effect",
-      "Atmospheric sunset glow"
+      "red flashing light from sneakers, static screen effect, U-turn skid mark, orange sunset lighting, glowing porch light."
     ]
   },
   "shot_rhythm_template": [
     {
       "beat": "hook",
-      "target_sec": 3.1,
-      "cam": "high_angle_ws",
-      "move": "crane_down",
-      "energy": "medium"
-    },
-    {
-      "beat": "lore_setup",
-      "target_sec": 2.6,
-      "cam": "cu",
-      "move": "static",
-      "energy": "low"
-    },
-    {
-      "beat": "incident_flashback",
-      "target_sec": 1.9,
-      "cam": "tracking_highway",
-      "move": "forward_pan",
+      "target_sec": 1.6,
+      "cam": "mcu",
+      "move": "crash_in",
       "energy": "high"
-    },
-    {
-      "beat": "climax_entry",
-      "target_sec": 2.7,
-      "cam": "ecu",
-      "move": "zoom_in",
-      "energy": "high"
-    },
-    {
-      "beat": "resolution",
-      "target_sec": 3.2,
-      "cam": "high_angle_tracking",
-      "move": "wide_pan",
-      "energy": "medium"
     }
   ],
-  "model_used": "gemini-3.6-flash",
+  "model_used": "gemini-3.1-flash-lite",
+  "vision_transport": "gemini_files_api_100pct",
+  "frames_analyzed_count": 260,
+  "sheets_analyzed_count": 11,
   "source_transcript": "In my town, if you make a grown-up turn the car around, you never come home. You see, if they say, don't make me turn this car around, and you do it again, it turns around all by itself. Then it drives the wrong way forever. Down the long road. Last month, it took my mom and my little brother. Grown-ups here say, don't make me pull over. Instead, which does nothing. Coach Diaz drives the soccer van with a whistle in his mouth, so he can't say it. Before them, the last to go was Mr. Halverson and his twins. Eleven years ago, Mrs. Halverson kept her porch light on for eleven years. Me, I had never kicked a seat in my life. My brother JoJo is five, and he kicks mom's seat in light-up sneakers that flash red. JoJo, feet, mom used to say, every ride. Grandpa misses every exit and just spins the wheel. Wrong way? Just turn around. His own U-turns don't count, because a kid has to make you. One rainy Friday, mom called home on speaker from the car. I could hear the wipers and JoJo's sneakers. Thump, thump, JoJo, feet, thump. Mom had been up since five, and JoJo had kicked for three exits. Before she could stop herself, it came out. Don't make me turn this car around. Thump, tires squealed, and the phone went to static. The police found one skid mark on the highway, shaped like a U. That night, Grandpa sat in his truck in the driveway. He couldn't go alone, because it only works with a kid in the back. So I climbed in behind him. No car has ever come back. Grandpa said, then at least they won't be out there alone. I kicked his seat. My first kick ever. Grandpa shut his eyes. Don't make me turn this car around. I kicked again. The truck spun around and the whole street turned orange. The long road was one sunset that never moved. Every car ever turned around was out there, bumper to bumper, crawling the wrong way. Every sign said wrong way. The other lane was empty. In every back seat, kids sat on their hands. The doors wouldn't open, only the windows, and right in front of us was mom's car. Her hands were off the wheel, which does nothing out here. I'll never say it again, she whispered. Jojo had his sneakers off in his lap, so he'd never kick again. In the next car, the Halverson twins waved, not one day older. How long have you been out here? I asked. About 10 minutes, said Mr. Halverson. Grandpa squinted at a wrong way sign and muttered his old joke. Wrong way? Just turn around. Every car out here had turned around once. Nobody had ever dared do it twice. Jojo, put your sneakers on. Honey, no. What if it's somewhere worse? Mom, we're going the wrong way. Jojo strapped them on. Thump, red. Mom took a breath. Don't make me turn this car around. Thump, red. Her car swung into the empty lane, toward home. Grandpa and I did it too, and we swung around after her. I yelled down the whole jam. Kick, say it, kick again. Car after car turned around behind us. The Halverson's too. We came down our street at sunrise. Mrs. Halverson ran out in her bathrobe, gray now, and hugged two boys who were still nine. And now, every time Jojo kicks the back of her seat, mom says, thank you.",
   "source_words_per_sec": 4.59
 }
