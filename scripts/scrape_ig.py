@@ -6,7 +6,7 @@ import subprocess
 import urllib.request
 
 TARGET_USER = os.environ.get("IG_TARGET_USER", "craftee_films").strip().lstrip("@")
-MAX_REELS = int(os.environ.get("MAX_REELS_PER_RUN", "5"))
+MAX_REELS = int(os.environ.get("MAX_REELS_PER_RUN", "25"))
 RAW_DIR = os.path.abspath("vault/raw")
 META_DIR = os.path.abspath("vault/raw_meta")
 
@@ -43,7 +43,6 @@ def download_direct_mp4(url: str, out_path: str) -> bool:
 
 
 def layer1_curl_cffi_ig(username: str, max_count: int) -> list[str]:
-    """Cookie-free Instagram public web profile + embed MP4 fetcher."""
     from curl_cffi import requests as cffi_req
 
     downloaded = []
@@ -95,16 +94,16 @@ def layer1_curl_cffi_ig(username: str, max_count: int) -> list[str]:
 
 
 def layer2_ytdlp_shorts(query_or_url: str, platform: str, max_count: int) -> list[str]:
-    """Downloads short vertical Roblox stories (<= 90s) via yt-dlp without cookies."""
+    """Downloads massive batches of short vertical Roblox stories (15s-110s) via yt-dlp without cookies."""
     archive_file = os.path.join(RAW_DIR, "downloaded_ids.txt")
     cmd = [
         "yt-dlp",
         "--no-warnings",
         "--ignore-errors",
         "--download-archive", archive_file,
-        "--playlist-end", "35",
+        "--playlist-end", "80",
         "--max-downloads", str(max_count),
-        "--match-filter", "duration >= 20 & duration <= 95",
+        "--match-filter", "duration >= 15 & duration <= 110",
         "-f", "bv*[ext=mp4]+ba[ext=m4a]/b[ext=mp4]/b",
         "--merge-output-format", "mp4",
         "-o", os.path.join(RAW_DIR, "%(id)s.%(ext)s"),
@@ -138,21 +137,22 @@ def layer2_ytdlp_shorts(query_or_url: str, platform: str, max_count: int) -> lis
 def main():
     os.makedirs(RAW_DIR, exist_ok=True)
     os.makedirs(META_DIR, exist_ok=True)
-    print(f"[Scraper] Harvesting up to {MAX_REELS} new videos for @{TARGET_USER} (cookie-free)...", flush=True)
+    print(f"[Scraper] Harvesting up to {MAX_REELS} new videos for @{TARGET_USER}...", flush=True)
 
     downloaded = []
 
-    # 1. Cookie-free Instagram Chrome-TLS scraper
     try:
         downloaded.extend(layer1_curl_cffi_ig(TARGET_USER, MAX_REELS))
     except Exception as e:
         print(f"[Layer 1 IG] Skipped ({e})", flush=True)
 
-    # 2. YouTube Shorts filter URL (sp=EgIYAQ%3D%3D forces <4 min / Shorts only) for exact @craftee_films / In This Town series
+    # Broad multi-query Shorts harvesting for massive script & frame collection
     queries = [
         "https://www.youtube.com/results?search_query=In+This+Town+Roblox+Stories+%23shorts&sp=EgIYAQ%253D%253D",
         "https://www.youtube.com/results?search_query=In+This+World+Roblox+Stories+%23shorts&sp=EgIYAQ%253D%253D",
         "https://www.youtube.com/results?search_query=craftee_films+roblox+%23shorts&sp=EgIYAQ%253D%253D",
+        "https://www.youtube.com/results?search_query=craftee+roblox+stories+%23shorts&sp=EgIYAQ%253D%253D",
+        "https://www.youtube.com/results?search_query=roblox+storytime+animation+%23shorts&sp=EgIYAQ%253D%253D",
         "https://www.youtube.com/@gopal70374/shorts",
     ]
     for q in queries:
@@ -162,7 +162,7 @@ def main():
         print(f"[Layer 2 Shorts] Searching ({need} needed): {q}", flush=True)
         downloaded.extend(layer2_ytdlp_shorts(q, "youtube_shorts", need))
 
-    print(f"[Scraper] Finished! Newly harvested IDs: {downloaded}", flush=True)
+    print(f"[Scraper] Finished! Newly harvested IDs ({len(downloaded)}): {downloaded}", flush=True)
 
 
 if __name__ == "__main__":
