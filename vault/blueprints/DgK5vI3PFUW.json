@@ -1,0 +1,228 @@
+{
+  "reel_id": "DgK5vI3PFUW",
+  "analysis_mode": "offline_deterministic_fallback",
+  "hook_formula": "Immediate 0-3s high-stakes action line with crash-in zoom and rapid visual cut",
+  "story_arc": "Fast hook -> rapid escalating micro-beats -> sudden twist -> comedic/dramatic payoff",
+  "pacing": {
+    "words_per_sec": 3.91,
+    "avg_cut_sec": 1.19,
+    "total_cuts": 124
+  },
+  "visual_style": {
+    "environments_seen": [
+      "MusicRow",
+      "TownPool",
+      "Gym",
+      "Street",
+      "School"
+    ],
+    "camera_patterns": [
+      "mcu -> ins -> ws -> low -> ecu -> two"
+    ],
+    "lighting_moods": [
+      "sunny",
+      "bright_day",
+      "sunset"
+    ],
+    "character_archetypes": [
+      {
+        "role": "protagonist",
+        "gender": "male",
+        "outfit_style": "vibrant streetwear",
+        "primary_colors": [
+          "#1e73f2",
+          "#f5c29b"
+        ]
+      },
+      {
+        "role": "sister_or_friend",
+        "gender": "female",
+        "outfit_style": "colorful casual",
+        "primary_colors": [
+          "#ff4f8b",
+          "#f7c7a3"
+        ]
+      }
+    ],
+    "background_crowd_density": "4-6 background NPCs in wide shots",
+    "visual_gags_and_fx": [
+      "crash_in",
+      "whoosh",
+      "boom",
+      "raincloud",
+      "bolt"
+    ]
+  },
+  "shot_rhythm_template": [
+    {
+      "beat": "hook",
+      "target_sec": 1.2,
+      "cam": "mcu",
+      "move": "crash_in",
+      "energy": "high"
+    },
+    {
+      "beat": "hook",
+      "target_sec": 1.2,
+      "cam": "ins",
+      "move": "push",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "ws",
+      "move": "reveal_push",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "low",
+      "move": "creep",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.234,
+      "cam": "ecu",
+      "move": "drift",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "two",
+      "move": "lock",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "ms",
+      "move": "crash_in",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.533,
+      "cam": "ots",
+      "move": "push",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "mcu",
+      "move": "reveal_push",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.867,
+      "cam": "ins",
+      "move": "creep",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.666,
+      "cam": "ws",
+      "move": "drift",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.5,
+      "cam": "low",
+      "move": "lock",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "ecu",
+      "move": "crash_in",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "two",
+      "move": "push",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "ms",
+      "move": "reveal_push",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "ots",
+      "move": "creep",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "mcu",
+      "move": "drift",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.4,
+      "cam": "ins",
+      "move": "lock",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "ws",
+      "move": "crash_in",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "low",
+      "move": "push",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.333,
+      "cam": "ecu",
+      "move": "reveal_push",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.333,
+      "cam": "two",
+      "move": "creep",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "ms",
+      "move": "drift",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "ots",
+      "move": "lock",
+      "energy": "high"
+    }
+  ],
+  "source_transcript": "In this town, flowers are basically money farms. Every flower grows real money instead of petals. And the rarer the flower, the more money it produces. Roses grow 100 dollar bills, and golden sunflowers can produce thousands of dollars every morning. Because of this, everyone owns a garden. Some families have entire farms filled with money flowers, while rich collectors spend millions buying rare seeds. But there's one flower nobody has successfully grown, the Diamond Lily. It's rumored to produce a million dollars every day. My family only had a tiny garden behind our apartment. We grew three daisies and one small rose, which barely gave us enough money to buy groceries. Meanwhile, our neighbor owned an enormous sunflower farm, and made more money in one week than my family earned in a year. One morning, I discovered a strange seed underneath our oldest flower pot. It was completely black, with a tiny golden symbol on it. I planted it immediately, hoping it would grow something valuable. The next morning, a tiny blue flower appeared. It didn't grow money. Instead, it produced a small silver key. I showed my dad, but he told me to throw it away. He said flowers sometimes produced unusual objects when their roots touched old pipes underground. But the following morning, the flower produced another key, and then another. I decided to investigate. I followed the roots beneath the garden, and discovered an old metal door hidden underneath our apartment building. The keys fit perfectly. Inside was a giant underground greenhouse filled with strange flowers. Some grew diamonds, others produced gold coins, and one enormous tree had hundreds of glowing seeds hanging from its branches. A note on the wall explained that this was the original money garden. Hundreds of years ago, every flower in town came from these seeds. But someone had stolen the rarest seeds and sold them to wealthy families, leaving ordinary people with only the cheapest varieties. Then, I heard footsteps. Our neighbor, the sunflower farmer, entered the greenhouse with several workers. He had been following me because he wanted to find the legendary seeds. He explained that he already owned most of the valuable flowers in town, but the original garden could make him richer than anyone alive. He offered to buy my black seed for an enormous amount of money. I refused, so he ordered his workers to grab it. I ran toward the glowing tree, and noticed something written on its trunk. The garden only grows when everyone can share. I suddenly understood why the rare flowers had stopped appearing. They weren't meant to belong to one person. Their seeds had to be planted across the town. I threw the black seed into the center of the greenhouse. They traveled through the pipes and appeared in gardens, parks, school yards, and empty fields. The next morning, strange flowers began growing everywhere. Families who had never owned valuable plants suddenly had golden roses and silver lilies. The sunflower farmer's private garden stopped producing money because the original garden had returned to the town. My family finally had enough money to move into a comfortable house. I even planted a small garden outside our new home. But one morning, I noticed something strange growing beside the flowers. A tiny black tree. It had no leaves, no petals, and no money. Instead, every branch was covered in little golden watches. And every watch was counting down.",
+  "source_words_per_sec": 3.91
+}

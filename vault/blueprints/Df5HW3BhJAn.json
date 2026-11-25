@@ -1,0 +1,228 @@
+{
+  "reel_id": "Df5HW3BhJAn",
+  "analysis_mode": "offline_deterministic_fallback",
+  "hook_formula": "Immediate 0-3s high-stakes action line with crash-in zoom and rapid visual cut",
+  "story_arc": "Fast hook -> rapid escalating micro-beats -> sudden twist -> comedic/dramatic payoff",
+  "pacing": {
+    "words_per_sec": 4.32,
+    "avg_cut_sec": 5.44,
+    "total_cuts": 26
+  },
+  "visual_style": {
+    "environments_seen": [
+      "MusicRow",
+      "TownPool",
+      "Gym",
+      "Street",
+      "School"
+    ],
+    "camera_patterns": [
+      "mcu -> ins -> ws -> low -> ecu -> two"
+    ],
+    "lighting_moods": [
+      "sunny",
+      "bright_day",
+      "sunset"
+    ],
+    "character_archetypes": [
+      {
+        "role": "protagonist",
+        "gender": "male",
+        "outfit_style": "vibrant streetwear",
+        "primary_colors": [
+          "#1e73f2",
+          "#f5c29b"
+        ]
+      },
+      {
+        "role": "sister_or_friend",
+        "gender": "female",
+        "outfit_style": "colorful casual",
+        "primary_colors": [
+          "#ff4f8b",
+          "#f7c7a3"
+        ]
+      }
+    ],
+    "background_crowd_density": "4-6 background NPCs in wide shots",
+    "visual_gags_and_fx": [
+      "crash_in",
+      "whoosh",
+      "boom",
+      "raincloud",
+      "bolt"
+    ]
+  },
+  "shot_rhythm_template": [
+    {
+      "beat": "hook",
+      "target_sec": 2.4,
+      "cam": "mcu",
+      "move": "crash_in",
+      "energy": "high"
+    },
+    {
+      "beat": "hook",
+      "target_sec": 2.4,
+      "cam": "ins",
+      "move": "push",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 2.4,
+      "cam": "ws",
+      "move": "reveal_push",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 2.367,
+      "cam": "low",
+      "move": "creep",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 2.033,
+      "cam": "ecu",
+      "move": "drift",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 2.4,
+      "cam": "two",
+      "move": "lock",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 2.4,
+      "cam": "ms",
+      "move": "crash_in",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "ots",
+      "move": "push",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 2.4,
+      "cam": "mcu",
+      "move": "reveal_push",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 2.4,
+      "cam": "ins",
+      "move": "creep",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 2.1,
+      "cam": "ws",
+      "move": "drift",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 2.4,
+      "cam": "low",
+      "move": "lock",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 2.4,
+      "cam": "ecu",
+      "move": "crash_in",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 2.4,
+      "cam": "two",
+      "move": "push",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 2.4,
+      "cam": "ms",
+      "move": "reveal_push",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 2.4,
+      "cam": "ots",
+      "move": "creep",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 2.4,
+      "cam": "mcu",
+      "move": "drift",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 2.4,
+      "cam": "ins",
+      "move": "lock",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 2.4,
+      "cam": "ws",
+      "move": "crash_in",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 2.4,
+      "cam": "low",
+      "move": "push",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 2.4,
+      "cam": "ecu",
+      "move": "reveal_push",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 2.4,
+      "cam": "two",
+      "move": "creep",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "ms",
+      "move": "drift",
+      "energy": "high"
+    },
+    {
+      "beat": "climax",
+      "target_sec": 1.2,
+      "cam": "ots",
+      "move": "lock",
+      "energy": "high"
+    }
+  ],
+  "source_transcript": "We only move when the eye blinks. Whoever moves while it's open turns to stone. We eat one bite per blink. A wedding lasts three blinks. A haircut lasts all year. This morning it stopped blinking. Nobody knows what it's looking at. The eye hangs over our city like a second moon. It blinks about every nine seconds. A blink is as long as a sneeze. That's when we live. Step freeze. Step freeze. We learn to talk without moving our lips before we learn to read. We sleep standing up, leaning on each other like books. Babies are born in a single blink. Don't ask. Our fastest runner has finished one race. It took him 19 days. And the streets are full of statues. Mr. Hale sneezed with the eye open. He's on third street, still sneezing. In winter, kids put a scarf on him. Mo is four. He lives next door. Four-year-olds can't hold still. So somebody has to hold them. I've held Mo still through about three million blinks. Every time the eye closes, he whispers, now I say, and he gets one wiggle. This morning I was turning around to grab him. The eye opened. It never closed. Everybody in the city is facing the eye. The way we always stop. It's polite. I'm facing the other way, with one arm out. Like I'm asking the hills to dance. Nine seconds. Nothing. An hour. Nothing. Miss Okoro was halfway into a chair. She has been sitting on air since breakfast. The baker is holding a hot tray. He's being very brave about it. Two people on Bell Street got married this morning. They're still on the kiss. Old Dez is stuck next to me, holding a ladder. Don't you twitch, kid. He said, with his lips shut. My arm hurts. Then let it hurt. Whispers crawled down the street with their lips shut. It's angry. It's sick. It's looking for somebody. By noon, my arm was shaking. Now? Mo whispered. Not yet. Then it started to rain. Out of a clear sky. A drop landed on my lip. Salt. Is he crying? Mo whispered. The eye was watering. It wasn't staring. It was trying not to blink. Why would anything try that hard not to blink? I'm the only one facing the hills. There are four hills behind our city. I've counted them my whole life. Today, there are five. The fifth one has a foot. The foot is lifted over our wall. Like somebody stopped in the middle of a step. It's as tall as the clouds. And it has too many elbows. It isn't stone. It's holding still. Same as us. It only moves when the eye is closed. Every morning of my life, the hills looked a little closer. We said the city was growing. One blink. One step. The eye was never watching us. We were just standing in front of the thing it was watching. It can't look at only one of us. So it stops everything it sees. We learn to live in the blinks. So did the thing behind us. I tried to say it without moving my lips. It's behind us. It came out as a hum. Mo Giggle only does hurt. What do you see kid? A hill with a foot. He was quiet for a long time. How close? One step. The rain is getting heavier. The lid has started to shake. Everybody I love is facing the wrong way. Mo whispers. Not now Mo, please. Not now. My whole life. I wished that thing would look away. Tonight, I'm begging it not to blink.",
+  "source_words_per_sec": 4.32
+}
