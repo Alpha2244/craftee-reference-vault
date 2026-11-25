@@ -1,0 +1,18 @@
+{
+  "total_scripts_collected": 1,
+  "total_words_collected": 197,
+  "avg_words_per_sec": 5.11,
+  "avg_cuts_per_video": 28.0,
+  "all_hooks": [],
+  "scripts": [
+    {
+      "id": "tonl6Il5_qc",
+      "duration": 38.568,
+      "words_per_sec": 5.11,
+      "total_cuts": 28,
+      "dense_frames_saved": 0,
+      "hook_0_to_3s": "",
+      "full_script": "My crush is obsessed with the mask. Superhero. She has no idea it's me. Every night I save the city in a mask. I never say a word so nobody knows my voice. Every morning in class she sits next to me and talks about it. He's so brave. Not like you. You're scared of pigeons. It's true. Once a pigeon chased me out of the cafeteria and the whole school heard me scream. She covered her locker in his posters. She even made a board with every boy in school on it to find out which one was him. My photo had a big red X. Next to it, scared of pigeons. Then one night she climbed the clock tower and yelled for help just so he would show up. And then she slipped for real. I flew in and caught her. She was holding on to me, staring right into my eyes. Two inches away. Still no idea. Then a pigeon landed on my head. And I scream. The same scream from the cafeteria. She froze. See her? Then she gently shoot the pigeon away. You save the city. I'll save you from the pigeons."
+    }
+  ]
+}
