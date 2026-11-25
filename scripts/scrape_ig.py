@@ -43,7 +43,7 @@ def download_direct_mp4(url: str, out_path: str) -> bool:
 
 
 def layer1_curl_cffi_ig(username: str, max_count: int) -> list[str]:
-    """Cookie-free Instagram public web profile + embed MP4 fetcher using Chrome TLS impersonation."""
+    """Cookie-free Instagram public web profile + embed MP4 fetcher."""
     from curl_cffi import requests as cffi_req
 
     downloaded = []
@@ -53,7 +53,7 @@ def layer1_curl_cffi_ig(username: str, max_count: int) -> list[str]:
         "X-IG-App-ID": "936619743392459",
     }
     api_url = f"https://www.instagram.com/api/v1/users/web_profile_info/?username={username}"
-    r = cffi_req.get(api_url, headers=headers, impersonate="chrome", timeout=25)
+    r = cffi_req.get(api_url, headers=headers, impersonate="chrome", timeout=20)
     if r.status_code != 200:
         raise RuntimeError(f"IG web_profile_info HTTP {r.status_code}")
 
@@ -78,7 +78,6 @@ def layer1_curl_cffi_ig(username: str, max_count: int) -> list[str]:
 
         video_url = node.get("video_url")
         if not video_url:
-            # Resolve via public embed page (no login required)
             emb = cffi_req.get(f"https://www.instagram.com/reel/{sc}/embed/captioned/", impersonate="chrome", timeout=20)
             m = re.search(r'"video_url":"(https:[^"]+)"', emb.text)
             if m:
@@ -89,29 +88,28 @@ def layer1_curl_cffi_ig(username: str, max_count: int) -> list[str]:
             cap = cap_edges[0]["node"]["text"] if cap_edges else ""
             save_meta(sc, f"https://www.instagram.com/reel/{sc}/", "instagram", cap, node.get("video_view_count", 0))
             downloaded.append(sc)
-            print(f"[Layer 1 IG] Downloaded {sc}", flush=True)
             if len(downloaded) >= max_count:
                 break
 
     return downloaded
 
 
-def layer2_ytdlp_source(url: str, platform: str, max_count: int) -> list[str]:
-    """Cookie-free yt-dlp downloader (works on IG Reels URL or YouTube Shorts mirror)."""
+def layer2_ytdlp_shorts(query_or_url: str, platform: str, max_count: int) -> list[str]:
+    """Downloads short vertical Roblox stories (<= 90s) via yt-dlp without cookies."""
     archive_file = os.path.join(RAW_DIR, "downloaded_ids.txt")
     cmd = [
         "yt-dlp",
         "--no-warnings",
         "--ignore-errors",
         "--download-archive", archive_file,
-        "--playlist-end", str(max_count * 2),
+        "--playlist-end", "35",
         "--max-downloads", str(max_count),
-        "--match-filter", "duration <= 75",
+        "--match-filter", "duration >= 20 & duration <= 95",
         "-f", "bv*[ext=mp4]+ba[ext=m4a]/b[ext=mp4]/b",
         "--merge-output-format", "mp4",
         "-o", os.path.join(RAW_DIR, "%(id)s.%(ext)s"),
         "--write-info-json",
-        url,
+        query_or_url,
     ]
     subprocess.run(cmd, check=False)
 
@@ -124,7 +122,7 @@ def layer2_ytdlp_source(url: str, platform: str, max_count: int) -> list[str]:
             if vid and os.path.exists(mp4_path) and os.path.getsize(mp4_path) > 15_000:
                 save_meta(
                     vid,
-                    info.get("webpage_url", url),
+                    info.get("webpage_url", query_or_url),
                     platform,
                     info.get("description") or info.get("title") or "",
                     info.get("view_count") or 0,
@@ -132,7 +130,8 @@ def layer2_ytdlp_source(url: str, platform: str, max_count: int) -> list[str]:
                 )
                 downloaded.append(vid)
         finally:
-            os.remove(info_file)
+            if os.path.exists(info_file):
+                os.remove(info_file)
     return downloaded
 
 
@@ -149,16 +148,19 @@ def main():
     except Exception as e:
         print(f"[Layer 1 IG] Skipped ({e})", flush=True)
 
-    # 2. Cookie-free yt-dlp on Instagram Reels
-    if len(downloaded) < MAX_REELS:
+    # 2. YouTube Shorts filter URL (sp=EgIYAQ%3D%3D forces <4 min / Shorts only) for exact @craftee_films / In This Town series
+    queries = [
+        "https://www.youtube.com/results?search_query=In+This+Town+Roblox+Stories+%23shorts&sp=EgIYAQ%253D%253D",
+        "https://www.youtube.com/results?search_query=In+This+World+Roblox+Stories+%23shorts&sp=EgIYAQ%253D%253D",
+        "https://www.youtube.com/results?search_query=craftee_films+roblox+%23shorts&sp=EgIYAQ%253D%253D",
+        "https://www.youtube.com/@gopal70374/shorts",
+    ]
+    for q in queries:
+        if len(downloaded) >= MAX_REELS:
+            break
         need = MAX_REELS - len(downloaded)
-        downloaded.extend(layer2_ytdlp_source(f"https://www.instagram.com/{TARGET_USER}/reels/", "instagram", need))
-
-    # 3. Unblocked YouTube Shorts mirror for @craftee_films (zero IP blocks ever)
-    if len(downloaded) < MAX_REELS:
-        need = MAX_REELS - len(downloaded)
-        print(f"[Layer 3 YT Mirror] Fetching {need} Shorts from @craftee_films YouTube...", flush=True)
-        downloaded.extend(layer2_ytdlp_source(f"ytsearch{need * 2}:{TARGET_USER} shorts", "youtube_shorts", need))
+        print(f"[Layer 2 Shorts] Searching ({need} needed): {q}", flush=True)
+        downloaded.extend(layer2_ytdlp_shorts(q, "youtube_shorts", need))
 
     print(f"[Scraper] Finished! Newly harvested IDs: {downloaded}", flush=True)
 
