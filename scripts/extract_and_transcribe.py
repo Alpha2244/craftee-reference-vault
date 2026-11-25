@@ -1,8 +1,10 @@
 import glob
 import json
+import math
 import os
 import re
 import subprocess
+from PIL import Image
 from faster_whisper import WhisperModel
 
 RAW_DIR = os.path.abspath("vault/raw")
@@ -24,23 +26,42 @@ def probe_duration(mp4_path: str) -> float:
     return float(out)
 
 
+def build_contact_sheet(frame_paths: list[str], out_path: str, cols: int = 4, thumb_w: int = 270, thumb_h: int = 480) -> str | None:
+    """Stitches up to 20 keyframes into a single high-res contact sheet so Gemini Vision can inspect 20 shots at once."""
+    selected = frame_paths[:20]
+    if not selected:
+        return None
+    rows = math.ceil(len(selected) / cols)
+    sheet = Image.new("RGB", (cols * thumb_w, rows * thumb_h), (18, 18, 22))
+    for idx, fp in enumerate(selected):
+        try:
+            with Image.open(fp) as im:
+                im_resized = im.convert("RGB").resize((thumb_w, thumb_h), Image.Resampling.LANCZOS)
+                r, c = divmod(idx, cols)
+                sheet.paste(im_resized, (c * thumb_w, r * thumb_h))
+        except Exception:
+            continue
+    sheet.save(out_path, "JPEG", quality=85)
+    return out_path
+
+
 def extract_massive_frames_and_cuts(mp4_path: str, out_dir: str, total_dur: float) -> list[dict]:
-    """Extracts BOTH exact camera cuts AND dense 2-fps frames (~100+ frames/video) for visual training."""
+    """Extracts 4-fps dense frames (~200+ frames/video -> thousands across vault) + exact scene cuts + contact sheet."""
     os.makedirs(out_dir, exist_ok=True)
 
-    # 1. Dense frame extraction: 2 frames per second (every 0.5s) across the entire video
+    # 1. Dense frame extraction: 4 frames per second (every 0.25s) across the entire video
     dense_cmd = [
         "ffmpeg", "-v", "error", "-y", "-i", mp4_path,
-        "-vf", "fps=2,scale=540:-2",
+        "-vf", "fps=4,scale=540:-2",
         "-q:v", "4",
         os.path.join(out_dir, "frame_%04d.jpg"),
     ]
     subprocess.run(dense_cmd, check=True)
 
-    # 2. Exact camera cut detection (scene change threshold 0.25)
+    # 2. Exact camera cut detection (scene change threshold 0.22)
     cut_cmd = [
         "ffmpeg", "-v", "info", "-y", "-i", mp4_path,
-        "-vf", "select='eq(n,2)+gt(scene,0.25)',showinfo,scale=540:-2",
+        "-vf", "select='eq(n,2)+gt(scene,0.22)',showinfo,scale=540:-2",
         "-vsync", "vfr",
         "-q:v", "3",
         os.path.join(out_dir, "cut_%03d.jpg"),
@@ -58,20 +79,37 @@ def extract_massive_frames_and_cuts(mp4_path: str, out_dir: str, total_dur: floa
 
     clean_ts = [timestamps[0]]
     for t in timestamps[1:]:
-        if t - clean_ts[-1] >= 0.40:
+        if t - clean_ts[-1] >= 0.35:
             clean_ts.append(t)
 
     cuts = []
+    cut_imgs = []
     for idx, t0 in enumerate(clean_ts):
         t1 = clean_ts[idx + 1] if idx + 1 < len(clean_ts) else round(total_dur, 3)
         img_name = f"cut_{idx + 1:03d}.jpg"
+        full_img = os.path.join(out_dir, img_name)
+        exists = os.path.exists(full_img)
+        if exists:
+            cut_imgs.append(full_img)
         cuts.append({
             "cut_index": idx,
             "t0": t0,
             "t1": t1,
             "dur": round(t1 - t0, 3),
-            "frame": img_name if os.path.exists(os.path.join(out_dir, img_name)) else None,
+            "frame": img_name if exists else None,
         })
+
+    # Sample evenly across all cuts + dense frames to build a 20-shot visual contact sheet
+    if len(cut_imgs) < 16:
+        all_dense = sorted(glob.glob(os.path.join(out_dir, "frame_*.jpg")))
+        if all_dense:
+            step = max(1, len(all_dense) // 20)
+            cut_imgs = all_dense[::step][:20]
+    elif len(cut_imgs) > 20:
+        step = len(cut_imgs) / 20.0
+        cut_imgs = [cut_imgs[int(i * step)] for i in range(20)]
+
+    build_contact_sheet(cut_imgs, os.path.join(out_dir, "contact_sheet.jpg"))
     return cuts
 
 
@@ -94,7 +132,6 @@ def transcribe_video(model: WhisperModel, mp4_path: str, total_dur: float) -> di
 
     full_text = " ".join(full_parts).strip()
     wps = round(len(words) / max(total_dur, 0.1), 2)
-    # Extract first ~15 words as the opening 3-second hook
     hook_words = [w[0] for w in words if w[1] <= 3.5]
     hook_line = " ".join(hook_words).strip() or " ".join(full_text.split()[:12])
 
@@ -109,9 +146,10 @@ def transcribe_video(model: WhisperModel, mp4_path: str, total_dur: float) -> di
 
 
 def rebuild_master_corpus():
-    """Compiles every harvested transcript & hook into one master training corpus for Gemini."""
+    """Compiles every harvested transcript, hook & frame count into one master training corpus for Gemini."""
     entries = []
     total_words = 0
+    total_frames = 0
     for tf in sorted(glob.glob(os.path.join(TRANS_DIR, "*.json"))):
         vid = os.path.splitext(os.path.basename(tf))[0]
         tr = json.load(open(tf, encoding="utf-8"))
@@ -119,14 +157,15 @@ def rebuild_master_corpus():
             continue
         cuts_file = os.path.join(FRAMES_DIR, vid, "cuts.json")
         cuts = json.load(open(cuts_file, encoding="utf-8")) if os.path.exists(cuts_file) else []
-        dense_count = len(glob.glob(os.path.join(FRAMES_DIR, vid, "frame_*.jpg")))
+        dense_count = len(glob.glob(os.path.join(FRAMES_DIR, vid, "*.jpg")))
         total_words += tr.get("word_count", 0)
+        total_frames += dense_count
         entries.append({
             "id": vid,
             "duration": tr.get("duration", 0),
             "words_per_sec": tr.get("words_per_sec", 0),
             "total_cuts": len(cuts),
-            "dense_frames_saved": dense_count,
+            "frames_saved": dense_count,
             "hook_0_to_3s": tr.get("hook_0_to_3s", ""),
             "full_script": tr.get("text", ""),
         })
@@ -134,6 +173,7 @@ def rebuild_master_corpus():
     corpus = {
         "total_scripts_collected": len(entries),
         "total_words_collected": total_words,
+        "total_frames_collected": total_frames,
         "avg_words_per_sec": round(sum(e["words_per_sec"] for e in entries) / max(len(entries), 1), 2),
         "avg_cuts_per_video": round(sum(e["total_cuts"] for e in entries) / max(len(entries), 1), 1),
         "all_hooks": [e["hook_0_to_3s"] for e in entries if e["hook_0_to_3s"]],
@@ -143,7 +183,7 @@ def rebuild_master_corpus():
         json.dump(corpus, f, indent=2)
     print(
         f"[Corpus] Rebuilt {CORPUS_PATH}: {corpus['total_scripts_collected']} scripts, "
-        f"{corpus['total_words_collected']} words, avg {corpus['avg_cuts_per_video']} cuts/video.",
+        f"{corpus['total_frames_collected']} total frames, {corpus['total_words_collected']} words.",
         flush=True,
     )
 
@@ -161,7 +201,7 @@ def main():
         cuts_path = os.path.join(FRAMES_DIR, vid, "cuts.json")
         dense_frames = glob.glob(os.path.join(FRAMES_DIR, vid, "frame_*.jpg"))
 
-        if os.path.exists(trans_path) and os.path.exists(cuts_path) and len(dense_frames) >= 5:
+        if os.path.exists(trans_path) and os.path.exists(cuts_path) and len(dense_frames) >= 10:
             continue
 
         if model is None:
