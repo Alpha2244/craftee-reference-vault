@@ -8,6 +8,7 @@ from faster_whisper import WhisperModel
 RAW_DIR = os.path.abspath("vault/raw")
 TRANS_DIR = os.path.abspath("vault/transcripts")
 FRAMES_DIR = os.path.abspath("vault/frames")
+CORPUS_PATH = os.path.abspath("vault/master_script_corpus.json")
 
 
 def probe_duration(mp4_path: str) -> float:
@@ -23,17 +24,28 @@ def probe_duration(mp4_path: str) -> float:
     return float(out)
 
 
-def detect_scene_cuts(mp4_path: str, out_dir: str, total_dur: float) -> list[dict]:
-    """Uses ffmpeg scene detection to extract exact cut timestamps and keyframes."""
+def extract_massive_frames_and_cuts(mp4_path: str, out_dir: str, total_dur: float) -> list[dict]:
+    """Extracts BOTH exact camera cuts AND dense 2-fps frames (~100+ frames/video) for visual training."""
     os.makedirs(out_dir, exist_ok=True)
-    cmd = [
-        "ffmpeg", "-v", "info", "-y", "-i", mp4_path,
-        "-vf", "select='eq(n,3)+gt(scene,0.28)',showinfo,scale=540:-2",
-        "-vsync", "vfr",
+
+    # 1. Dense frame extraction: 2 frames per second (every 0.5s) across the entire video
+    dense_cmd = [
+        "ffmpeg", "-v", "error", "-y", "-i", mp4_path,
+        "-vf", "fps=2,scale=540:-2",
         "-q:v", "4",
+        os.path.join(out_dir, "frame_%04d.jpg"),
+    ]
+    subprocess.run(dense_cmd, check=True)
+
+    # 2. Exact camera cut detection (scene change threshold 0.25)
+    cut_cmd = [
+        "ffmpeg", "-v", "info", "-y", "-i", mp4_path,
+        "-vf", "select='eq(n,2)+gt(scene,0.25)',showinfo,scale=540:-2",
+        "-vsync", "vfr",
+        "-q:v", "3",
         os.path.join(out_dir, "cut_%03d.jpg"),
     ]
-    res = subprocess.run(cmd, capture_output=True, text=True, check=True)
+    res = subprocess.run(cut_cmd, capture_output=True, text=True, check=True)
     timestamps = []
     for line in res.stderr.splitlines():
         if "pts_time:" in line:
@@ -46,7 +58,7 @@ def detect_scene_cuts(mp4_path: str, out_dir: str, total_dur: float) -> list[dic
 
     clean_ts = [timestamps[0]]
     for t in timestamps[1:]:
-        if t - clean_ts[-1] >= 0.45:
+        if t - clean_ts[-1] >= 0.40:
             clean_ts.append(t)
 
     cuts = []
@@ -82,13 +94,58 @@ def transcribe_video(model: WhisperModel, mp4_path: str, total_dur: float) -> di
 
     full_text = " ".join(full_parts).strip()
     wps = round(len(words) / max(total_dur, 0.1), 2)
+    # Extract first ~15 words as the opening 3-second hook
+    hook_words = [w[0] for w in words if w[1] <= 3.5]
+    hook_line = " ".join(hook_words).strip() or " ".join(full_text.split()[:12])
+
     return {
         "duration": round(total_dur, 3),
         "word_count": len(words),
         "words_per_sec": wps,
+        "hook_0_to_3s": hook_line,
         "text": full_text,
         "words": words,
     }
+
+
+def rebuild_master_corpus():
+    """Compiles every harvested transcript & hook into one master training corpus for Gemini."""
+    entries = []
+    total_words = 0
+    for tf in sorted(glob.glob(os.path.join(TRANS_DIR, "*.json"))):
+        vid = os.path.splitext(os.path.basename(tf))[0]
+        tr = json.load(open(tf, encoding="utf-8"))
+        if not tr.get("text"):
+            continue
+        cuts_file = os.path.join(FRAMES_DIR, vid, "cuts.json")
+        cuts = json.load(open(cuts_file, encoding="utf-8")) if os.path.exists(cuts_file) else []
+        dense_count = len(glob.glob(os.path.join(FRAMES_DIR, vid, "frame_*.jpg")))
+        total_words += tr.get("word_count", 0)
+        entries.append({
+            "id": vid,
+            "duration": tr.get("duration", 0),
+            "words_per_sec": tr.get("words_per_sec", 0),
+            "total_cuts": len(cuts),
+            "dense_frames_saved": dense_count,
+            "hook_0_to_3s": tr.get("hook_0_to_3s", ""),
+            "full_script": tr.get("text", ""),
+        })
+
+    corpus = {
+        "total_scripts_collected": len(entries),
+        "total_words_collected": total_words,
+        "avg_words_per_sec": round(sum(e["words_per_sec"] for e in entries) / max(len(entries), 1), 2),
+        "avg_cuts_per_video": round(sum(e["total_cuts"] for e in entries) / max(len(entries), 1), 1),
+        "all_hooks": [e["hook_0_to_3s"] for e in entries if e["hook_0_to_3s"]],
+        "scripts": entries,
+    }
+    with open(CORPUS_PATH, "w", encoding="utf-8") as f:
+        json.dump(corpus, f, indent=2)
+    print(
+        f"[Corpus] Rebuilt {CORPUS_PATH}: {corpus['total_scripts_collected']} scripts, "
+        f"{corpus['total_words_collected']} words, avg {corpus['avg_cuts_per_video']} cuts/video.",
+        flush=True,
+    )
 
 
 def main():
@@ -96,17 +153,15 @@ def main():
     os.makedirs(FRAMES_DIR, exist_ok=True)
 
     mp4_files = sorted(glob.glob(os.path.join(RAW_DIR, "*.mp4")))
-    if not mp4_files:
-        print("[Extract] No MP4 files in vault/raw.", flush=True)
-        return
-
     model = None
+
     for mp4 in mp4_files:
         vid = os.path.splitext(os.path.basename(mp4))[0]
         trans_path = os.path.join(TRANS_DIR, f"{vid}.json")
         cuts_path = os.path.join(FRAMES_DIR, vid, "cuts.json")
+        dense_frames = glob.glob(os.path.join(FRAMES_DIR, vid, "frame_*.jpg"))
 
-        if os.path.exists(trans_path) and os.path.exists(cuts_path):
+        if os.path.exists(trans_path) and os.path.exists(cuts_path) and len(dense_frames) >= 5:
             continue
 
         if model is None:
@@ -120,11 +175,18 @@ def main():
         with open(trans_path, "w", encoding="utf-8") as f:
             json.dump(tr, f, indent=2)
 
-        cuts = detect_scene_cuts(mp4, os.path.join(FRAMES_DIR, vid), dur)
+        cuts = extract_massive_frames_and_cuts(mp4, os.path.join(FRAMES_DIR, vid), dur)
         with open(cuts_path, "w", encoding="utf-8") as f:
             json.dump(cuts, f, indent=2)
 
-        print(f"[Extract] {vid}: {tr['word_count']} words ({tr['words_per_sec']} wps), {len(cuts)} camera cuts.", flush=True)
+        frame_total = len(glob.glob(os.path.join(FRAMES_DIR, vid, "*.jpg")))
+        print(
+            f"[Extract] {vid}: {tr['word_count']} words ({tr['words_per_sec']} wps), "
+            f"{len(cuts)} cuts, {frame_total} total frames saved.",
+            flush=True,
+        )
+
+    rebuild_master_corpus()
 
 
 if __name__ == "__main__":
