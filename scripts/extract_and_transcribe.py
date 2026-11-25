@@ -26,7 +26,6 @@ def probe_duration(mp4_path: str) -> float:
 def detect_scene_cuts(mp4_path: str, out_dir: str, total_dur: float) -> list[dict]:
     """Uses ffmpeg scene detection to extract exact cut timestamps and keyframes."""
     os.makedirs(out_dir, exist_ok=True)
-    # Extract frame at t=0.1s + every scene cut (threshold 0.28 catches fast Roblox camera cuts)
     cmd = [
         "ffmpeg", "-v", "info", "-y", "-i", mp4_path,
         "-vf", "select='eq(n,3)+gt(scene,0.28)',showinfo,scale=540:-2",
@@ -45,7 +44,6 @@ def detect_scene_cuts(mp4_path: str, out_dir: str, total_dur: float) -> list[dic
     if not timestamps or timestamps[0] > 0.3:
         timestamps.insert(0, 0.0)
 
-    # Deduplicate cuts closer than 0.45s
     clean_ts = [timestamps[0]]
     for t in timestamps[1:]:
         if t - clean_ts[-1] >= 0.45:
