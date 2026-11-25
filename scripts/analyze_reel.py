@@ -12,15 +12,20 @@ FRAMES_DIR = os.path.abspath("vault/frames")
 BLUEPRINT_DIR = os.path.abspath("vault/blueprints")
 VISUAL_BIBLE_PATH = os.path.abspath("vault/visual_bible.json")
 
-# Active 2026 Gemini & Gemma multimodal models ordered by speed & reliability
+# Cap Vision API calls per workflow run so free-tier RPM/TPM never overflows;
+# subsequent runs automatically pick up the remaining videos!
+MAX_VISION_REELS_PER_RUN = int(os.environ.get("MAX_VISION_REELS_PER_RUN", "6"))
+INTER_REEL_COOLDOWN_SEC = float(os.environ.get("INTER_REEL_COOLDOWN_SEC", "16"))
+
+# Active 2026 Gemini & Gemma multimodal models ordered by reliability & free-tier quota
 MODELS = [
     "gemini-3.8-flash",
     "gemini-3.6-flash",
     "gemini-3.5-flash-lite",
     "gemini-3.1-flash-lite",
+    "gemini-2.5-flash",
     "gemini-4-hydrogen",
     "gemini-4-argon",
-    "gemini-2.5-flash",
     "gemma-4-31b-it",
 ]
 
@@ -176,7 +181,6 @@ def upload_file_to_gemini_files_api(api_key: str, file_path: str, mime_type: str
     file_size = os.path.getsize(file_path)
     display_name = os.path.basename(file_path)
 
-    # Step 1: Start resumable upload session
     init_url = f"https://generativelanguage.googleapis.com/upload/v1beta/files?key={api_key}"
     init_headers = {
         "X-Goog-Upload-Protocol": "resumable",
@@ -193,7 +197,6 @@ def upload_file_to_gemini_files_api(api_key: str, file_path: str, mime_type: str
         if not upload_url:
             return None
 
-        # Step 2: Upload raw bytes and finalize
         with open(file_path, "rb") as f:
             raw_bytes = f.read()
         up_headers = {
@@ -213,7 +216,6 @@ def upload_file_to_gemini_files_api(api_key: str, file_path: str, mime_type: str
 
 
 def delete_gemini_uploaded_files(api_key: str, uploaded_files: list[dict]):
-    """Deletes temporary sheet files from Gemini Files API after analysis completes."""
     for uf in uploaded_files:
         fname = uf.get("name")
         if not fname:
@@ -227,7 +229,6 @@ def delete_gemini_uploaded_files(api_key: str, uploaded_files: list[dict]):
 
 
 def build_offline_blueprint(vid: str, tr: dict, cuts: list[dict], dense_count: int) -> dict:
-    """Zero-API deterministic fallback blueprint built directly from Whisper & FFmpeg cut data."""
     avg_cut = round(tr["duration"] / max(len(cuts), 1), 2)
     template = []
     cams = ["mcu", "ins", "ws", "low", "ecu", "two", "ms", "ots"]
@@ -267,7 +268,7 @@ def build_offline_blueprint(vid: str, tr: dict, cuts: list[dict], dense_count: i
 
 
 def call_gemini_vision_full_frames(api_key: str, prompt: str, sheet_paths: list[str]) -> dict:
-    """Sends 100% of multi-sheets via Gemini Files API (with automatic inline fallback if Files API is unavailable)."""
+    """Sends 100% of multi-sheets via Gemini Files API with smart 429 cooldown recovery."""
     uploaded_files = []
     file_parts = []
 
@@ -277,11 +278,9 @@ def call_gemini_vision_full_frames(api_key: str, prompt: str, sheet_paths: list[
             uploaded_files.append(uf)
             file_parts.append({"file_data": {"mime_type": uf["mime_type"], "file_uri": uf["uri"]}})
 
-    # Fallback to inline base64 across evenly spaced sheets if Files API upload failed
     inline_parts = []
     if not file_parts:
-        sampled = sheet_paths[:10]
-        for sp in sampled:
+        for sp in sheet_paths[:8]:
             if os.path.exists(sp):
                 with open(sp, "rb") as f:
                     b64 = base64.b64encode(f.read()).decode("ascii")
@@ -319,8 +318,8 @@ def call_gemini_vision_full_frames(api_key: str, prompt: str, sheet_paths: list[
                 except urllib.error.HTTPError as e:
                     last_err = f"{model} HTTP {e.code}"
                     if e.code == 429 and attempt == 0:
-                        print(f"[RateLimit] {model} hit 429; waiting 6s then trying next...", flush=True)
-                        time.sleep(6)
+                        print(f"[RateLimit] {model} hit 429; cooling down 22s for rolling quota reset...", flush=True)
+                        time.sleep(22)
                         continue
                     break
                 except Exception as e:
@@ -345,9 +344,12 @@ def synthesize_master_visual_bible(api_key: str):
     hooks = []
     arcs = []
     total_frames_analyzed = 0
+    vision_verified_count = 0
 
     for bp in blueprints:
         total_frames_analyzed += bp.get("frames_analyzed_count", 0)
+        if bp.get("model_used"):
+            vision_verified_count += 1
         vs = bp.get("visual_style", {})
         envs.update(vs.get("environments_seen", []))
         cam_patterns.extend(vs.get("camera_patterns", []))
@@ -358,7 +360,6 @@ def synthesize_master_visual_bible(api_key: str):
         if bp.get("story_arc"):
             arcs.append(bp["story_arc"])
 
-    # Gather representative sheets across every harvested Reel for cross-vault synthesis
     cross_sheets = []
     for reel_dir in sorted(glob.glob(os.path.join(FRAMES_DIR, "*"))):
         reel_sheets = sorted(glob.glob(os.path.join(reel_dir, "sheet_*.jpg")))
@@ -366,10 +367,19 @@ def synthesize_master_visual_bible(api_key: str):
             cross_sheets.append(reel_sheets[0])
             if len(reel_sheets) > 2:
                 cross_sheets.append(reel_sheets[len(reel_sheets) // 2])
-    cross_sheets = cross_sheets[:16]
+    cross_sheets = cross_sheets[:12]
 
     distilled_rules = {}
+    if os.path.exists(VISUAL_BIBLE_PATH):
+        try:
+            prev = json.load(open(VISUAL_BIBLE_PATH, encoding="utf-8"))
+            if isinstance(prev.get("vision_distilled_standards"), dict) and prev["vision_distilled_standards"]:
+                distilled_rules = prev["vision_distilled_standards"]
+        except Exception:
+            pass
+
     if api_key and cross_sheets:
+        time.sleep(10)
         synth_prompt = f"""You are the Lead Art & Cinematography Director for a Roblox 3D Reels studio modeled after @craftee_films.
 You have analyzed {total_frames_analyzed} total frames across {len(blueprints)} viral @craftee_films Reels.
 Synthesize the exact visual standards into one complete JSON blueprint so our Blender engine matches their look with zero visual mistakes:
@@ -391,14 +401,17 @@ Synthesize the exact visual standards into one complete JSON blueprint so our Bl
   }}
 }}"""
         try:
-            distilled_rules = call_gemini_vision_full_frames(api_key, synth_prompt, cross_sheets)
-            print("[VisualBible] Synthesized master visual rules across all Reel multi-sheets.", flush=True)
+            fresh_rules = call_gemini_vision_full_frames(api_key, synth_prompt, cross_sheets)
+            if fresh_rules:
+                distilled_rules = fresh_rules
+                print("[VisualBible] Synthesized master visual rules across Reel multi-sheets.", flush=True)
         except Exception as e:
-            print(f"[VisualBible] Using aggregated blueprint synthesis ({e}).", flush=True)
+            print(f"[VisualBible] Preserving aggregated blueprint synthesis ({e}).", flush=True)
 
     total_disk_frames = len(glob.glob(os.path.join(FRAMES_DIR, "*", "frame_*.jpg")))
     bible = {
         "total_reels_trained_on": len(blueprints),
+        "vision_verified_reels": vision_verified_count,
         "total_dense_frames_indexed": total_disk_frames,
         "total_frames_analyzed_by_vision": max(total_frames_analyzed, total_disk_frames),
         "canonical_cast_universe": CANONICAL_CAST_UNIVERSE,
@@ -415,7 +428,7 @@ Synthesize the exact visual standards into one complete JSON blueprint so our Bl
         json.dump(bible, f, indent=2)
     print(
         f"[VisualBible] Saved {VISUAL_BIBLE_PATH} ({bible['total_reels_trained_on']} reels, "
-        f"{bible['total_frames_analyzed_by_vision']} frames).",
+        f"{bible['vision_verified_reels']} vision-verified, {bible['total_frames_analyzed_by_vision']} frames).",
         flush=True,
     )
 
@@ -429,17 +442,20 @@ def main():
         print("[Analyze] No transcripts found yet; nothing to analyze.", flush=True)
         return
 
+    vision_calls_this_run = 0
+
     for trans_file in trans_files:
         vid = os.path.splitext(os.path.basename(trans_file))[0]
         bp_path = os.path.join(BLUEPRINT_DIR, f"{vid}.json")
         dense_frames = sorted(glob.glob(os.path.join(FRAMES_DIR, vid, "frame_*.jpg")))
         sheets = sorted(glob.glob(os.path.join(FRAMES_DIR, vid, "sheet_*.jpg")))
 
-        # Skip only if already analyzed with full-frame multi-sheets
+        # Skip ONLY if already analyzed with real Gemini Vision on all frames
         if os.path.exists(bp_path):
             try:
                 existing = json.load(open(bp_path, encoding="utf-8"))
-                if existing.get("frames_analyzed_count", 0) >= len(dense_frames) and len(dense_frames) > 0:
+                already_vision = bool(existing.get("model_used")) and existing.get("analysis_mode") != "offline_deterministic_fallback"
+                if already_vision and existing.get("frames_analyzed_count", 0) >= len(dense_frames) and len(dense_frames) > 0:
                     continue
             except Exception:
                 pass
@@ -447,6 +463,17 @@ def main():
         tr = json.load(open(trans_file, encoding="utf-8"))
         cuts_file = os.path.join(FRAMES_DIR, vid, "cuts.json")
         cuts = json.load(open(cuts_file, encoding="utf-8")) if os.path.exists(cuts_file) else []
+
+        # If we reached this run's free-tier Vision quota cap, save/keep offline blueprint so next run continues seamlessly
+        if not api_key or vision_calls_this_run >= MAX_VISION_REELS_PER_RUN:
+            if not os.path.exists(bp_path):
+                bp = build_offline_blueprint(vid, tr, cuts, len(dense_frames))
+                bp["sheets_analyzed_count"] = len(sheets)
+                bp["source_transcript"] = tr.get("text", "")
+                bp["source_words_per_sec"] = tr.get("words_per_sec", 3.0)
+                with open(bp_path, "w", encoding="utf-8") as f:
+                    json.dump(bp, f, indent=2)
+            continue
 
         prompt = f"""Analyze 100% of the {len(dense_frames)} chronological frames (packed across {len(sheets)} 5x5 contact sheets with F0001..F{len(dense_frames):04d} frame numbers and timestamps) from this viral @craftee_films Roblox 3D storytelling Reel.
 
@@ -489,13 +516,12 @@ Inspect EVERY frame across ALL {len(sheets)} sheets from start to finish and ret
   ]
 }}"""
 
-        print(f"[Analyze] Analyzing all {len(dense_frames)} frames ({len(sheets)} sheets) for {vid}...", flush=True)
+        print(f"[Analyze] Vision pass ({vision_calls_this_run + 1}/{MAX_VISION_REELS_PER_RUN}) on {len(dense_frames)} frames ({len(sheets)} sheets) for {vid}...", flush=True)
         try:
-            if not api_key:
-                raise RuntimeError("GEMINI_API_KEY empty")
             bp = call_gemini_vision_full_frames(api_key, prompt, sheets)
+            vision_calls_this_run += 1
         except Exception as e:
-            print(f"[WARN] Vision fallback engaged for {vid} ({e}); building offline blueprint.", flush=True)
+            print(f"[WARN] Vision fallback engaged for {vid} ({e}); saving offline blueprint for retry on next run.", flush=True)
             bp = build_offline_blueprint(vid, tr, cuts, len(dense_frames))
 
         bp["frames_analyzed_count"] = len(dense_frames)
@@ -509,6 +535,9 @@ Inspect EVERY frame across ALL {len(sheets)} sheets from start to finish and ret
             f"({len(dense_frames)} frames, mode={bp.get('model_used', bp.get('analysis_mode'))})",
             flush=True,
         )
+
+        if vision_calls_this_run < MAX_VISION_REELS_PER_RUN:
+            time.sleep(INTER_REEL_COOLDOWN_SEC)
 
     synthesize_master_visual_bible(api_key)
 
