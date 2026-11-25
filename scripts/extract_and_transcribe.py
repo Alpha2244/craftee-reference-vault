@@ -4,7 +4,7 @@ import math
 import os
 import re
 import subprocess
-from PIL import Image
+from PIL import Image, ImageDraw
 from faster_whisper import WhisperModel
 
 RAW_DIR = os.path.abspath("vault/raw")
@@ -26,27 +26,56 @@ def probe_duration(mp4_path: str) -> float:
     return float(out)
 
 
-def build_contact_sheet(frame_paths: list[str], out_path: str, cols: int = 4, thumb_w: int = 270, thumb_h: int = 480) -> str | None:
-    """Stitches up to 20 keyframes into a single high-res contact sheet so Gemini Vision can inspect 20 shots at once."""
-    selected = frame_paths[:20]
-    if not selected:
-        return None
-    rows = math.ceil(len(selected) / cols)
-    sheet = Image.new("RGB", (cols * thumb_w, rows * thumb_h), (18, 18, 22))
-    for idx, fp in enumerate(selected):
-        try:
-            with Image.open(fp) as im:
-                im_resized = im.convert("RGB").resize((thumb_w, thumb_h), Image.Resampling.LANCZOS)
-                r, c = divmod(idx, cols)
-                sheet.paste(im_resized, (c * thumb_w, r * thumb_h))
-        except Exception:
-            continue
-    sheet.save(out_path, "JPEG", quality=85)
-    return out_path
+def build_all_multi_sheets(
+    frame_paths: list[str], out_dir: str, fps: float = 4.0, cols: int = 5, rows: int = 5, thumb_w: int = 216, thumb_h: int = 384
+) -> list[str]:
+    """Packs 100% of extracted dense frames chronologically into 5x5 contact sheets (25 frames/sheet)."""
+    for old_sheet in glob.glob(os.path.join(out_dir, "sheet_*.jpg")):
+        os.remove(old_sheet)
+
+    if not frame_paths:
+        return []
+
+    per_sheet = cols * rows
+    total_sheets = math.ceil(len(frame_paths) / per_sheet)
+    created_sheets = []
+
+    for s_idx in range(total_sheets):
+        batch = frame_paths[s_idx * per_sheet : (s_idx + 1) * per_sheet]
+        sheet_rows = math.ceil(len(batch) / cols)
+        sheet = Image.new("RGB", (cols * thumb_w, sheet_rows * thumb_h), (18, 18, 22))
+        draw = ImageDraw.Draw(sheet)
+
+        for local_i, fp in enumerate(batch):
+            global_i = s_idx * per_sheet + local_i
+            sec = global_i / max(fps, 0.1)
+            try:
+                with Image.open(fp) as im:
+                    im_resized = im.convert("RGB").resize((thumb_w, thumb_h), Image.Resampling.LANCZOS)
+                    r, c = divmod(local_i, cols)
+                    x0, y0 = c * thumb_w, r * thumb_h
+                    sheet.paste(im_resized, (x0, y0))
+                    # Burn crisp frame index & timestamp badge so Gemini tracks exact timing across sheets
+                    label = f"F{global_i + 1:04d} ({sec:.2f}s)"
+                    draw.rectangle([x0 + 4, y0 + 4, x0 + 118, y0 + 22], fill=(0, 0, 0))
+                    draw.text((x0 + 8, y0 + 7), label, fill=(255, 255, 255))
+            except Exception:
+                continue
+
+        sheet_path = os.path.join(out_dir, f"sheet_{s_idx + 1:03d}.jpg")
+        sheet.save(sheet_path, "JPEG", quality=82)
+        created_sheets.append(sheet_path)
+
+    # Also save sheet_001 as contact_sheet.jpg for quick preview compatibility
+    if created_sheets:
+        with Image.open(created_sheets[0]) as preview:
+            preview.save(os.path.join(out_dir, "contact_sheet.jpg"), "JPEG", quality=82)
+
+    return created_sheets
 
 
-def extract_massive_frames_and_cuts(mp4_path: str, out_dir: str, total_dur: float) -> list[dict]:
-    """Extracts 4-fps dense frames (~200+ frames/video -> thousands across vault) + exact scene cuts + contact sheet."""
+def extract_massive_frames_and_cuts(mp4_path: str, out_dir: str, total_dur: float) -> tuple[list[dict], list[str]]:
+    """Extracts 4-fps dense frames across the entire video, packs 100% into multi-sheets, and detects camera cuts."""
     os.makedirs(out_dir, exist_ok=True)
 
     # 1. Dense frame extraction: 4 frames per second (every 0.25s) across the entire video
@@ -57,6 +86,9 @@ def extract_massive_frames_and_cuts(mp4_path: str, out_dir: str, total_dur: floa
         os.path.join(out_dir, "frame_%04d.jpg"),
     ]
     subprocess.run(dense_cmd, check=True)
+
+    all_dense = sorted(glob.glob(os.path.join(out_dir, "frame_*.jpg")))
+    sheets = build_all_multi_sheets(all_dense, out_dir, fps=4.0)
 
     # 2. Exact camera cut detection (scene change threshold 0.22)
     cut_cmd = [
@@ -83,34 +115,19 @@ def extract_massive_frames_and_cuts(mp4_path: str, out_dir: str, total_dur: floa
             clean_ts.append(t)
 
     cuts = []
-    cut_imgs = []
     for idx, t0 in enumerate(clean_ts):
         t1 = clean_ts[idx + 1] if idx + 1 < len(clean_ts) else round(total_dur, 3)
         img_name = f"cut_{idx + 1:03d}.jpg"
         full_img = os.path.join(out_dir, img_name)
-        exists = os.path.exists(full_img)
-        if exists:
-            cut_imgs.append(full_img)
         cuts.append({
             "cut_index": idx,
             "t0": t0,
             "t1": t1,
             "dur": round(t1 - t0, 3),
-            "frame": img_name if exists else None,
+            "frame": img_name if os.path.exists(full_img) else None,
         })
 
-    # Sample evenly across all cuts + dense frames to build a 20-shot visual contact sheet
-    if len(cut_imgs) < 16:
-        all_dense = sorted(glob.glob(os.path.join(out_dir, "frame_*.jpg")))
-        if all_dense:
-            step = max(1, len(all_dense) // 20)
-            cut_imgs = all_dense[::step][:20]
-    elif len(cut_imgs) > 20:
-        step = len(cut_imgs) / 20.0
-        cut_imgs = [cut_imgs[int(i * step)] for i in range(20)]
-
-    build_contact_sheet(cut_imgs, os.path.join(out_dir, "contact_sheet.jpg"))
-    return cuts
+    return cuts, sheets
 
 
 def transcribe_video(model: WhisperModel, mp4_path: str, total_dur: float) -> dict:
@@ -157,7 +174,8 @@ def rebuild_master_corpus():
             continue
         cuts_file = os.path.join(FRAMES_DIR, vid, "cuts.json")
         cuts = json.load(open(cuts_file, encoding="utf-8")) if os.path.exists(cuts_file) else []
-        dense_count = len(glob.glob(os.path.join(FRAMES_DIR, vid, "*.jpg")))
+        dense_count = len(glob.glob(os.path.join(FRAMES_DIR, vid, "frame_*.jpg")))
+        sheet_count = len(glob.glob(os.path.join(FRAMES_DIR, vid, "sheet_*.jpg")))
         total_words += tr.get("word_count", 0)
         total_frames += dense_count
         entries.append({
@@ -165,7 +183,8 @@ def rebuild_master_corpus():
             "duration": tr.get("duration", 0),
             "words_per_sec": tr.get("words_per_sec", 0),
             "total_cuts": len(cuts),
-            "frames_saved": dense_count,
+            "dense_frames_saved": dense_count,
+            "multi_sheets_saved": sheet_count,
             "hook_0_to_3s": tr.get("hook_0_to_3s", ""),
             "full_script": tr.get("text", ""),
         })
@@ -173,7 +192,7 @@ def rebuild_master_corpus():
     corpus = {
         "total_scripts_collected": len(entries),
         "total_words_collected": total_words,
-        "total_frames_collected": total_frames,
+        "total_dense_frames_collected": total_frames,
         "avg_words_per_sec": round(sum(e["words_per_sec"] for e in entries) / max(len(entries), 1), 2),
         "avg_cuts_per_video": round(sum(e["total_cuts"] for e in entries) / max(len(entries), 1), 1),
         "all_hooks": [e["hook_0_to_3s"] for e in entries if e["hook_0_to_3s"]],
@@ -183,7 +202,7 @@ def rebuild_master_corpus():
         json.dump(corpus, f, indent=2)
     print(
         f"[Corpus] Rebuilt {CORPUS_PATH}: {corpus['total_scripts_collected']} scripts, "
-        f"{corpus['total_frames_collected']} total frames, {corpus['total_words_collected']} words.",
+        f"{corpus['total_dense_frames_collected']} dense frames, {corpus['total_words_collected']} words.",
         flush=True,
     )
 
@@ -199,9 +218,14 @@ def main():
         vid = os.path.splitext(os.path.basename(mp4))[0]
         trans_path = os.path.join(TRANS_DIR, f"{vid}.json")
         cuts_path = os.path.join(FRAMES_DIR, vid, "cuts.json")
-        dense_frames = glob.glob(os.path.join(FRAMES_DIR, vid, "frame_*.jpg"))
+        dense_frames = sorted(glob.glob(os.path.join(FRAMES_DIR, vid, "frame_*.jpg")))
+        existing_sheets = sorted(glob.glob(os.path.join(FRAMES_DIR, vid, "sheet_*.jpg")))
 
+        # Backfill multi-sheets if dense frames exist from an earlier run without sheet_*.jpg
         if os.path.exists(trans_path) and os.path.exists(cuts_path) and len(dense_frames) >= 10:
+            if not existing_sheets:
+                sheets = build_all_multi_sheets(dense_frames, os.path.join(FRAMES_DIR, vid), fps=4.0)
+                print(f"[Sheets] Built {len(sheets)} multi-sheets for {len(dense_frames)} existing frames in {vid}.", flush=True)
             continue
 
         if model is None:
@@ -215,14 +239,14 @@ def main():
         with open(trans_path, "w", encoding="utf-8") as f:
             json.dump(tr, f, indent=2)
 
-        cuts = extract_massive_frames_and_cuts(mp4, os.path.join(FRAMES_DIR, vid), dur)
+        cuts, sheets = extract_massive_frames_and_cuts(mp4, os.path.join(FRAMES_DIR, vid), dur)
         with open(cuts_path, "w", encoding="utf-8") as f:
             json.dump(cuts, f, indent=2)
 
-        frame_total = len(glob.glob(os.path.join(FRAMES_DIR, vid, "*.jpg")))
+        dense_total = len(glob.glob(os.path.join(FRAMES_DIR, vid, "frame_*.jpg")))
         print(
             f"[Extract] {vid}: {tr['word_count']} words ({tr['words_per_sec']} wps), "
-            f"{len(cuts)} cuts, {frame_total} total frames saved.",
+            f"{len(cuts)} cuts, {dense_total} dense frames packed into {len(sheets)} sheets.",
             flush=True,
         )
 
