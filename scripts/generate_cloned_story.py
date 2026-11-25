@@ -8,9 +8,10 @@ import time
 import urllib.error
 import urllib.request
 
-BLUEPRINT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "vault", "blueprints"))
+ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+BLUEPRINT_DIR = os.path.join(ROOT_DIR, "vault", "blueprints")
+CORPUS_PATH = os.path.join(ROOT_DIR, "vault", "master_script_corpus.json")
 
-# Active 2026 Gemini & Gemma models ordered by free-tier speed & reliability
 MODELS = [
     "gemini-3.8-flash",
     "gemini-3.6-flash",
@@ -58,8 +59,34 @@ def extract_json_safely(raw_text: str) -> dict:
         raise
 
 
+def load_training_context() -> tuple[dict, str]:
+    """Loads a random blueprint + a rich multi-script training block from master_script_corpus.json."""
+    blueprints = sorted(glob.glob(os.path.join(BLUEPRINT_DIR, "*.json")))
+    bp = json.load(open(random.choice(blueprints), encoding="utf-8")) if blueprints else {}
+
+    corpus_block = ""
+    if os.path.exists(CORPUS_PATH):
+        corpus = json.load(open(CORPUS_PATH, encoding="utf-8"))
+        scripts = corpus.get("scripts", [])
+        hooks = corpus.get("all_hooks", [])
+        sample_scripts = random.sample(scripts, min(8, len(scripts))) if scripts else []
+        sample_hooks = random.sample(hooks, min(15, len(hooks))) if hooks else []
+        corpus_block = (
+            f"CORPUS STATS ({corpus.get('total_scripts_collected', 0)} harvested scripts, "
+            f"avg {corpus.get('avg_words_per_sec', 3.2)} words/sec, "
+            f"avg {corpus.get('avg_cuts_per_video', 24)} camera cuts/video):\n"
+            f"PROVEN OPENING HOOKS FROM VAULT:\n"
+            + "\n".join(f"- {h}" for h in sample_hooks)
+            + "\n\nFULL REFERENCE SCRIPTS FROM VAULT (STUDY RHYTHM, DIALOGUE & TWISTS):\n"
+            + "\n---\n".join(
+                f"[{s['id']} | {s['total_cuts']} cuts | {s['words_per_sec']} wps]: {s['full_script'][:700]}"
+                for s in sample_scripts
+            )
+        )
+    return bp, corpus_block
+
+
 def build_offline_fast_story(palettes: list[dict]) -> dict:
-    """Zero-API emergency backup story with 24 rapid cuts across 3 rich sets."""
     beats = [
         ("MusicRow", "sunny", "mcu", "crash_in", "Alex", "STOP scrolling! Never take a mystery bet!", "shock", "shock", ["whoosh@0.0"]),
         ("MusicRow", "sunny", "two", "push", "Jax", "Jax bet me a hundred bucks right here.", "talk", "smug", []),
@@ -152,20 +179,21 @@ def call_gemini_json_defensive(api_key: str, prompt: str) -> dict:
 def main(project_dir: str):
     api_key = os.environ.get("GEMINI_API_KEY", "").strip()
     os.makedirs(project_dir, exist_ok=True)
-    blueprints = sorted(glob.glob(os.path.join(BLUEPRINT_DIR, "*.json")))
-    bp = json.load(open(random.choice(blueprints), encoding="utf-8")) if blueprints else {}
+    bp, corpus_block = load_training_context()
     theme = os.environ.get("STORY_THEME", "").strip()
     palettes = random.sample(OUTFIT_PALETTES, 3)
 
-    prompt = f"""You are a viral Roblox 3D Reels director cloning the exact pacing, hook intensity, rapid camera cuts, and visual variety of top creator @craftee_films.
+    prompt = f"""You are a viral Roblox 3D Reels director trained on our entire @craftee_films / In This Town script & visual vault.
 
-REFERENCE BLUEPRINT TO CLONE STYLE FROM:
-{json.dumps(bp, indent=2) if bp else "Fast-paced 22-to-28-shot Roblox comedic/dramatic twist Reel with 1.4s cuts, punchy 3-second hook, escalating stakes, and rich set changes."}
+{corpus_block}
 
-OPTIONAL USER THEME: "{theme or 'Create a brand-new original viral twist story (do NOT copy the reference plot word-for-word, clone its pacing, hook structure, and visual energy)'}"
+SELECTED VISUAL & CAMERA BLUEPRINT:
+{json.dumps(bp, indent=2) if bp else "Fast-paced 24-to-28-shot Roblox comedic/dramatic twist Reel with 1.5s cuts, punchy 3-second hook, escalating stakes, and rich set changes."}
+
+OPTIONAL USER THEME: "{theme or 'Write a brand-new original viral twist story matching the exact hook punchiness, fast dialogue rhythm, and rapid visual cuts of the training scripts above (never copy any script word-for-word).'}"
 
 STRICT PRODUCTION RULES:
-1. TOTAL LENGTH: 210 to 250 words across 22 to 28 rapid shots (each shot is 1 short punchy sentence, ~8-11 words, cutting every ~1.6 to 2.0 seconds).
+1. TOTAL LENGTH: 210 to 250 words across 24 to 28 rapid shots (each shot is 1 short punchy sentence, ~8-10 words, cutting every ~1.6 to 1.9 seconds).
 2. MULTI-LOCATION VISUAL VARIETY: Use 2 to 3 DIFFERENT rich sets from: {json.dumps(RICH_SETS)}
 3. DYNAMIC CAMERA WORK: Never repeat the same angle twice in a row! Alternate cam ({json.dumps(sorted(VALID_CAMS))}) and move ({json.dumps(sorted(VALID_MOVES))}).
 4. CHARACTERS: Use Alex and Jax with these exact color palettes:
@@ -189,7 +217,7 @@ Return ONLY valid JSON matching:
       "cam": "mcu",
       "move": "crash_in",
       "subject": "Alex",
-      "text": "Punchy hook line under 11 words!",
+      "text": "Punchy hook line under 10 words!",
       "sfx": ["whoosh@0.0"],
       "actors": [
         {{"who": "Alex", "at": [-1.5, 0], "yaw": 15, "anim": "shock", "face": "shock", "talk": [0.0, 1.8]}},
@@ -207,7 +235,6 @@ Return ONLY valid JSON matching:
         print(f"[WARN] Story LLM fallback engaged ({e}); using offline 20-shot fast-cut story.", flush=True)
         story = build_offline_fast_story(palettes)
 
-    # Full schema sanitization so compile.py never fails
     valid_sets = set(RICH_SETS)
     cast = story.get("cast")
     if not isinstance(cast, dict) or not cast:
