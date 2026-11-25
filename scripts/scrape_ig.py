@@ -1,8 +1,5 @@
-import glob
 import json
 import os
-import re
-import subprocess
 import urllib.request
 
 TARGET_USER = os.environ.get("IG_TARGET_USER", "craftee_films").strip().lstrip("@")
@@ -11,158 +8,73 @@ RAW_DIR = os.path.abspath("vault/raw")
 META_DIR = os.path.abspath("vault/raw_meta")
 
 
-def save_meta(vid: str, source_url: str, platform: str, caption: str = "", views: int = 0, duration: float = 0):
-    meta_path = os.path.join(META_DIR, f"{vid}.json")
-    if not os.path.exists(meta_path):
-        with open(meta_path, "w", encoding="utf-8") as f:
-            json.dump(
-                {
-                    "id": vid,
-                    "source": source_url,
-                    "platform": platform,
-                    "username": TARGET_USER,
-                    "caption": caption,
-                    "views": views,
-                    "duration": duration,
-                },
-                f,
-                indent=2,
-            )
-
-
-def download_direct_mp4(url: str, out_path: str) -> bool:
+def download_mp4(url: str, out_path: str) -> bool:
     try:
         req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
         with urllib.request.urlopen(req, timeout=60) as resp, open(out_path, "wb") as f:
             f.write(resp.read())
         return os.path.exists(out_path) and os.path.getsize(out_path) > 15_000
-    except Exception:
+    except Exception as e:
+        print(f"[Download WARN] {e}", flush=True)
         if os.path.exists(out_path):
             os.remove(out_path)
         return False
 
 
-def layer1_curl_cffi_ig(username: str, max_count: int) -> list[str]:
-    from curl_cffi import requests as cffi_req
+def main():
+    os.makedirs(RAW_DIR, exist_ok=True)
+    os.makedirs(META_DIR, exist_ok=True)
 
+    token = os.environ.get("BRIGHTDATA_API_TOKEN", "").strip()
+    if not token:
+        raise RuntimeError("Missing BRIGHTDATA_API_TOKEN in GitHub Secrets!")
+
+    from brightdata import SyncBrightDataClient
+
+    profile_url = f"https://www.instagram.com/{TARGET_USER}/"
+    print(f"[BrightData] Fetching up to {MAX_REELS} Reels from {profile_url}...", flush=True)
+
+    with SyncBrightDataClient(api_token=token, auto_create_zones=False) as client:
+        result = client.search.instagram.reels_all(
+            profile_url,
+            num_of_posts=MAX_REELS,
+            timeout=420,
+        )
+
+    reels = getattr(result, "data", None) or (result if isinstance(result, list) else [])
     downloaded = []
-    headers = {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
-        "Accept-Language": "en-US,en;q=0.9",
-        "X-IG-App-ID": "936619743392459",
-    }
-    api_url = f"https://www.instagram.com/api/v1/users/web_profile_info/?username={username}"
-    r = cffi_req.get(api_url, headers=headers, impersonate="chrome", timeout=20)
-    if r.status_code != 200:
-        raise RuntimeError(f"IG web_profile_info HTTP {r.status_code}")
 
-    data = r.json()
-    edges = (
-        data.get("data", {})
-        .get("user", {})
-        .get("edge_owner_to_timeline_media", {})
-        .get("edges", [])
-    )
+    for item in reels:
+        if not isinstance(item, dict):
+            continue
+        sc = item.get("shortcode") or item.get("id") or item.get("post_id")
+        video_url = item.get("video_url") or item.get("url_video")
+        if not sc or not video_url:
+            continue
 
-    for edge in edges:
-        node = edge.get("node", {})
-        if not node.get("is_video"):
-            continue
-        sc = node.get("shortcode")
-        if not sc:
-            continue
         mp4_path = os.path.join(RAW_DIR, f"{sc}.mp4")
         if os.path.exists(mp4_path) and os.path.getsize(mp4_path) > 15_000:
             continue
 
-        video_url = node.get("video_url")
-        if not video_url:
-            emb = cffi_req.get(f"https://www.instagram.com/reel/{sc}/embed/captioned/", impersonate="chrome", timeout=20)
-            m = re.search(r'"video_url":"(https:[^"]+)"', emb.text)
-            if m:
-                video_url = m.group(1).replace("\\u0026", "&").replace("\\/", "/")
-
-        if video_url and download_direct_mp4(video_url, mp4_path):
-            cap_edges = node.get("edge_media_to_caption", {}).get("edges", [])
-            cap = cap_edges[0]["node"]["text"] if cap_edges else ""
-            save_meta(sc, f"https://www.instagram.com/reel/{sc}/", "instagram", cap, node.get("video_view_count", 0))
-            downloaded.append(sc)
-            if len(downloaded) >= max_count:
-                break
-
-    return downloaded
-
-
-def layer2_ytdlp_shorts(query_or_url: str, platform: str, max_count: int) -> list[str]:
-    """Downloads massive batches of short vertical Roblox stories (15s-110s) via yt-dlp without cookies."""
-    archive_file = os.path.join(RAW_DIR, "downloaded_ids.txt")
-    cmd = [
-        "yt-dlp",
-        "--no-warnings",
-        "--ignore-errors",
-        "--download-archive", archive_file,
-        "--playlist-end", "80",
-        "--max-downloads", str(max_count),
-        "--match-filter", "duration >= 15 & duration <= 110",
-        "-f", "bv*[ext=mp4]+ba[ext=m4a]/b[ext=mp4]/b",
-        "--merge-output-format", "mp4",
-        "-o", os.path.join(RAW_DIR, "%(id)s.%(ext)s"),
-        "--write-info-json",
-        query_or_url,
-    ]
-    subprocess.run(cmd, check=False)
-
-    downloaded = []
-    for info_file in glob.glob(os.path.join(RAW_DIR, "*.info.json")):
-        try:
-            info = json.load(open(info_file, encoding="utf-8"))
-            vid = info.get("id")
-            mp4_path = os.path.join(RAW_DIR, f"{vid}.mp4")
-            if vid and os.path.exists(mp4_path) and os.path.getsize(mp4_path) > 15_000:
-                save_meta(
-                    vid,
-                    info.get("webpage_url", query_or_url),
-                    platform,
-                    info.get("description") or info.get("title") or "",
-                    info.get("view_count") or 0,
-                    info.get("duration") or 0,
+        if download_mp4(video_url, mp4_path):
+            with open(os.path.join(META_DIR, f"{sc}.json"), "w", encoding="utf-8") as f:
+                json.dump(
+                    {
+                        "id": sc,
+                        "source": item.get("url", f"https://www.instagram.com/reel/{sc}/"),
+                        "platform": "instagram",
+                        "username": TARGET_USER,
+                        "caption": item.get("description") or item.get("caption") or "",
+                        "views": item.get("video_view_count") or item.get("views") or 0,
+                        "date_posted": item.get("date_posted", ""),
+                    },
+                    f,
+                    indent=2,
                 )
-                downloaded.append(vid)
-        finally:
-            if os.path.exists(info_file):
-                os.remove(info_file)
-    return downloaded
+            downloaded.append(sc)
+            print(f"[BrightData] Downloaded {sc}.mp4", flush=True)
 
-
-def main():
-    os.makedirs(RAW_DIR, exist_ok=True)
-    os.makedirs(META_DIR, exist_ok=True)
-    print(f"[Scraper] Harvesting up to {MAX_REELS} new videos for @{TARGET_USER}...", flush=True)
-
-    downloaded = []
-
-    try:
-        downloaded.extend(layer1_curl_cffi_ig(TARGET_USER, MAX_REELS))
-    except Exception as e:
-        print(f"[Layer 1 IG] Skipped ({e})", flush=True)
-
-    # Broad multi-query Shorts harvesting for massive script & frame collection
-    queries = [
-        "https://www.youtube.com/results?search_query=In+This+Town+Roblox+Stories+%23shorts&sp=EgIYAQ%253D%253D",
-        "https://www.youtube.com/results?search_query=In+This+World+Roblox+Stories+%23shorts&sp=EgIYAQ%253D%253D",
-        "https://www.youtube.com/results?search_query=craftee_films+roblox+%23shorts&sp=EgIYAQ%253D%253D",
-        "https://www.youtube.com/results?search_query=craftee+roblox+stories+%23shorts&sp=EgIYAQ%253D%253D",
-        "https://www.youtube.com/results?search_query=roblox+storytime+animation+%23shorts&sp=EgIYAQ%253D%253D",
-        "https://www.youtube.com/@gopal70374/shorts",
-    ]
-    for q in queries:
-        if len(downloaded) >= MAX_REELS:
-            break
-        need = MAX_REELS - len(downloaded)
-        print(f"[Layer 2 Shorts] Searching ({need} needed): {q}", flush=True)
-        downloaded.extend(layer2_ytdlp_shorts(q, "youtube_shorts", need))
-
-    print(f"[Scraper] Finished! Newly harvested IDs ({len(downloaded)}): {downloaded}", flush=True)
+    print(f"[Scraper] Finished! Downloaded {len(downloaded)} new @craftee_films Reels: {downloaded}", flush=True)
 
 
 if __name__ == "__main__":
