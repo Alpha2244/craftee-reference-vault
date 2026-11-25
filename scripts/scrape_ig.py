@@ -24,25 +24,8 @@ def download_mp4(url: str, out_path: str) -> bool:
         return False
 
 
-def fetch_via_sdk(token: str, profile_url: str, max_reels: int) -> list[dict]:
-    from brightdata import SyncBrightDataClient
-
-    with SyncBrightDataClient(api_token=token, auto_create_zones=False) as client:
-        result = client.search.instagram.reels_all(
-            profile_url,
-            num_of_posts=max_reels,
-            timeout=420,
-        )
-    data = getattr(result, "data", None)
-    if isinstance(data, list):
-        return data
-    if isinstance(result, list):
-        return result
-    return []
-
-
 def fetch_via_rest_api(token: str, profile_url: str, max_reels: int) -> list[dict]:
-    """Direct Bright Data Web Scraper REST API fallback."""
+    """Calls Bright Data Instagram Reels Scraper REST API with the required {"input": [...]} schema."""
     headers = {
         "Authorization": f"Bearer {token}",
         "Content-Type": "application/json",
@@ -51,10 +34,23 @@ def fetch_via_rest_api(token: str, profile_url: str, max_reels: int) -> list[dic
         f"https://api.brightdata.com/datasets/v3/trigger"
         f"?dataset_id={REELS_DATASET_ID}&include_errors=true&type=discover_new&discover_by=url"
     )
-    payload = json.dumps([{"url": profile_url, "num_of_posts": max_reels}]).encode("utf-8")
+    body_obj = {
+        "input": [
+            {
+                "url": profile_url,
+                "num_of_posts": max_reels,
+            }
+        ]
+    }
+    payload = json.dumps(body_obj).encode("utf-8")
     req = urllib.request.Request(trigger_url, data=payload, headers=headers, method="POST")
-    with urllib.request.urlopen(req, timeout=60) as resp:
-        snap = json.loads(resp.read().decode("utf-8"))
+
+    try:
+        with urllib.request.urlopen(req, timeout=60) as resp:
+            snap = json.loads(resp.read().decode("utf-8"))
+    except urllib.error.HTTPError as e:
+        err_body = e.read().decode("utf-8", errors="ignore")
+        raise RuntimeError(f"Bright Data HTTP {e.code}: {err_body}") from e
 
     snapshot_id = snap.get("snapshot_id")
     if not snapshot_id:
@@ -62,12 +58,13 @@ def fetch_via_rest_api(token: str, profile_url: str, max_reels: int) -> list[dic
 
     print(f"[BrightData REST] Triggered snapshot {snapshot_id}, polling for results...", flush=True)
     progress_url = f"https://api.brightdata.com/datasets/v3/progress/{snapshot_id}"
-    for _ in range(60):
+    for _ in range(70):
         time.sleep(6)
         preq = urllib.request.Request(progress_url, headers={"Authorization": f"Bearer {token}"})
         with urllib.request.urlopen(preq, timeout=30) as presp:
             pinfo = json.loads(presp.read().decode("utf-8"))
         status = pinfo.get("status", "")
+        print(f"[BrightData REST] Snapshot status: {status}", flush=True)
         if status == "ready":
             break
         if status == "failed":
@@ -88,22 +85,20 @@ def main():
     if not token:
         raise RuntimeError("Missing BRIGHTDATA_API_TOKEN in GitHub Secrets!")
 
-    profile_url = f"https://www.instagram.com/{TARGET_USER}/"
+    profile_url = f"https://www.instagram.com/{TARGET_USER}"
     print(f"[BrightData] Fetching up to {MAX_REELS} Reels from {profile_url}...", flush=True)
 
-    reels = []
-    try:
-        reels = fetch_via_sdk(token, profile_url, MAX_REELS)
-    except Exception as sdk_err:
-        print(f"[BrightData SDK] Falling back to REST API ({sdk_err})...", flush=True)
-        reels = fetch_via_rest_api(token, profile_url, MAX_REELS)
-
+    reels = fetch_via_rest_api(token, profile_url, MAX_REELS)
     print(f"[BrightData] Received {len(reels)} Reel records from Instagram.", flush=True)
     downloaded = []
 
     for item in reels:
         if not isinstance(item, dict):
             continue
+        if item.get("error"):
+            print(f"[BrightData Item WARN] {item.get('error')}", flush=True)
+            continue
+
         sc = str(item.get("shortcode") or item.get("id") or item.get("post_id") or "").strip()
         video_url = item.get("video_url") or item.get("url_video")
         if not sc or not video_url:
