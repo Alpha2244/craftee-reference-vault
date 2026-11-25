@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       max_reels:
-        description: "Number of new videos to scrape & analyze in this run"
+        description: "Number of new Instagram Reels to scrape & analyze in this run"
         required: false
         default: "25"
   schedule:
@@ -33,11 +33,12 @@ jobs:
           if [ -f requirements.txt ]; then
             pip install -q -r requirements.txt
           else
-            pip install -q "faster-whisper>=1.0.3" "yt-dlp>=2024.10.22" "curl_cffi>=0.7.0" "Pillow>=10.0.0" "numpy>=1.26.0"
+            pip install -q "faster-whisper>=1.0.3" "brightdata-sdk>=0.1.0" "Pillow>=10.0.0" "numpy>=1.26.0"
           fi
 
-      - name: 3. Scrape Massive Batch of Reels & Shorts (Cookie-Free)
+      - name: 3. Scrape @craftee_films Reels via Bright Data Cloud API
         env:
+          BRIGHTDATA_API_TOKEN: ${{ secrets.BRIGHTDATA_API_TOKEN }}
           IG_TARGET_USER: "craftee_films"
           MAX_REELS_PER_RUN: ${{ github.event.inputs.max_reels || '25' }}
         run: |
@@ -69,7 +70,7 @@ jobs:
             git add vault/master_script_corpus.json
           fi
           if ! git diff --cached --quiet; then
-            git commit -m "Harvested & analyzed massive @craftee_films script corpus, frames & blueprints"
+            git commit -m "Harvested & analyzed @craftee_films Instagram Reels corpus, frames & blueprints"
             git push
           else
             echo "No new data to commit."
