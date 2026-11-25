@@ -1,12 +1,13 @@
 {
-  "total_scripts_collected": 36,
-  "total_words_collected": 13746,
-  "total_dense_frames_collected": 8073,
-  "avg_words_per_sec": 4.77,
-  "avg_cuts_per_video": 48.2,
+  "total_scripts_collected": 37,
+  "total_words_collected": 14171,
+  "total_dense_frames_collected": 8488,
+  "avg_words_per_sec": 4.75,
+  "avg_cuts_per_video": 49.4,
   "all_hooks": [
     "I'm the only kid at superhero school with no super power, so I've been faking one for a year to impress",
     "In this town, nothing grew on the hill, not grass, not weeds, nothing.",
+    "In this world, everything is either blue or pink. Even the sky was painted in two halves.",
     "Whoever reaches the top of the tower gets to marry the girl inside. Four hundred boys have fallen",
     "I kicked my dad's door open and the robot over his bed said good morning son in his",
     "A goddess got kicked out of Heaven. She can only go back when I become a good person. Heaven's list says I'm",
@@ -61,6 +62,16 @@
       "multi_sheets_saved": 16,
       "hook_0_to_3s": "In this town, nothing grew on the hill, not grass, not weeds, nothing.",
       "full_script": "In this town, nothing grew on the hill, not grass, not weeds, nothing. Every seed anyone ever planted up there was dead in a week. So an eight-year-old Theo carried a tiny pine tree up that hill. The whole street laughed at him. Theo didn't argue. He just went home, got another seed, and planted that one too. That became his rule. Every time somebody laughed at him, he planted another tree. And the loudest laugh always came from Rosa, the girl next door. She laughed at every single one, always right when he was about to give up. At 12, Theo had 40 trees, and 39 of them were dead. But one was alive, nobody could explain it. Not even Theo. At 18, the whole school laughed when he skipped prom to carry buckets up the hill. That night, he planted six more. At 30, the town laughed when he spent his savings on baby trees. He planted every single one. Rosa laughed so hard she had to sit down. At 50, people stopped laughing. They just shook their heads. So he planted one for every head shake. And by 70, Theo's hill was the only green thing anyone could see from town. Then the storm came. It rained for three days straight. The river jumped the bridge. And on the third night, the hill above the town started to slide. Theo was up there alone, in the dark. Tying his youngest trees to six, so the water wouldn't rip them out. The mud was up to his knees. He slipped twice. He kept the time. Down below, everyone ran out into the street, staring up at that hill, waiting for the mud to come down on their houses. It never came. Thousands of roots were holding that hill together. The water just ran down slow and brown, between the trees and into the river. The next morning, the whole town climbed the hill. The same people who'd laughed at him for 60 years stood there in the mud and didn't say a word. Theo walked past all of them, up to the very first tree that ever lived. Leaning against it was an old rusty watering can. The same can that had been sitting there, full, every morning since he was 12. Scratched into the side was one word, Rosa."
+    },
+    {
+      "id": "Df1TsA-To-A",
+      "duration": 103.908,
+      "words_per_sec": 4.09,
+      "total_cuts": 94,
+      "dense_frames_saved": 415,
+      "multi_sheets_saved": 17,
+      "hook_0_to_3s": "In this world, everything is either blue or pink. Even the sky was painted in two halves.",
+      "full_script": "In this world, everything is either blue or pink. Even the sky was painted in two halves. Every morning, I walked past blue houses, blue trees, and blue cars. Across the street, everything was pink, and nobody dared cross to the other side. Because above our city, hung a giant balance scale. Every person added weight to their color. And if either side touched the ground, that color would take over the entire world. That's why both sides were always fighting. Every day, giant blue and pink tanks attacked each other. And they didn't fire normal bullets, they fired color balloons. One pink splash could turn a blue person pink, and one blue splash could turn them right back. I was blue, just like Leo and Rose. We always stuck together, even during the biggest battles. Until one morning, a pink tank suddenly aimed straight at Leo. Leo, watch out! Before I could reach him, Rose pushed him away. Splash! Her entire body turned pink, and before we could save her, pink soldiers took her away. The next day, I spotted Rose inside a pink tank. Rose, it's me! But she aimed her cannon straight at us. Boom! A pink balloon exploded beside me. Three blue soldiers instantly turned pink. Leo grabbed my arm. We have to bring her back! So we stole the biggest blue tank in our city. I aimed directly at Rose. But then, hundreds of pink tanks surrounded us. They started firing from every direction. I fired back. Boom! Pink soldiers were turning blue everywhere. The giant scale began tilting toward our side. We were about to win. But suddenly, Rose aimed her cannon straight at me. I aimed mine back at her. Stop! Leo screamed, but it was too late. We both fired, and Leo jumped right between us. Boom! Both balloons hit him at the exact same time. Blue and pink exploded all over his body. I thought he'd turn blue, or maybe pink, but instead, he turned purple. Suddenly, the giant scale stopped moving. Crack! A third purple side appeared between blue and pink. Purple roads spread across our city. Purple houses rose from the ground. Even the sky split into three colors. And that's when I realized we had just created a third world. I was still blue. Rose was still pink, but Leo, he was the first person in the purple world. But the balance was still shaking. Leo needed more people on his side. Comment, Leo, to choose the purple side and save the world."
     },
     {
       "id": "Df29ivcBfK_",

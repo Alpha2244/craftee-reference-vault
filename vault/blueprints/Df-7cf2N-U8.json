@@ -1,9 +1,7 @@
 {
   "reel_id": "Df-7cf2N-U8",
-  "frames_analyzed_count": 77,
-  "analysis_mode": "offline_deterministic_fallback",
-  "hook_formula": "Immediate 0-3s high-stakes action line with crash-in zoom and rapid visual cut",
-  "story_arc": "Fast hook -> rapid escalating micro-beats -> sudden twist -> comedic/dramatic payoff",
+  "hook_formula": "The 'Underdog Secret' hook: Starts with a high-stakes social vulnerability ('no super power') combined with a relatable romantic motivation ('impress my crush') within the first 1.5 seconds to trigger immediate empathy and curiosity.",
+  "story_arc": "Setup: Protagonist fakes powers at superhero school to hide his normalcy. Escalation: Weird phenomena occur (floating stops, fire dies) whenever he is near his crush. Twist/Payoff: A villain attack reveals his true power is a 'power nullifier,' which explains the previous anomalies and leads to a romantic resolution.",
   "pacing": {
     "words_per_sec": 5.25,
     "avg_cut_sec": 1.13,
@@ -11,219 +9,64 @@
   },
   "visual_style": {
     "environments_seen": [
-      "MusicRow",
-      "TownPool",
-      "Gym",
-      "Street",
-      "School"
+      "Superhero school exterior",
+      "School hallway",
+      "Classroom",
+      "School courtyard/plaza",
+      "Sunset park bench"
     ],
+    "background_details": "Stylized Roblox-aesthetic architecture with bright, saturated colors, blocky geometry, school lockers, desks, and a large plaza with a central star motif.",
     "camera_patterns": [
-      "mcu -> ins -> ws -> low -> ecu -> two"
+      "mcu -> ws -> cu -> mcu -> ecu -> tracking_shot -> low_angle -> two_shot"
     ],
     "lighting_moods": [
-      "sunny",
       "bright_day",
-      "sunset"
+      "sunny",
+      "dramatic_sunset"
     ],
     "character_archetypes": [
       {
         "role": "protagonist",
         "gender": "male",
-        "outfit_style": "vibrant streetwear",
+        "skin_hex": "#f8d0a0",
+        "hair_style": "spiky",
+        "outfit_style": "green and black striped long-sleeve shirt",
         "primary_colors": [
-          "#1e73f2",
-          "#f5c29b"
+          "#00ff00",
+          "#000000"
         ]
       },
       {
-        "role": "sister_or_friend",
+        "role": "crush",
         "gender": "female",
-        "outfit_style": "colorful casual",
+        "skin_hex": "#f8d0a0",
+        "hair_style": "long",
+        "outfit_style": "black blazer, white shirt, black skirt",
         "primary_colors": [
-          "#ff4f8b",
-          "#f7c7a3"
+          "#000000",
+          "#ffffff"
         ]
       }
     ],
-    "background_crowd_density": "4-6 background NPCs in wide shots",
+    "character_interactions": [
+      "Characters maintain consistent spacing in classroom scenes; the protagonist enters the crush's personal space to trigger the nullification effect; final scene features intimate proximity on a bench."
+    ],
     "visual_gags_and_fx": [
-      "crash_in",
-      "whoosh",
-      "boom",
-      "raincloud",
-      "bolt"
+      "Flashlight beams for eyes, leaf blower prop, cardboard car, size-scaling villain, floating rope, heart emojis, nullification aura circles."
     ]
   },
   "shot_rhythm_template": [
     {
       "beat": "hook",
-      "target_sec": 1.267,
-      "cam": "mcu",
-      "move": "crash_in",
-      "energy": "high"
-    },
-    {
-      "beat": "hook",
-      "target_sec": 1.2,
-      "cam": "ins",
-      "move": "push",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.2,
-      "cam": "ws",
-      "move": "reveal_push",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.2,
-      "cam": "low",
-      "move": "creep",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.2,
-      "cam": "ecu",
-      "move": "drift",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.2,
-      "cam": "two",
-      "move": "lock",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.333,
-      "cam": "ms",
-      "move": "crash_in",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.2,
-      "cam": "ots",
-      "move": "push",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.2,
-      "cam": "mcu",
-      "move": "reveal_push",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.2,
-      "cam": "ins",
-      "move": "creep",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
       "target_sec": 1.6,
-      "cam": "ws",
-      "move": "drift",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.467,
-      "cam": "low",
-      "move": "lock",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.2,
-      "cam": "ecu",
-      "move": "crash_in",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.7,
-      "cam": "two",
-      "move": "push",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.2,
-      "cam": "ms",
-      "move": "reveal_push",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.533,
-      "cam": "ots",
-      "move": "creep",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.2,
       "cam": "mcu",
-      "move": "drift",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.533,
-      "cam": "ins",
-      "move": "lock",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.2,
-      "cam": "ws",
       "move": "crash_in",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.2,
-      "cam": "low",
-      "move": "push",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.2,
-      "cam": "ecu",
-      "move": "reveal_push",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.2,
-      "cam": "two",
-      "move": "creep",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.4,
-      "cam": "ms",
-      "move": "drift",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.4,
-      "cam": "ots",
-      "move": "lock",
       "energy": "high"
     }
   ],
+  "model_used": "gemini-3.1-flash-lite",
+  "vision_transport": "gemini_files_api_100pct",
+  "frames_analyzed_count": 77,
   "sheets_analyzed_count": 4,
   "source_transcript": "I'm the only kid at superhero school with no super power, so I've been faking one for a year to impress my crush. Her power is floating, and she can't turn it off. She's tied to her desk by the ankle. For laser eyes, I used two flashlights. For flying, a leaf blower. For super strength, a cardboard car. If anyone found out I'd be kicked out, but weird things kept happening. Every time I sat next to her, she stopped floating. The whole class said she liked me, and whenever I walked past the fire kid, his flames went out. Then a villain who grows as big as a building smashed through the wall. Every hero bounced off him. He snapped her rope and grabbed her. I ran straight at him. The closer I got, the smaller he got. When I reached him, he was normal size. She dropped into my arms. That's when I got it. I do have a power. Every power near me stops working. So she never liked me. It was just my power. I asked her out anyway. She said yes. Then she cut the rope off her ankle. Next to you, I don't need it.",
   "source_words_per_sec": 5.25

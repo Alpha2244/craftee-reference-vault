@@ -1,9 +1,7 @@
 {
   "reel_id": "Df4yPulP54M",
-  "frames_analyzed_count": 521,
-  "analysis_mode": "offline_deterministic_fallback",
-  "hook_formula": "Immediate 0-3s high-stakes action line with crash-in zoom and rapid visual cut",
-  "story_arc": "Fast hook -> rapid escalating micro-beats -> sudden twist -> comedic/dramatic payoff",
+  "hook_formula": "In this world, you can only eat foods that start with the first letter of your name. (Establishes an absurd, high-stakes absolute rule in under 3 seconds using direct visual demonstration of eggs, preventing scroll-away by introducing instant surrealism).",
+  "story_arc": "Setup: Introduce the arbitrary town rule where names dictate diets and mayors must be named Pete. Escalation: Ezra highlights his miserable 3,000-day egg diet and lists three strange clues in the museum (rigged laws, unused balloon catcher, and baby Zachary Paul). Twist/Payoff: Ezra realizes it's a centuries-old political conspiracy, eats pizza in public, proves magic doesn't exist, and overthrows the mayor into a life of forced zucchini.",
   "pacing": {
     "words_per_sec": 4.51,
     "avg_cut_sec": 1.76,
@@ -11,219 +9,95 @@
   },
   "visual_style": {
     "environments_seen": [
-      "MusicRow",
-      "TownPool",
-      "Gym",
-      "Street",
-      "School"
+      "restaurant interior with lettered doors",
+      "town square / street with brick buildings",
+      "town museum with checkered marble floors and display cases",
+      "school lunchroom",
+      "town hall rooftop with balloon catcher net"
     ],
+    "background_details": "Roblox-style stylized low-poly town featuring brick facades, colored restaurant doorways labeled A through Z, menu boards with item lists, museum display stands with red velvet ropes, and a giant net structure on top of town hall.",
     "camera_patterns": [
-      "mcu -> ins -> ws -> low -> ecu -> two"
+      "mcu",
+      "ins",
+      "ws",
+      "low",
+      "ecu",
+      "two"
     ],
     "lighting_moods": [
-      "sunny",
       "bright_day",
-      "sunset"
+      "sunny"
     ],
     "character_archetypes": [
       {
         "role": "protagonist",
         "gender": "male",
-        "outfit_style": "vibrant streetwear",
+        "skin_hex": "#f5d1b1",
+        "hair_style": "spiky",
+        "outfit_style": "red t-shirt and blue jeans",
         "primary_colors": [
-          "#1e73f2",
-          "#f5c29b"
+          "#ff0000",
+          "#0000ff"
         ]
       },
       {
-        "role": "sister_or_friend",
+        "role": "sister",
         "gender": "female",
-        "outfit_style": "colorful casual",
+        "skin_hex": "#f5d1b1",
+        "hair_style": "pigtails",
+        "outfit_style": "red dress with white trim",
         "primary_colors": [
-          "#ff4f8b",
-          "#f7c7a3"
+          "#ff0000",
+          "#ffffff"
+        ]
+      },
+      {
+        "role": "mayor",
+        "gender": "male",
+        "skin_hex": "#f5d1b1",
+        "hair_style": "short",
+        "outfit_style": "white suit with gold epaulets",
+        "primary_colors": [
+          "#ffffff",
+          "#ffd700"
+        ]
+      },
+      {
+        "role": "friend",
+        "gender": "female",
+        "skin_hex": "#f5d1b1",
+        "hair_style": "long",
+        "outfit_style": "pink hoodie and plaid skirt",
+        "primary_colors": [
+          "#ffc0cb",
+          "#8b0000"
         ]
       }
     ],
-    "background_crowd_density": "4-6 background NPCs in wide shots",
+    "character_interactions": [
+      "characters stand side-by-side at lunch tables",
+      "mayor stands behind podium pointing at menus",
+      "protagonist confronts the mayor across a long table in the town square"
+    ],
     "visual_gags_and_fx": [
-      "crash_in",
-      "whoosh",
-      "boom",
-      "raincloud",
-      "bolt"
+      "letter glowing over characters' heads",
+      "sparkle particle effects on food items",
+      "giant balloon transformation reference posters",
+      "spiderwebs on unused balloon catcher"
     ]
   },
   "shot_rhythm_template": [
     {
       "beat": "hook",
-      "target_sec": 1.3,
+      "target_sec": 1.6,
       "cam": "mcu",
       "move": "crash_in",
-      "energy": "high"
-    },
-    {
-      "beat": "hook",
-      "target_sec": 1.9,
-      "cam": "ins",
-      "move": "push",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 2.4,
-      "cam": "ws",
-      "move": "reveal_push",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.233,
-      "cam": "low",
-      "move": "creep",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.2,
-      "cam": "ecu",
-      "move": "drift",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.633,
-      "cam": "two",
-      "move": "lock",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.533,
-      "cam": "ms",
-      "move": "crash_in",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.534,
-      "cam": "ots",
-      "move": "push",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 2.4,
-      "cam": "mcu",
-      "move": "reveal_push",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.667,
-      "cam": "ins",
-      "move": "creep",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 2.4,
-      "cam": "ws",
-      "move": "drift",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 2.166,
-      "cam": "low",
-      "move": "lock",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.2,
-      "cam": "ecu",
-      "move": "crash_in",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 2.167,
-      "cam": "two",
-      "move": "push",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.2,
-      "cam": "ms",
-      "move": "reveal_push",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.2,
-      "cam": "ots",
-      "move": "creep",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.2,
-      "cam": "mcu",
-      "move": "drift",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.2,
-      "cam": "ins",
-      "move": "lock",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.5,
-      "cam": "ws",
-      "move": "crash_in",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 2.4,
-      "cam": "low",
-      "move": "push",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 2.4,
-      "cam": "ecu",
-      "move": "reveal_push",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.3,
-      "cam": "two",
-      "move": "creep",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.4,
-      "cam": "ms",
-      "move": "drift",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 2.133,
-      "cam": "ots",
-      "move": "lock",
       "energy": "high"
     }
   ],
+  "model_used": "gemini-3.5-flash-lite",
+  "vision_transport": "gemini_files_api_100pct",
+  "frames_analyzed_count": 521,
   "sheets_analyzed_count": 21,
   "source_transcript": "In this world, you can only eat foods that start with the first letter of your name. And every mayor we've ever had has a name that starts with Pete. You see, Paul gets pizza, pancakes, and popcorn. Charlotte gets cake, cookies, and chocolate. Hazel gets hamburgers and hot dogs. Levi gets lasagna and lemonade. And everybody knows that if you take one bite of the wrong letter, you swell up like a giant balloon. So, in our town, every restaurant has 26 doors, one for each letter. Parents pick a baby's name by reading the menu first. School lunch takes two hours because the lunch lady cooks 26 different meals. Nobody has named a kid with an X in a hundred years. And on top of town hall, there's a huge net called the balloon catcher, just in case. My name is Ezra, and I've eaten eggs 3,000 days in a row. Eggs for breakfast, eggs for lunch, and eggplant for dinner. On my last birthday, my cake was a boiled egg with a candle in it. My best friend Hazel has the luckiest letter in school, and she eats her hamburgers right in front of me. My little sister, Ellie, is five, and eggs are the only thing she'll eat. Our mayor, Mayor Paul, decides what every food is called. Last year, when ice cream got popular, he changed its name to polar cream. And now only the pee people get it. Then, on Monday, he made a new law. By Friday, eggs would be called protein pearls. That night at dinner, Ellie pushed her eggplant away and didn't eat a thing. So I started looking around, and I noticed three things. One, in the town museum, the first law book is open under glass. The list for pee is three pages long. Every other letter gets three lines. Two, the balloon catcher is covered in spiderwebs. Nobody has ever used it, not once. And three, next to the law book, there's an old baby picture of our mayor. And the little sign under it says, baby Zachary Paul. And that's when I understood it. There was never any magic. The rule is just a law written by the very first mayor, Mayor Patricia. So her family could keep the best food and the mayor's chair forever. Nobody ever swelled up, because nobody ever dared to take a bite. And our mayor isn't even a pea. He's a Z, hiding behind his middle name. On Friday, the whole town was in the square. Mayor Paul sat at a long table full of pizza, pancakes, and pie, with his pen over the egg law. I walked right up to his table, picked up a slice of pizza, and took the biggest bite of my life. Hazel covered her eyes. Ellie held her breath. Everybody looked up at the balloon catcher. Nothing happened. So, Hazel grabbed a pancake. Ellie grabbed a slice of pie. Then, one by one, the whole town took a bite of a letter that wasn't theirs. That same afternoon, the town voted. The food law is gone for everyone, except for the one person who lied about his letter. Mayor Zachary has to follow it for the rest of his life. Zucchini for breakfast, zucchini for lunch, and zucchini for dinner. Ellie ate pie until she fell asleep, and I haven't touched an egg since. And now everyone in town eats whatever they want, except our old mayor, whose name starts with Z.",
   "source_words_per_sec": 4.51

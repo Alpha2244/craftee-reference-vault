@@ -1,9 +1,7 @@
 {
   "reel_id": "Df4ji36pcCH",
-  "frames_analyzed_count": 337,
-  "analysis_mode": "offline_deterministic_fallback",
-  "hook_formula": "Immediate 0-3s high-stakes action line with crash-in zoom and rapid visual cut",
-  "story_arc": "Fast hook -> rapid escalating micro-beats -> sudden twist -> comedic/dramatic payoff",
+  "hook_formula": "High-concept world-building rule delivered instantly in the first 1.5 seconds ('At my school, whatever your t-shirt says, you are'), pairing a striking visual (Roblox character wearing a crown and plain blue shirt) with immediate intrigue about societal rules.",
+  "story_arc": "Setup (explaining the school shirt rules and eccentric classmates) -> Escalation (new principal Mr. Pickett enforces strict control via spirit shirts and hidden text) -> Climax/Twist (students lift Mr. Pickett, his blazer opens revealing 'PRINCIPAL', then protagonist orchestrates mass rebellion by turning shirts inside out at three o'clock, stripping the principal of his power and restoring true friendship).",
   "pacing": {
     "words_per_sec": 3.82,
     "avg_cut_sec": 1.21,
@@ -11,47 +9,68 @@
   },
   "visual_style": {
     "environments_seen": [
-      "MusicRow",
-      "TownPool",
-      "Gym",
-      "Street",
-      "School"
+      "school hallway with lockers and checkerboard tile floor",
+      "classroom with desks and wooden flooring",
+      "school assembly gymnasium with wooden stage and purple accents"
     ],
+    "background_details": "Purple lockers, wall clocks showing passing time, rows of wooden desks, large tiered auditorium seating filled with 600 identical student avatars, banners reading 'LAST DAY OF SCHOOL'.",
     "camera_patterns": [
-      "mcu -> ins -> ws -> low -> ecu -> two"
+      "mcu",
+      "cu",
+      "ws",
+      "low_angle",
+      "two_shot",
+      "ecu"
     ],
     "lighting_moods": [
-      "sunny",
       "bright_day",
-      "sunset"
+      "indoor_fluorescent"
     ],
     "character_archetypes": [
       {
         "role": "protagonist",
         "gender": "male",
-        "outfit_style": "vibrant streetwear",
+        "skin_hex": "#f6b019",
+        "hair_style": "crown",
+        "outfit_style": "plain blue shirt, green pants, golden crown with jewels",
         "primary_colors": [
-          "#1e73f2",
-          "#f5c29b"
+          "#1e69d2",
+          "#55a020"
         ]
       },
       {
-        "role": "sister_or_friend",
-        "gender": "female",
-        "outfit_style": "colorful casual",
+        "role": "best friend (Dante)",
+        "gender": "male",
+        "skin_hex": "#f8c594",
+        "hair_style": "short black hair",
+        "outfit_style": "red and white striped shirt / plain shirt",
         "primary_colors": [
-          "#ff4f8b",
-          "#f7c7a3"
+          "#e63946",
+          "#ffffff"
+        ]
+      },
+      {
+        "role": "principal (Mr. Pickett)",
+        "gender": "male",
+        "skin_hex": "#f8c594",
+        "hair_style": "slicked black hair",
+        "outfit_style": "dark blue blazer with gold buttons",
+        "primary_colors": [
+          "#1d3557",
+          "#457b9d"
         ]
       }
     ],
-    "background_crowd_density": "4-6 background NPCs in wide shots",
+    "character_interactions": [
+      "side-by-side seating at classroom desks",
+      "confrontational framing during shirt-pulling scene",
+      "crowd lifting character overhead in auditorium"
+    ],
     "visual_gags_and_fx": [
-      "crash_in",
-      "whoosh",
-      "boom",
-      "raincloud",
-      "bolt"
+      "crown zoom",
+      "text appearing on shirts matching spoken dialogue",
+      "clock time jumps",
+      "blazer opening to reveal text"
     ]
   },
   "shot_rhythm_template": [
@@ -59,171 +78,13 @@
       "beat": "hook",
       "target_sec": 1.4,
       "cam": "mcu",
-      "move": "crash_in",
-      "energy": "high"
-    },
-    {
-      "beat": "hook",
-      "target_sec": 1.2,
-      "cam": "ins",
-      "move": "push",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 2.3,
-      "cam": "ws",
-      "move": "reveal_push",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.2,
-      "cam": "low",
-      "move": "creep",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.2,
-      "cam": "ecu",
-      "move": "drift",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.5,
-      "cam": "two",
-      "move": "lock",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.333,
-      "cam": "ms",
-      "move": "crash_in",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.2,
-      "cam": "ots",
-      "move": "push",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.2,
-      "cam": "mcu",
-      "move": "reveal_push",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.2,
-      "cam": "ins",
-      "move": "creep",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.3,
-      "cam": "ws",
-      "move": "drift",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.6,
-      "cam": "low",
-      "move": "lock",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.333,
-      "cam": "ecu",
-      "move": "crash_in",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.267,
-      "cam": "two",
-      "move": "push",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.3,
-      "cam": "ms",
-      "move": "reveal_push",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 2.266,
-      "cam": "ots",
-      "move": "creep",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.2,
-      "cam": "mcu",
-      "move": "drift",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.667,
-      "cam": "ins",
-      "move": "lock",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.233,
-      "cam": "ws",
-      "move": "crash_in",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.2,
-      "cam": "low",
-      "move": "push",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.2,
-      "cam": "ecu",
-      "move": "reveal_push",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.433,
-      "cam": "two",
-      "move": "creep",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.2,
-      "cam": "ms",
-      "move": "drift",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 2.133,
-      "cam": "ots",
-      "move": "lock",
+      "move": "static",
       "energy": "high"
     }
   ],
+  "model_used": "gemini-3.5-flash-lite",
+  "vision_transport": "gemini_files_api_100pct",
+  "frames_analyzed_count": 337,
   "sheets_analyzed_count": 14,
   "source_transcript": "At my school, whatever your t-shirt says, you are. And at the last bell on the last day, it's forever. Turn it inside out, and it doesn't count. All he wore, I need a nap. He's been asleep since Tuesday. We flip his shirt for tests. Rocco borrowed his dad's world's best dad's shirt. He's nine. He has back pain. Our new principal, Mr. Pickett, never unbuttons his blazer. Nobody's ever seen his shirt. Me? Mine's plain blue. It doesn't say anything, so I'm just me. My best friend, Dante, wears stripes. He laughs at all my jokes, even the bad ones. On the last day, everybody wears plain shirts. Everybody. Then, Mr. Pickett handed out free spirit shirts. A big smiley face on the front. No words. 600 kids put them on. Mine wouldn't go over my crown. I never take it off. The words were on the back. I do what I'm told. You can't read your own back. Sit up straight, said Mr. Pickett. 600 kids sat up. Carry me. They lifted him over their heads. His blazer fell open. His t-shirt said, principal. He was only the principal because his shirt said so. All day, they did what he said. No recess, no lunch, extra math. I grabbed Dante's shirt to pull it off. Dante, said Mr. Pickett. So he did. 2.52. I told Dante my best joke. He didn't laugh. I just wanted to hear him laugh. Dante, I said, laugh. He laughed. I do what I'm told. It doesn't say who's telling. I ran for the stage. 2.59. I grabbed the microphone. Everybody. Turn every shirt in this gym inside out. 600 kids turned theirs. Then they turned to Mr. Pickett's. Stop, said Mr. Pickett. Nobody stopped. 3 o'clock. His shirt said nothing now. He was just some guy in a blazer. Dante laughed at my next joke. Nobody told him to.",
   "source_words_per_sec": 3.82

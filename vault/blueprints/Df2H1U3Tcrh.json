@@ -1,9 +1,7 @@
 {
   "reel_id": "Df2H1U3Tcrh",
-  "frames_analyzed_count": 623,
-  "analysis_mode": "offline_deterministic_fallback",
-  "hook_formula": "Immediate 0-3s high-stakes action line with crash-in zoom and rapid visual cut",
-  "story_arc": "Fast hook -> rapid escalating micro-beats -> sudden twist -> comedic/dramatic payoff",
+  "hook_formula": "High-stakes dystopian hook. Protagonist wastes his last 7 lifetime words on a question, setting his counter to zero as a creepy robot speaks in his dad's voice.",
+  "story_arc": "Setup: Protagonist exhausts his remaining words asking a robot about his dad. Escalation: Flees through a dystopian city where zero-word citizens are harvested by collector robots. Twist/Payoff: Dad's robot guides him to the master mic to trigger global shutdown\u2014revealing all robots were actually converted humans now permanently disabled.",
   "pacing": {
     "words_per_sec": 4.31,
     "avg_cut_sec": 8.67,
@@ -11,177 +9,113 @@
   },
   "visual_style": {
     "environments_seen": [
-      "MusicRow",
-      "TownPool",
-      "Gym",
-      "Street",
-      "School"
+      "bedroom",
+      "staircase",
+      "dystopian_city_street",
+      "word_beggar_market",
+      "tower_lobby_elevator",
+      "tower_rooftop_mic"
     ],
+    "background_details": "Rainy dystopian neon city with digital word billboard screens, crowded market rows of collared mute citizens, and a massive suspended globe microphone on a high tower roof.",
     "camera_patterns": [
-      "mcu -> ins -> ws -> low -> ecu -> two"
+      "mcu -> close_up -> ws -> low_angle -> high_angle -> two_shot -> tilt_up"
     ],
     "lighting_moods": [
-      "sunny",
-      "bright_day",
-      "sunset"
+      "dark_dystopian",
+      "rainy_night",
+      "neon_glare",
+      "dim_indoor"
     ],
     "character_archetypes": [
       {
         "role": "protagonist",
         "gender": "male",
-        "outfit_style": "vibrant streetwear",
+        "skin_hex": "#F5C29B",
+        "hair_style": "spiky",
+        "outfit_style": "Blue shirt with digital word counter collar",
         "primary_colors": [
-          "#1e73f2",
-          "#f5c29b"
+          "#2980B9",
+          "#FFFFFF"
         ]
       },
       {
-        "role": "sister_or_friend",
-        "gender": "female",
-        "outfit_style": "colorful casual",
+        "role": "father / collector robot",
+        "gender": "male",
+        "skin_hex": "#FFFFFF",
+        "hair_style": "smooth",
+        "outfit_style": "White sleek humanoid chassis with glowing chest hatch",
         "primary_colors": [
-          "#ff4f8b",
-          "#f7c7a3"
+          "#FFFFFF",
+          "#F39C12"
         ]
       }
     ],
-    "background_crowd_density": "4-6 background NPCs in wide shots",
+    "character_interactions": [
+      "Chest tapping gesture replicating fatherly affection",
+      "Arm reaching past shoulder to press elevator button",
+      "Leaning into suspended microphone to utter shutdown voice code"
+    ],
     "visual_gags_and_fx": [
-      "crash_in",
-      "whoosh",
-      "boom",
-      "raincloud",
-      "bolt"
+      "Digital word counter UI over collar",
+      "Glowing chest core hatch",
+      "Rain atmosphere particle FX",
+      "Citywide power blackout animation"
     ]
   },
   "shot_rhythm_template": [
     {
       "beat": "hook",
-      "target_sec": 2.4,
+      "target_sec": 3.0,
       "cam": "mcu",
-      "move": "crash_in",
+      "move": "zoom_in",
       "energy": "high"
     },
     {
-      "beat": "hook",
-      "target_sec": 2.066,
-      "cam": "ins",
-      "move": "push",
+      "beat": "setup",
+      "target_sec": 13.3,
+      "cam": "close_up",
+      "move": "static",
+      "energy": "medium"
+    },
+    {
+      "beat": "chase",
+      "target_sec": 37.5,
+      "cam": "low_angle",
+      "move": "tracking",
       "energy": "high"
     },
     {
-      "beat": "escalation",
-      "target_sec": 2.1,
+      "beat": "world_explanation",
+      "target_sec": 75.3,
       "cam": "ws",
-      "move": "reveal_push",
-      "energy": "high"
+      "move": "pan",
+      "energy": "medium"
     },
     {
-      "beat": "escalation",
-      "target_sec": 2.4,
-      "cam": "low",
-      "move": "creep",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 2.4,
-      "cam": "ecu",
-      "move": "drift",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 2.4,
-      "cam": "two",
-      "move": "lock",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 2.4,
-      "cam": "ms",
-      "move": "crash_in",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 2.4,
-      "cam": "ots",
-      "move": "push",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 2.4,
+      "beat": "market_encounter",
+      "target_sec": 88.8,
       "cam": "mcu",
-      "move": "reveal_push",
+      "move": "dolly",
+      "energy": "low"
+    },
+    {
+      "beat": "climax_ascent",
+      "target_sec": 132.7,
+      "cam": "tilt_up",
+      "move": "push_in",
       "energy": "high"
     },
     {
-      "beat": "escalation",
-      "target_sec": 2.4,
-      "cam": "ins",
-      "move": "creep",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 2.4,
-      "cam": "ws",
-      "move": "drift",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 2.4,
-      "cam": "low",
-      "move": "lock",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.333,
-      "cam": "ecu",
-      "move": "crash_in",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.2,
-      "cam": "two",
-      "move": "push",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.2,
-      "cam": "ms",
-      "move": "reveal_push",
-      "energy": "high"
-    },
-    {
-      "beat": "climax",
-      "target_sec": 1.2,
-      "cam": "ots",
-      "move": "creep",
-      "energy": "high"
-    },
-    {
-      "beat": "climax",
-      "target_sec": 2.4,
-      "cam": "mcu",
-      "move": "drift",
-      "energy": "high"
-    },
-    {
-      "beat": "climax",
-      "target_sec": 2.4,
-      "cam": "ins",
-      "move": "lock",
-      "energy": "high"
+      "beat": "twist_payoff",
+      "target_sec": 156.0,
+      "cam": "two_shot",
+      "move": "slow_zoom",
+      "energy": "low"
     }
   ],
+  "model_used": "gemini-3.6-flash",
+  "vision_transport": "gemini_files_api_100pct",
+  "frames_analyzed_count": 623,
   "sheets_analyzed_count": 25,
   "source_transcript": "I kicked my dad's door open and the robot over his bed said good morning son in his voice dad didn't move I had seven words left. What did you do to my dad? Zero. It turned. I ran. I wanted to cry There was no time for ten years. We had planned to stop every robot on earth tonight The plan needed one voice and seven words dad lost his last night. He talks in his sleep I had just screamed mine at a machine. It didn't run. It walked. Don't run on the stairs son You'll break your neck dad said that every morning run out of words and a collector comes to wear the voice His glowed in its chest behind a little glass door. I jumped the last six steps and pulled the bookcase down It stepped through it like tall grass. I went for the front door. Not the door son I opened it anyway a second collector stood on our step arm already out I went under its arm and into the ring every screen on our street found my face zero words hold still box owns every voice 10,000 words each for life up in the towers. They buy millions down here only the robots talk the crossing robot turned his head Careful dear Mrs. Dunmore's voice she ran out in March the bus robot opened its doors all aboard mr. Okafor last winter Every robot on my street was somebody I used to know and all of them were walking toward me I ran for the quiet market where the word beggars sit hundreds in rows collars at one at two spare a word say their signs I held up seven fingers nobody down here has seven of anything an old woman pulled her blanket over my dark collar collectors came down The rose reading next then I heard it ready or not son its feet stopped at the blanket It looked right at me through the gap cold. It said very cold and it walked on I didn't have time to wonder why over the market stands the box tower at its top hangs the mouth one microphone every robot on Earth obeys ten years ago dad cleaned its floors and heard the seven words that switched them off He never said them he drew them on my wall. We saved our words for tonight. I ran into the lobby the elevator said floor Please I opened my mouth nothing a hand reached past my shoulder top floor said my dad's voice the doors closed on the two of us It could have taken my voice right there. It tapped its chest twice instead dad never said I love you too many words He tapped it on my headboard tick tick no stolen voice knows that not the stairs not the door cold It had never been chasing me it had been walking me here the top floor was one room open to the rain the mouth hung in the middle big As a church bell on every screen below collector 4 4 7 1 complete your collection its arm came up toward my collar I watched it fight the arm hold still sorry then it leaned past me into the mouth and said seven words in my dad's voice The mouth only listens to the living it listened every light in the city went out at once every robot stopped where it stood The one beside me stops to behind its little glass door a small light beat twice and went dark They never took our voices they took us every robot on Earth was somebody who ran out of words and we had just switched them all off The plan worked the city is silent now. I can't say sorry. I can't say goodbye. I can't say dad I had seven words and I spent them on a question. What did you do to my dad? He should have asked me",
   "source_words_per_sec": 4.31

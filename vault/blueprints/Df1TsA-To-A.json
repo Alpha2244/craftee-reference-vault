@@ -1,0 +1,95 @@
+{
+  "reel_id": "Df1TsA-To-A",
+  "hook_formula": "High-concept binary world setup with a striking split-color visual aesthetic ('In this world, everything is either blue or pink') combined with rapid movement and immediate high-stakes worldbuilding.",
+  "story_arc": "Setup: Introduction of the strictly segregated blue and pink world and the giant balance scale -> Escalation: Daily tank battles, Rose getting captured and turned pink, the protagonists stealing a blue tank to fight back -> Climax/Twist: Leo getting hit by both blue and pink balloons simultaneously, creating a new purple world -> Payoff/CTA: Call to action for viewers to comment 'Leo' to save the purple world.",
+  "pacing": {
+    "words_per_sec": 4.09,
+    "avg_cut_sec": 1.11,
+    "total_cuts": 94
+  },
+  "visual_style": {
+    "environments_seen": [
+      "suburban town split down the middle into blue and pink halves",
+      "battlefield lined with sandbags",
+      "tank garage",
+      "purple-transformed city district"
+    ],
+    "background_details": "Suburban houses, trees, cars, and massive armies of blue and pink tanks facing off across a dividing line, overseen by a giant mechanical balance scale hanging from the sky.",
+    "camera_patterns": [
+      "ws",
+      "mcu",
+      "cu",
+      "low_angle",
+      "tracking",
+      "ecu"
+    ],
+    "lighting_moods": [
+      "bright_day",
+      "sunny",
+      "sunset"
+    ],
+    "character_archetypes": [
+      {
+        "role": "protagonist / narrator",
+        "gender": "male",
+        "skin_hex": "#f5d6b1",
+        "hair_style": "short blond",
+        "outfit_style": "blue suit and tie",
+        "primary_colors": [
+          "#0055ff",
+          "#000000"
+        ]
+      },
+      {
+        "role": "friend / companion (Leo)",
+        "gender": "male",
+        "skin_hex": "#8d5524",
+        "hair_style": "short brown",
+        "outfit_style": "blue t-shirt and dark pants / purple t-shirt later",
+        "primary_colors": [
+          "#0033ff",
+          "#800080"
+        ]
+      },
+      {
+        "role": "friend / captive (Rose)",
+        "gender": "female",
+        "skin_hex": "#f5d6b1",
+        "hair_style": "long brown with red bow",
+        "outfit_style": "blue dress / pink dress",
+        "primary_colors": [
+          "#00bfff",
+          "#ff69b4"
+        ]
+      }
+    ],
+    "character_interactions": [
+      "standing behind sandbag barricades in formation",
+      "pushing and rescuing teammates",
+      "operating giant tanks together",
+      "aiming color cannons at each other"
+    ],
+    "visual_gags_and_fx": [
+      "color-changing particle splashes",
+      "giant hanging balance scale tilting",
+      "tank explosions with colored smoke",
+      "sky splitting into three distinct colors",
+      "crack fx on the scale"
+    ]
+  },
+  "shot_rhythm_template": [
+    {
+      "beat": "hook",
+      "target_sec": 1.6,
+      "cam": "mcu",
+      "move": "crash_in",
+      "energy": "high"
+    }
+  ],
+  "model_used": "gemini-3.5-flash-lite",
+  "vision_transport": "gemini_files_api_100pct",
+  "frames_analyzed_count": 415,
+  "sheets_analyzed_count": 17,
+  "source_transcript": "In this world, everything is either blue or pink. Even the sky was painted in two halves. Every morning, I walked past blue houses, blue trees, and blue cars. Across the street, everything was pink, and nobody dared cross to the other side. Because above our city, hung a giant balance scale. Every person added weight to their color. And if either side touched the ground, that color would take over the entire world. That's why both sides were always fighting. Every day, giant blue and pink tanks attacked each other. And they didn't fire normal bullets, they fired color balloons. One pink splash could turn a blue person pink, and one blue splash could turn them right back. I was blue, just like Leo and Rose. We always stuck together, even during the biggest battles. Until one morning, a pink tank suddenly aimed straight at Leo. Leo, watch out! Before I could reach him, Rose pushed him away. Splash! Her entire body turned pink, and before we could save her, pink soldiers took her away. The next day, I spotted Rose inside a pink tank. Rose, it's me! But she aimed her cannon straight at us. Boom! A pink balloon exploded beside me. Three blue soldiers instantly turned pink. Leo grabbed my arm. We have to bring her back! So we stole the biggest blue tank in our city. I aimed directly at Rose. But then, hundreds of pink tanks surrounded us. They started firing from every direction. I fired back. Boom! Pink soldiers were turning blue everywhere. The giant scale began tilting toward our side. We were about to win. But suddenly, Rose aimed her cannon straight at me. I aimed mine back at her. Stop! Leo screamed, but it was too late. We both fired, and Leo jumped right between us. Boom! Both balloons hit him at the exact same time. Blue and pink exploded all over his body. I thought he'd turn blue, or maybe pink, but instead, he turned purple. Suddenly, the giant scale stopped moving. Crack! A third purple side appeared between blue and pink. Purple roads spread across our city. Purple houses rose from the ground. Even the sky split into three colors. And that's when I realized we had just created a third world. I was still blue. Rose was still pink, but Leo, he was the first person in the purple world. But the balance was still shaking. Leo needed more people on his side. Comment, Leo, to choose the purple side and save the world.",
+  "source_words_per_sec": 4.09
+}

@@ -1,9 +1,7 @@
 {
   "reel_id": "Df3ST5WhQwt",
-  "frames_analyzed_count": 143,
-  "analysis_mode": "offline_deterministic_fallback",
-  "hook_formula": "Immediate 0-3s high-stakes action line with crash-in zoom and rapid visual cut",
-  "story_arc": "Fast hook -> rapid escalating micro-beats -> sudden twist -> comedic/dramatic payoff",
+  "hook_formula": "High-stakes supernatural exile premise paired with fast action immediately pulls viewers into the narrative.",
+  "story_arc": "Setup: An exiled goddess moves in with the town's worst kid. Escalation: Misunderstandings and magic ruin his attempts at good deeds. Twist: The goddess deliberately sabotaged him to avoid returning to Heaven. Payoff: He intentionally breaks rules to stay with her.",
   "pacing": {
     "words_per_sec": 5.55,
     "avg_cut_sec": 1.13,
@@ -11,219 +9,153 @@
   },
   "visual_style": {
     "environments_seen": [
-      "MusicRow",
-      "TownPool",
-      "Gym",
-      "Street",
-      "School"
+      "Heaven Gates",
+      "Kid Bedroom",
+      "Library",
+      "School Cafeteria",
+      "Classroom",
+      "Pizza Palace",
+      "Suburban Roof",
+      "Suburban Crosswalk",
+      "Dog Shelter"
     ],
+    "background_details": "Simple low-poly Roblox environments featuring basic furniture, window blinds, storefront signs, and minimal crowd assets.",
     "camera_patterns": [
-      "mcu -> ins -> ws -> low -> ecu -> two"
+      "mcu",
+      "ins",
+      "ws",
+      "low",
+      "ecu",
+      "two_shot"
     ],
     "lighting_moods": [
-      "sunny",
       "bright_day",
-      "sunset"
+      "night",
+      "warm_indoor",
+      "heavenly_glow"
     ],
     "character_archetypes": [
       {
         "role": "protagonist",
         "gender": "male",
-        "outfit_style": "vibrant streetwear",
+        "skin_hex": "#FFE0BD",
+        "hair_style": "spiky",
+        "outfit_style": "Green and black long-sleeve striped sweater with dark pants",
         "primary_colors": [
-          "#1e73f2",
-          "#f5c29b"
+          "#00FF66",
+          "#000000"
         ]
       },
       {
-        "role": "sister_or_friend",
+        "role": "goddess",
         "gender": "female",
-        "outfit_style": "colorful casual",
+        "skin_hex": "#FFE0BD",
+        "hair_style": "long",
+        "outfit_style": "White divine robes with gold embellishments and a floating yellow halo",
         "primary_colors": [
-          "#ff4f8b",
-          "#f7c7a3"
+          "#FFFFFF",
+          "#FFD700"
+        ]
+      },
+      {
+        "role": "bully",
+        "gender": "male",
+        "skin_hex": "#FFE0BD",
+        "hair_style": "cap",
+        "outfit_style": "Red top and white backwards cap",
+        "primary_colors": [
+          "#FF0000",
+          "#FFFFFF"
         ]
       }
     ],
-    "background_crowd_density": "4-6 background NPCs in wide shots",
+    "character_interactions": [
+      "Front-facing medium two-shots during dialogue, tight inserts on shared props, and symmetrical side-by-side roof seating for emotional intimacy."
+    ],
     "visual_gags_and_fx": [
-      "crash_in",
-      "whoosh",
-      "boom",
-      "raincloud",
-      "bolt"
+      "Floating gold halo glow",
+      "Paper homework transforming into a flying bird",
+      "Exploding lunchbox spark FX",
+      "Digital clock time-skip",
+      "Overdue library book stamp",
+      "Blushing cheek overlays"
     ]
   },
   "shot_rhythm_template": [
     {
       "beat": "hook",
-      "target_sec": 1.2,
+      "target_sec": 1.167,
       "cam": "mcu",
-      "move": "crash_in",
+      "move": "crash_down",
       "energy": "high"
     },
     {
-      "beat": "hook",
-      "target_sec": 1.566,
+      "beat": "inciting_incident",
+      "target_sec": 2.733,
+      "cam": "two_shot",
+      "move": "static",
+      "energy": "medium"
+    },
+    {
+      "beat": "lore_setup",
+      "target_sec": 4.7,
       "cam": "ins",
-      "move": "push",
-      "energy": "high"
+      "move": "zoom_in",
+      "energy": "medium"
     },
     {
-      "beat": "escalation",
-      "target_sec": 1.967,
-      "cam": "ws",
-      "move": "reveal_push",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.433,
+      "beat": "roommate_conflict",
+      "target_sec": 7.733,
       "cam": "low",
-      "move": "creep",
-      "energy": "high"
+      "move": "static",
+      "energy": "medium"
     },
     {
-      "beat": "escalation",
-      "target_sec": 1.2,
-      "cam": "ecu",
-      "move": "drift",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.2,
-      "cam": "two",
-      "move": "lock",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.2,
-      "cam": "ms",
-      "move": "crash_in",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.2,
-      "cam": "ots",
-      "move": "push",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.367,
+      "beat": "magic_gag_1",
+      "target_sec": 10.7,
       "cam": "mcu",
-      "move": "reveal_push",
+      "move": "pan_up",
       "energy": "high"
     },
     {
-      "beat": "escalation",
-      "target_sec": 1.333,
-      "cam": "ins",
-      "move": "creep",
+      "beat": "magic_gag_2",
+      "target_sec": 13.267,
+      "cam": "medium",
+      "move": "static",
       "energy": "high"
     },
     {
-      "beat": "escalation",
-      "target_sec": 1.234,
-      "cam": "ws",
-      "move": "drift",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.2,
-      "cam": "low",
-      "move": "lock",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.2,
+      "beat": "bonding_montage",
+      "target_sec": 20.267,
       "cam": "ecu",
-      "move": "crash_in",
-      "energy": "high"
+      "move": "static",
+      "energy": "low"
     },
     {
-      "beat": "escalation",
-      "target_sec": 1.2,
-      "cam": "two",
-      "move": "push",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 2.0,
-      "cam": "ms",
-      "move": "reveal_push",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.2,
-      "cam": "ots",
-      "move": "creep",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.2,
-      "cam": "mcu",
-      "move": "drift",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.266,
-      "cam": "ins",
-      "move": "lock",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.2,
+      "beat": "attempted_good_deeds",
+      "target_sec": 27.267,
       "cam": "ws",
-      "move": "crash_in",
-      "energy": "high"
+      "move": "pan_left",
+      "energy": "medium"
     },
     {
-      "beat": "escalation",
-      "target_sec": 1.2,
-      "cam": "low",
-      "move": "push",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.2,
+      "beat": "climax_twist",
+      "target_sec": 30.067,
       "cam": "ecu",
-      "move": "reveal_push",
+      "move": "zoom_in",
       "energy": "high"
     },
     {
-      "beat": "escalation",
-      "target_sec": 1.2,
-      "cam": "two",
-      "move": "creep",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.366,
-      "cam": "ms",
-      "move": "drift",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.2,
-      "cam": "ots",
-      "move": "lock",
-      "energy": "high"
+      "beat": "heartfelt_payoff",
+      "target_sec": 36.036,
+      "cam": "two_shot",
+      "move": "static",
+      "energy": "medium"
     }
   ],
+  "model_used": "gemini-3.6-flash",
+  "vision_transport": "gemini_files_api_100pct",
+  "frames_analyzed_count": 143,
   "sheets_analyzed_count": 6,
   "source_transcript": "A goddess got kicked out of Heaven. She can only go back when I become a good person. Heaven's list says I'm the worst kid in town. I once forgot to return a library book, so she moved into my room. She took my bed. I took the floor. She made me do my homework. It turned into a bird and flew away. She made me share my lunch with the bully. It exploded in his face. She sent me to bed early. I woke up the next afternoon. Every time I got in trouble, her halo glowed a little brighter and she smiled. She tried pizza for the first time. She ate eleven slices. She sat with me on the roof every night counting stars. I didn't want her to leave, but a goddess belongs in Heaven. So I tried my hardest. I helped every old lady cross the street. I gave my piggy bank to the dog shelter. That night I caught her turning my homework into a bird. She'd been doing it all along. She never wanted to go back. Heaven doesn't have pizza or me. Now I forget to return a library book every single week.",
   "source_words_per_sec": 5.55
