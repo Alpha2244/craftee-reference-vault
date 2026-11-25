@@ -1,0 +1,97 @@
+{
+  "reel_id": "tonl6Il5_qc",
+  "hook_formula": "Sets up an immediate secret identity dilemma and romantic irony ('My crush is obsessed with the mask superhero. She has no idea it's me') within the first 2 seconds, utilizing a rapid crash-zoom and punchy caption text to halt the scroll.",
+  "story_arc": "Setup: Protagonist leads a double life as a masked hero while hiding his identity from his classmate crush. Escalation: The crush obsesses over the hero, disparages the protagonist's cowardice, builds a conspiracy board, and fakes an emergency at a clock tower. Twist/Payoff: He saves her, but a pigeon triggers his signature cowardice scream, blowing his cover\u2014leading to a sweet acceptance.",
+  "pacing": {
+    "words_per_sec": 5.11,
+    "avg_cut_sec": 1.38,
+    "total_cuts": 28
+  },
+  "visual_style": {
+    "environments_seen": [
+      "classroom",
+      "rooftop skyline",
+      "school hallway/cafeteria",
+      "bedroom with conspiracy board",
+      "clock tower"
+    ],
+    "camera_patterns": [
+      "mcu",
+      "crash_in",
+      "ws",
+      "low_angle",
+      "ecu",
+      "over_the_shoulder"
+    ],
+    "lighting_moods": [
+      "bright classroom daylight",
+      "nighttime moonlight",
+      "sunset rooftop"
+    ],
+    "character_archetypes": [
+      {
+        "role": "protagonist",
+        "outfit_style": "green striped shirt and green hair as student, red and blue super suit with mask",
+        "primary_colors": [
+          "#00FF00",
+          "#FF0000",
+          "#0000FF"
+        ]
+      },
+      {
+        "role": "crush",
+        "outfit_style": "dark school uniform with black hair and skirt",
+        "primary_colors": [
+          "#000000",
+          "#FFFFFF"
+        ]
+      }
+    ],
+    "visual_gags_and_fx": [
+      "crash zoom",
+      "conspiracy red yarn strings",
+      "big red X photo marker",
+      "pigeon surprise attack"
+    ]
+  },
+  "shot_rhythm_template": [
+    {
+      "beat": "hook",
+      "target_sec": 1.6,
+      "cam": "mcu",
+      "move": "crash_in",
+      "energy": "high"
+    },
+    {
+      "beat": "setup",
+      "target_sec": 1.2,
+      "cam": "ws",
+      "move": "pan",
+      "energy": "medium"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.0,
+      "cam": "ecu",
+      "move": "push_in",
+      "energy": "high"
+    },
+    {
+      "beat": "twist",
+      "target_sec": 1.5,
+      "cam": "low",
+      "move": "tilt_up",
+      "energy": "climax"
+    },
+    {
+      "beat": "payoff",
+      "target_sec": 2.0,
+      "cam": "mcu",
+      "move": "static",
+      "energy": "resolved"
+    }
+  ],
+  "model_used": "gemini-3.5-flash-lite",
+  "source_transcript": "My crush is obsessed with the mask. Superhero. She has no idea it's me. Every night I save the city in a mask. I never say a word so nobody knows my voice. Every morning in class she sits next to me and talks about it. He's so brave. Not like you. You're scared of pigeons. It's true. Once a pigeon chased me out of the cafeteria and the whole school heard me scream. She covered her locker in his posters. She even made a board with every boy in school on it to find out which one was him. My photo had a big red X. Next to it, scared of pigeons. Then one night she climbed the clock tower and yelled for help just so he would show up. And then she slipped for real. I flew in and caught her. She was holding on to me, staring right into my eyes. Two inches away. Still no idea. Then a pigeon landed on my head. And I scream. The same scream from the cafeteria. She froze. See her? Then she gently shoot the pigeon away. You save the city. I'll save you from the pigeons.",
+  "source_words_per_sec": 5.11
+}
