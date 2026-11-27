@@ -1,9 +1,7 @@
 {
   "reel_id": "Df53MLxuXqa",
-  "frames_analyzed_count": 75,
-  "analysis_mode": "offline_deterministic_fallback",
-  "hook_formula": "Immediate 0-3s high-stakes action line with crash-in zoom and rapid visual cut",
-  "story_arc": "Fast hook -> rapid escalating micro-beats -> sudden twist -> comedic/dramatic payoff",
+  "hook_formula": "Absurd romantic premise ('brought her the moon') immediately driving action and curiosity.",
+  "story_arc": "Setup: Protagonist seeks moon for crush -> Escalation: Failed DIY rocket launches -> Climax: Lunar landing in dad's car -> Twist: Rescued her missing cat 'Moon' eating his lunches.",
   "pacing": {
     "words_per_sec": 5.19,
     "avg_cut_sec": 1.08,
@@ -11,219 +9,111 @@
   },
   "visual_style": {
     "environments_seen": [
-      "MusicRow",
-      "TownPool",
-      "Gym",
-      "Street",
-      "School"
+      "Suburban street",
+      "Garage",
+      "School hallway",
+      "School roof",
+      "Principal's pool",
+      "Kitchen",
+      "Moon surface",
+      "Backyard"
     ],
+    "background_details": "Simple low-poly Roblox builds featuring lockers, brick school walls, residential fences, and a backyard grill.",
     "camera_patterns": [
-      "mcu -> ins -> ws -> low -> ecu -> two"
+      "two -> mcu -> ws -> ins -> mcu -> low -> ecu -> two"
     ],
     "lighting_moods": [
-      "sunny",
+      "night",
       "bright_day",
-      "sunset"
+      "space_darkness"
     ],
     "character_archetypes": [
       {
         "role": "protagonist",
         "gender": "male",
-        "outfit_style": "vibrant streetwear",
+        "skin_hex": "#FFE0BD",
+        "hair_style": "spiky",
+        "outfit_style": "green and black striped sweater with dark pants",
         "primary_colors": [
-          "#1e73f2",
-          "#f5c29b"
+          "#34A853",
+          "#1A1A1A"
         ]
       },
       {
-        "role": "sister_or_friend",
+        "role": "crush",
         "gender": "female",
-        "outfit_style": "colorful casual",
+        "skin_hex": "#FFE0BD",
+        "hair_style": "long with bangs",
+        "outfit_style": "school uniform with dark blazer and pleated skirt",
         "primary_colors": [
-          "#ff4f8b",
-          "#f7c7a3"
+          "#1A1A1A",
+          "#FFFFFF"
         ]
       }
     ],
-    "background_crowd_density": "4-6 background NPCs in wide shots",
+    "character_interactions": "Over-the-shoulder framing during dialogue, close-up object reveals, and tight side-by-side hugs.",
     "visual_gags_and_fx": [
-      "crash_in",
-      "whoosh",
-      "boom",
-      "raincloud",
-      "bolt"
+      "Lawn chair rocket with fireworks",
+      "Soda bottle propulsion",
+      "Flying car spaceflight",
+      "Miniature space helmet on cat",
+      "Anger symbol visual effect"
     ]
   },
   "shot_rhythm_template": [
     {
       "beat": "hook",
+      "target_sec": 0.9,
+      "cam": "two",
+      "move": "static",
+      "energy": "high"
+    },
+    {
+      "beat": "setup",
+      "target_sec": 1.3,
+      "cam": "mcu",
+      "move": "zoom_in",
+      "energy": "medium"
+    },
+    {
+      "beat": "failed_attempt_1",
+      "target_sec": 1.0,
+      "cam": "ws",
+      "move": "pan_up",
+      "energy": "high"
+    },
+    {
+      "beat": "failed_attempt_2",
       "target_sec": 1.2,
       "cam": "mcu",
-      "move": "crash_in",
-      "energy": "high"
+      "move": "static",
+      "energy": "medium"
     },
     {
-      "beat": "hook",
-      "target_sec": 1.2,
-      "cam": "ins",
-      "move": "push",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.367,
+      "beat": "climax_launch",
+      "target_sec": 1.5,
       "cam": "ws",
-      "move": "reveal_push",
+      "move": "tracking",
       "energy": "high"
     },
     {
-      "beat": "escalation",
-      "target_sec": 1.2,
-      "cam": "low",
-      "move": "creep",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.2,
+      "beat": "twist_reveal",
+      "target_sec": 1.1,
       "cam": "ecu",
-      "move": "drift",
-      "energy": "high"
+      "move": "static",
+      "energy": "medium"
     },
     {
-      "beat": "escalation",
-      "target_sec": 1.2,
+      "beat": "payoff",
+      "target_sec": 1.4,
       "cam": "two",
-      "move": "lock",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.334,
-      "cam": "ms",
-      "move": "crash_in",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.266,
-      "cam": "ots",
-      "move": "push",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.2,
-      "cam": "mcu",
-      "move": "reveal_push",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.266,
-      "cam": "ins",
-      "move": "creep",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.2,
-      "cam": "ws",
-      "move": "drift",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.2,
-      "cam": "low",
-      "move": "lock",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.2,
-      "cam": "ecu",
-      "move": "crash_in",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.6,
-      "cam": "two",
-      "move": "push",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.2,
-      "cam": "ms",
-      "move": "reveal_push",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.367,
-      "cam": "ots",
-      "move": "creep",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.2,
-      "cam": "mcu",
-      "move": "drift",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.2,
-      "cam": "ins",
-      "move": "lock",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.466,
-      "cam": "ws",
-      "move": "crash_in",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.2,
-      "cam": "low",
-      "move": "push",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.2,
-      "cam": "ecu",
-      "move": "reveal_push",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.2,
-      "cam": "two",
-      "move": "creep",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 2.4,
-      "cam": "ms",
-      "move": "drift",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.2,
-      "cam": "ots",
-      "move": "lock",
+      "move": "static",
       "energy": "high"
     }
   ],
+  "model_used": "gemini-3.6-flash",
+  "vision_transport": "gemini_files_api_100pct",
+  "frames_analyzed_count": 75,
   "sheets_analyzed_count": 3,
   "source_transcript": "My crush said she'd go out with whoever brought her the moon, so I built a rocket in my garage. I've liked her for years. She has no idea. She'd been crying all week. She must really want the moon. My first rocket was a lawn chair and a hundred fireworks. I landed in the principal's pool. My second was 2000 soda bottles. I landed on the school roof. Lost cat posters were all over town. I was too busy to read them. Every launch my mom packed me a tuna sandwich. Every landing it was gone. My third rocket was my dad's car. Don't tell him. It worked. I made it to the moon and grabbed a moon rock. I crashed, landed in her backyard right on her dad's barbecue. She ran out. I held up the rock. I brought you the moon. She didn't look at it. She was looking behind me. A cat in a tiny helmet climbed out of my rocket. It was her cat. His name is Moon. He'd been eating my tuna all week. She hugged Moon, then me. Oh and her dog is missing too. His name is Sun.",
   "source_words_per_sec": 5.19

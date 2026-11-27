@@ -1,0 +1,230 @@
+{
+  "reel_id": "DgMNEFvB7bS",
+  "frames_analyzed_count": 639,
+  "analysis_mode": "offline_deterministic_fallback",
+  "hook_formula": "Immediate 0-3s high-stakes action line with crash-in zoom and rapid visual cut",
+  "story_arc": "Fast hook -> rapid escalating micro-beats -> sudden twist -> comedic/dramatic payoff",
+  "pacing": {
+    "words_per_sec": 4.64,
+    "avg_cut_sec": 1.26,
+    "total_cuts": 127
+  },
+  "visual_style": {
+    "environments_seen": [
+      "MusicRow",
+      "TownPool",
+      "Gym",
+      "Street",
+      "School"
+    ],
+    "camera_patterns": [
+      "mcu -> ins -> ws -> low -> ecu -> two"
+    ],
+    "lighting_moods": [
+      "sunny",
+      "bright_day",
+      "sunset"
+    ],
+    "character_archetypes": [
+      {
+        "role": "protagonist",
+        "gender": "male",
+        "outfit_style": "vibrant streetwear",
+        "primary_colors": [
+          "#1e73f2",
+          "#f5c29b"
+        ]
+      },
+      {
+        "role": "sister_or_friend",
+        "gender": "female",
+        "outfit_style": "colorful casual",
+        "primary_colors": [
+          "#ff4f8b",
+          "#f7c7a3"
+        ]
+      }
+    ],
+    "background_crowd_density": "4-6 background NPCs in wide shots",
+    "visual_gags_and_fx": [
+      "crash_in",
+      "whoosh",
+      "boom",
+      "raincloud",
+      "bolt"
+    ]
+  },
+  "shot_rhythm_template": [
+    {
+      "beat": "hook",
+      "target_sec": 1.2,
+      "cam": "mcu",
+      "move": "crash_in",
+      "energy": "high"
+    },
+    {
+      "beat": "hook",
+      "target_sec": 1.834,
+      "cam": "ins",
+      "move": "push",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.266,
+      "cam": "ws",
+      "move": "reveal_push",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.434,
+      "cam": "low",
+      "move": "creep",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "ecu",
+      "move": "drift",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.834,
+      "cam": "two",
+      "move": "lock",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.3,
+      "cam": "ms",
+      "move": "crash_in",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "ots",
+      "move": "push",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.734,
+      "cam": "mcu",
+      "move": "reveal_push",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "ins",
+      "move": "creep",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "ws",
+      "move": "drift",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.367,
+      "cam": "low",
+      "move": "lock",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "ecu",
+      "move": "crash_in",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "two",
+      "move": "push",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "ms",
+      "move": "reveal_push",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "ots",
+      "move": "creep",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.367,
+      "cam": "mcu",
+      "move": "drift",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.433,
+      "cam": "ins",
+      "move": "lock",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.6,
+      "cam": "ws",
+      "move": "crash_in",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.334,
+      "cam": "low",
+      "move": "push",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "ecu",
+      "move": "reveal_push",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.333,
+      "cam": "two",
+      "move": "creep",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "ms",
+      "move": "drift",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.867,
+      "cam": "ots",
+      "move": "lock",
+      "energy": "high"
+    }
+  ],
+  "sheets_analyzed_count": 26,
+  "source_transcript": "In this town, everybody has a tiny door in their chest. Nobody has ever opened one. Last week, something knocked on mine, from the inside. They've been there since the night of the long storm. Ten years ago, when the gate was locked, a little wooden door with a brass keyhole right over your heart. When you turn five, the keymaster takes your key and hangs it in his tower. He's tall and thin, and you can hear his keys a whole street away. He says the storm got inside us, and our doors are how it gets out. So if yours ever knocks, you tell him. He comes with a pot of black wax and seals its shut, and the light goes out of your eyes. Mrs. Thorne used to sing. Now she stands in her yard all day, facing the wall. And every night, you set one extra plate at your table for whatever's behind your door. Because the keymaster says the hungry ones knock louder. Mom sets three, one for her, one for me, and one for the thing in my chest. My door knocked on Monday. Two taps, I put both hands over it. The wood was ice cold and wet. On Tuesday, water ran out of the keyhole, and it smelled like rain. On Wednesday, two taps, and then a third one, quick and light, right behind them. And then I felt it breathe. On Thursday night, the keys stopped outside our house. The keymaster walked in, took out a long brass horn, and pressed it to my chest. He listened for a long time. Then his face went white, and he backed out of the room. I'm out of wax, he said. I'll be back on Sunday. By Saturday, every door on our street was knocking. All night long, like rain on a roof. He sealed and sealed until the whole town was silent, except for me. So on Sunday, I climbed the tower to find my key. Thousands of them, each with a name. I found mine. Then I noticed something. I held it up next to the one beside it. They were all the same key. Behind me, it got quiet. The keymaster had left his keys at the door. Put it back, he whispered. I ran. With my door pounding so hard it hurt to breathe. Through streets full of people standing perfectly still with black wax on their chests. And as I ran past, every one of them turned to look at me. I didn't stop until I reached the gate. He was walking toward me with his pot of wax. So I did the one thing nobody had ever done. I put the key in my own chest, and I turned it. It opened, and there was nothing inside. Nothing at all, but something was still knocking. Two taps, then a third, quick and light. And it wasn't coming from me. I turned around. In the middle of that huge black gate was a tiny brass keyhole. Exactly like mine. And the same key fit both. Don't, he said. He was crying. There was a door in his chest too. Under so much wax you could barely see it. She knocked all night. He said. I thought it was the storm, using her knock. So I locked the gate. And I sealed every door that could hear her. I put the key in the gate, and I turned it. And out of the fog came people. Hundreds of them soaked and muddy with gray in their hair. The storm had carried them so far it took ten years to walk home. It was never inside us. It was them. And our doors were the only things that could hear. The first one walked up to me and tapped my chest twice. The same two taps. All over town. The wax cracked. Behind me. A plate hit the ground. I said it for you. Mom said. Every night. I thought it was for the door. I'm right here. Dad said. Then a young woman stepped out of the fog and tapped the key master's chest once. Quick and light. She said. I've been walking for ten years. He couldn't speak. He opened his arms and his wax. Split down the middle. Every door in town is open now. And every night we still set one extra plate for whoever's still walking home.",
+  "source_words_per_sec": 4.64
+}

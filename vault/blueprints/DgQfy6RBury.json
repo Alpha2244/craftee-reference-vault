@@ -1,0 +1,230 @@
+{
+  "reel_id": "DgQfy6RBury",
+  "frames_analyzed_count": 533,
+  "analysis_mode": "offline_deterministic_fallback",
+  "hook_formula": "Immediate 0-3s high-stakes action line with crash-in zoom and rapid visual cut",
+  "story_arc": "Fast hook -> rapid escalating micro-beats -> sudden twist -> comedic/dramatic payoff",
+  "pacing": {
+    "words_per_sec": 4.79,
+    "avg_cut_sec": 1.48,
+    "total_cuts": 90
+  },
+  "visual_style": {
+    "environments_seen": [
+      "MusicRow",
+      "TownPool",
+      "Gym",
+      "Street",
+      "School"
+    ],
+    "camera_patterns": [
+      "mcu -> ins -> ws -> low -> ecu -> two"
+    ],
+    "lighting_moods": [
+      "sunny",
+      "bright_day",
+      "sunset"
+    ],
+    "character_archetypes": [
+      {
+        "role": "protagonist",
+        "gender": "male",
+        "outfit_style": "vibrant streetwear",
+        "primary_colors": [
+          "#1e73f2",
+          "#f5c29b"
+        ]
+      },
+      {
+        "role": "sister_or_friend",
+        "gender": "female",
+        "outfit_style": "colorful casual",
+        "primary_colors": [
+          "#ff4f8b",
+          "#f7c7a3"
+        ]
+      }
+    ],
+    "background_crowd_density": "4-6 background NPCs in wide shots",
+    "visual_gags_and_fx": [
+      "crash_in",
+      "whoosh",
+      "boom",
+      "raincloud",
+      "bolt"
+    ]
+  },
+  "shot_rhythm_template": [
+    {
+      "beat": "hook",
+      "target_sec": 1.5,
+      "cam": "mcu",
+      "move": "crash_in",
+      "energy": "high"
+    },
+    {
+      "beat": "hook",
+      "target_sec": 1.466,
+      "cam": "ins",
+      "move": "push",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "ws",
+      "move": "reveal_push",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "low",
+      "move": "creep",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 2.4,
+      "cam": "ecu",
+      "move": "drift",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.5,
+      "cam": "two",
+      "move": "lock",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.733,
+      "cam": "ms",
+      "move": "crash_in",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "ots",
+      "move": "push",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.333,
+      "cam": "mcu",
+      "move": "reveal_push",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.567,
+      "cam": "ins",
+      "move": "creep",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "ws",
+      "move": "drift",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "low",
+      "move": "lock",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 2.4,
+      "cam": "ecu",
+      "move": "crash_in",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 2.4,
+      "cam": "two",
+      "move": "push",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.433,
+      "cam": "ms",
+      "move": "reveal_push",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 2.4,
+      "cam": "ots",
+      "move": "creep",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.767,
+      "cam": "mcu",
+      "move": "drift",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 2.3,
+      "cam": "ins",
+      "move": "lock",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "ws",
+      "move": "crash_in",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.467,
+      "cam": "low",
+      "move": "push",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.767,
+      "cam": "ecu",
+      "move": "reveal_push",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.8,
+      "cam": "two",
+      "move": "creep",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.633,
+      "cam": "ms",
+      "move": "drift",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.467,
+      "cam": "ots",
+      "move": "lock",
+      "energy": "high"
+    }
+  ],
+  "sheets_analyzed_count": 22,
+  "source_transcript": "Your little sister is a monster, and every night for two years, you've carried her up this mountain in a box on your back. In this valley, something comes down from the peaks when it snows. If it finds you in the dark, you turn. Your eyes go pink, your teeth go sharp, and after that, one minute of sunlight is all it takes. The watch has a rule about the turn, and they carry swords, no exceptions. They say the worst part is, the turned still feel like themselves. Two winters ago, you went down to the village to sell charcoal, and the snow caught you on the way home. You don't remember that night. You remember waking up at dusk in a snowbank, with your sister, Nell, kneeling next to you. She had a piece of green bamboo tied across her mouth. She pointed at her teeth. She pointed at the sun going down, and she hasn't said one word since. So you built a box out of the firewood crate. She's 11, but she can fold up small. By day, you hide in caves. By night, you walk. Past the summit, there's an old doctor who can turn people back. But only before the third winter. And this morning, you smelled snow. It's been easier than you expected. You got strong fast. You haven't been tired in two years. You haven't even been hungry. You figure that's what worrying does. Dogs bark at the box in every village. In the last one, a kid named Dennis kicked it. And you almost bid him long week. And lately, daylight hurts your eyes. But you sleep through it anyway for her. Tonight, on the rope bridge below the summit, a man is waiting. Long sword. A coat that's one color on the left and another on the right. Open the box, he says. She's never heard anybody. Open it. Behind him, the sky is going gray. You've got maybe four minutes. You set the box down. You stand in front of it, and you put your arms out. He steps around you, and he lifts the lid himself. Nell is curled up inside in your old checkered scar. Blinky. He holds his lantern up to her face. Brown eyes. He pulls the bamboo down with one finger. Her teeth are fine. Kid, the man says. He isn't looking at her anymore. When was the last time you ate? You open your mouth to answer, and you feel them. You've been feeling them for two years. You thought everybody's teeth felt like that. Nell climbs out of the box. She stands between you and the sword with her arms out. Exactly the way you just did. And for the first time in two years, she talks. He doesn't know. She says. Please, he's never heard anybody. He carried me the whole way. The man looks at the box. He looks at the mountain behind you. The first edge of the sun comes over the ridge, and the back of your neck starts to sting. Ten years, he says. And I've never seen one of them carry somebody up a mountain. He puts the sword away, and he slides the box over to you. It's a tight fit. You built it for somebody smaller. The lid comes down, and it's dark. Then the whole box lifts off the ground. She's 11. You wait twice what she does. She doesn't put you down once. All the way to the doctor's door. And through the wood, you can hear her humming. You were the one it found in the snow. She tied on the bamboo before you woke up. So you'd have somebody to save, instead of somebody to be afraid of. And she stopped talking, because she never could lie to you.",
+  "source_words_per_sec": 4.79
+}

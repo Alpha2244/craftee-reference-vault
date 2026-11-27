@@ -1,0 +1,230 @@
+{
+  "reel_id": "DgOI1H5hUxZ",
+  "frames_analyzed_count": 151,
+  "analysis_mode": "offline_deterministic_fallback",
+  "hook_formula": "Immediate 0-3s high-stakes action line with crash-in zoom and rapid visual cut",
+  "story_arc": "Fast hook -> rapid escalating micro-beats -> sudden twist -> comedic/dramatic payoff",
+  "pacing": {
+    "words_per_sec": 4.89,
+    "avg_cut_sec": 1.12,
+    "total_cuts": 34
+  },
+  "visual_style": {
+    "environments_seen": [
+      "MusicRow",
+      "TownPool",
+      "Gym",
+      "Street",
+      "School"
+    ],
+    "camera_patterns": [
+      "mcu -> ins -> ws -> low -> ecu -> two"
+    ],
+    "lighting_moods": [
+      "sunny",
+      "bright_day",
+      "sunset"
+    ],
+    "character_archetypes": [
+      {
+        "role": "protagonist",
+        "gender": "male",
+        "outfit_style": "vibrant streetwear",
+        "primary_colors": [
+          "#1e73f2",
+          "#f5c29b"
+        ]
+      },
+      {
+        "role": "sister_or_friend",
+        "gender": "female",
+        "outfit_style": "colorful casual",
+        "primary_colors": [
+          "#ff4f8b",
+          "#f7c7a3"
+        ]
+      }
+    ],
+    "background_crowd_density": "4-6 background NPCs in wide shots",
+    "visual_gags_and_fx": [
+      "crash_in",
+      "whoosh",
+      "boom",
+      "raincloud",
+      "bolt"
+    ]
+  },
+  "shot_rhythm_template": [
+    {
+      "beat": "hook",
+      "target_sec": 1.5,
+      "cam": "mcu",
+      "move": "crash_in",
+      "energy": "high"
+    },
+    {
+      "beat": "hook",
+      "target_sec": 1.367,
+      "cam": "ins",
+      "move": "push",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "ws",
+      "move": "reveal_push",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "low",
+      "move": "creep",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "ecu",
+      "move": "drift",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "two",
+      "move": "lock",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "ms",
+      "move": "crash_in",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.266,
+      "cam": "ots",
+      "move": "push",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.4,
+      "cam": "mcu",
+      "move": "reveal_push",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "ins",
+      "move": "creep",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "ws",
+      "move": "drift",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.867,
+      "cam": "low",
+      "move": "lock",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.4,
+      "cam": "ecu",
+      "move": "crash_in",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "two",
+      "move": "push",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.234,
+      "cam": "ms",
+      "move": "reveal_push",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "ots",
+      "move": "creep",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.334,
+      "cam": "mcu",
+      "move": "drift",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "ins",
+      "move": "lock",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "ws",
+      "move": "crash_in",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "low",
+      "move": "push",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "ecu",
+      "move": "reveal_push",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "two",
+      "move": "creep",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "ms",
+      "move": "drift",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "ots",
+      "move": "lock",
+      "energy": "high"
+    }
+  ],
+  "sheets_analyzed_count": 7,
+  "source_transcript": "I got a job as the mall Santa. On the first day, my crush got in line behind 50 little kids. She had no idea it was me. She leaned in so close I could feel her breath on my ear and whispered, I want the boy with the green hair. Me. She came back every single day. She told Santa I'd given her my fries since September. That I tripped over her chair three times a week. That I'd never said one word to her. And I still couldn't because 50 kids were watching. On Christmas Eve she whispered, last wish, I'm giving up on him. So I ripped off my beer. Fifty kids screamed, fake Santa! Candy canes flew at my head. Security grabbed my arms, then it started snowing. Inside the mall. Bells rang over the food court and the kids screamed again. The real Santa! He walked straight up to us. She's asked me for you every Christmas since kindergarten. So I asked her right there. Will you go out with? Yes! Santa just sighed. Finally, now get out of my chair.",
+  "source_words_per_sec": 4.89
+}

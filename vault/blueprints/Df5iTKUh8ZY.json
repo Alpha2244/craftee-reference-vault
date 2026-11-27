@@ -1,9 +1,7 @@
 {
   "reel_id": "Df5iTKUh8ZY",
-  "frames_analyzed_count": 69,
-  "analysis_mode": "offline_deterministic_fallback",
-  "hook_formula": "Immediate 0-3s high-stakes action line with crash-in zoom and rapid visual cut",
-  "story_arc": "Fast hook -> rapid escalating micro-beats -> sudden twist -> comedic/dramatic payoff",
+  "hook_formula": "Absurdist paradox hook pairing high-stakes tragedy with instant comedic denial to prevent scrolling.",
+  "story_arc": "Premise setup (fake death) -> Escalation (absurdist funeral speeches) -> Payoff (crush confession and discovery).",
   "pacing": {
     "words_per_sec": 5.59,
     "avg_cut_sec": 1.03,
@@ -11,47 +9,83 @@
   },
   "visual_style": {
     "environments_seen": [
-      "MusicRow",
-      "TownPool",
-      "Gym",
-      "Street",
-      "School"
+      "church interior",
+      "boat deck",
+      "ocean waters",
+      "home doorway",
+      "living room",
+      "church yard",
+      "school hallway",
+      "classroom"
     ],
+    "background_details": "Blocky Roblox props, stacked sandwich towers, church pews, wooden podiums, low-poly suburban exterior.",
     "camera_patterns": [
-      "mcu -> ins -> ws -> low -> ecu -> two"
+      "mcu",
+      "ins",
+      "ws",
+      "low",
+      "ecu",
+      "two"
     ],
     "lighting_moods": [
-      "sunny",
       "bright_day",
-      "sunset"
+      "sunny"
     ],
     "character_archetypes": [
       {
         "role": "protagonist",
         "gender": "male",
-        "outfit_style": "vibrant streetwear",
+        "skin_hex": "#FFE0BD",
+        "hair_style": "spiky",
+        "outfit_style": "green and black striped shirt, brown hat, fake mustache",
         "primary_colors": [
-          "#1e73f2",
-          "#f5c29b"
+          "#00E676",
+          "#000000"
         ]
       },
       {
-        "role": "sister_or_friend",
+        "role": "crush",
         "gender": "female",
-        "outfit_style": "colorful casual",
+        "skin_hex": "#FFE0BD",
+        "hair_style": "long",
+        "outfit_style": "dark jacket with beige pleated skirt",
         "primary_colors": [
-          "#ff4f8b",
-          "#f7c7a3"
+          "#212121",
+          "#F5F5DC"
+        ]
+      },
+      {
+        "role": "bully",
+        "gender": "male",
+        "skin_hex": "#FFE0BD",
+        "hair_style": "cap",
+        "outfit_style": "tan jacket over black shirt",
+        "primary_colors": [
+          "#D7CCC8",
+          "#212121"
+        ]
+      },
+      {
+        "role": "teacher",
+        "gender": "female",
+        "skin_hex": "#FFE0BD",
+        "hair_style": "bun",
+        "outfit_style": "black outfit with glasses",
+        "primary_colors": [
+          "#212121",
+          "#FF9800"
         ]
       }
     ],
-    "background_crowd_density": "4-6 background NPCs in wide shots",
+    "character_interactions": [
+      "Over-the-shoulder medium shots, centered podium speeches, side-by-side desk positioning.",
+      "Direct face-to-face outdoor confrontation ending."
+    ],
     "visual_gags_and_fx": [
-      "crash_in",
-      "whoosh",
-      "boom",
-      "raincloud",
-      "bolt"
+      "Massive sandwich tower visual",
+      "Grade C paper overlay",
+      "Mustache hair clipping visual gag",
+      "Bicycle riding exit visual"
     ]
   },
   "shot_rhythm_template": [
@@ -59,171 +93,41 @@
       "beat": "hook",
       "target_sec": 1.3,
       "cam": "mcu",
-      "move": "crash_in",
+      "move": "static",
       "energy": "high"
     },
     {
-      "beat": "hook",
-      "target_sec": 1.2,
-      "cam": "ins",
-      "move": "push",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.2,
-      "cam": "ws",
-      "move": "reveal_push",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.2,
-      "cam": "low",
-      "move": "creep",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.2,
-      "cam": "ecu",
-      "move": "drift",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.2,
-      "cam": "two",
-      "move": "lock",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.2,
-      "cam": "ms",
-      "move": "crash_in",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.2,
-      "cam": "ots",
-      "move": "push",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.2,
+      "beat": "twist_denial",
+      "target_sec": 0.6,
       "cam": "mcu",
-      "move": "reveal_push",
+      "move": "push_in",
       "energy": "high"
     },
     {
-      "beat": "escalation",
-      "target_sec": 1.2,
-      "cam": "ins",
-      "move": "creep",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.2,
+      "beat": "flashback_setup",
+      "target_sec": 0.8,
       "cam": "ws",
-      "move": "drift",
-      "energy": "high"
+      "move": "pan",
+      "energy": "medium"
     },
     {
-      "beat": "escalation",
-      "target_sec": 1.2,
-      "cam": "low",
-      "move": "lock",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.2,
-      "cam": "ecu",
-      "move": "crash_in",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.2,
-      "cam": "two",
-      "move": "push",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.2,
-      "cam": "ms",
-      "move": "reveal_push",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.2,
-      "cam": "ots",
-      "move": "creep",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.633,
-      "cam": "mcu",
-      "move": "drift",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.2,
+      "beat": "absurd_escalation",
+      "target_sec": 1.0,
       "cam": "ins",
-      "move": "lock",
+      "move": "static",
       "energy": "high"
     },
     {
-      "beat": "escalation",
-      "target_sec": 1.467,
-      "cam": "ws",
-      "move": "crash_in",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.4,
-      "cam": "low",
-      "move": "push",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.2,
-      "cam": "ecu",
-      "move": "reveal_push",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.2,
+      "beat": "payoff_resolution",
+      "target_sec": 1.5,
       "cam": "two",
-      "move": "creep",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.2,
-      "cam": "ms",
-      "move": "drift",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.233,
-      "cam": "ots",
-      "move": "lock",
-      "energy": "high"
+      "move": "push_in",
+      "energy": "medium"
     }
   ],
+  "model_used": "gemini-3.6-flash",
+  "vision_transport": "gemini_files_api_100pct",
+  "frames_analyzed_count": 69,
   "sheets_analyzed_count": 3,
   "source_transcript": "My crush cried at my funeral. I'm not dead! On the class boat trip, I fell overboard and floated to an island. It took me three days to get home. My mom found me that morning. She said it was too late to cancel the sandwiches. So I went to my own funeral in a fake mustache and my grandpa's hat. My hair didn't fit under it. The bully cried the hardest. He said I was the only kid who never ran from him. I ran from him every day. The lunch lady cried into the meatloaf. My teacher said she loved my essays. She gave every one of them a seat. My best friend gave a speech. Then he asked if he could have my bite. Finally, my crush walked up. She never said a word to me. She said she'd like me since second grade. She said she'd been too scared to tell me, and now it was too late. I almost ripped off the mustache right there. After the funeral, she walked straight up to me. She'd spotted my green spikes the second I walked in. Then she smiled. Nice mustache, seer.",
   "source_words_per_sec": 5.59

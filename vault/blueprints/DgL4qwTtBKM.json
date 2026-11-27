@@ -1,0 +1,230 @@
+{
+  "reel_id": "DgL4qwTtBKM",
+  "frames_analyzed_count": 149,
+  "analysis_mode": "offline_deterministic_fallback",
+  "hook_formula": "Immediate 0-3s high-stakes action line with crash-in zoom and rapid visual cut",
+  "story_arc": "Fast hook -> rapid escalating micro-beats -> sudden twist -> comedic/dramatic payoff",
+  "pacing": {
+    "words_per_sec": 4.98,
+    "avg_cut_sec": 1.04,
+    "total_cuts": 36
+  },
+  "visual_style": {
+    "environments_seen": [
+      "MusicRow",
+      "TownPool",
+      "Gym",
+      "Street",
+      "School"
+    ],
+    "camera_patterns": [
+      "mcu -> ins -> ws -> low -> ecu -> two"
+    ],
+    "lighting_moods": [
+      "sunny",
+      "bright_day",
+      "sunset"
+    ],
+    "character_archetypes": [
+      {
+        "role": "protagonist",
+        "gender": "male",
+        "outfit_style": "vibrant streetwear",
+        "primary_colors": [
+          "#1e73f2",
+          "#f5c29b"
+        ]
+      },
+      {
+        "role": "sister_or_friend",
+        "gender": "female",
+        "outfit_style": "colorful casual",
+        "primary_colors": [
+          "#ff4f8b",
+          "#f7c7a3"
+        ]
+      }
+    ],
+    "background_crowd_density": "4-6 background NPCs in wide shots",
+    "visual_gags_and_fx": [
+      "crash_in",
+      "whoosh",
+      "boom",
+      "raincloud",
+      "bolt"
+    ]
+  },
+  "shot_rhythm_template": [
+    {
+      "beat": "hook",
+      "target_sec": 1.267,
+      "cam": "mcu",
+      "move": "crash_in",
+      "energy": "high"
+    },
+    {
+      "beat": "hook",
+      "target_sec": 1.2,
+      "cam": "ins",
+      "move": "push",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.267,
+      "cam": "ws",
+      "move": "reveal_push",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "low",
+      "move": "creep",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "ecu",
+      "move": "drift",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "two",
+      "move": "lock",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "ms",
+      "move": "crash_in",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "ots",
+      "move": "push",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "mcu",
+      "move": "reveal_push",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "ins",
+      "move": "creep",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "ws",
+      "move": "drift",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "low",
+      "move": "lock",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.534,
+      "cam": "ecu",
+      "move": "crash_in",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "two",
+      "move": "push",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "ms",
+      "move": "reveal_push",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "ots",
+      "move": "creep",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "mcu",
+      "move": "drift",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "ins",
+      "move": "lock",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "ws",
+      "move": "crash_in",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.466,
+      "cam": "low",
+      "move": "push",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.434,
+      "cam": "ecu",
+      "move": "reveal_push",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.233,
+      "cam": "two",
+      "move": "creep",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.467,
+      "cam": "ms",
+      "move": "drift",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "ots",
+      "move": "lock",
+      "energy": "high"
+    }
+  ],
+  "sheets_analyzed_count": 6,
+  "source_transcript": "50 boys are fighting for my crush on live TV 9 million people are watching I'm the cameraman we've been friends since kindergarten so she got me the job I only have one rule never say a word on night one Kyle brought her a tiger then she sat down in front of my camera blushing He never takes his eyes off me. She said on night two Kyle brought an orchestra when he looks at me I forget anyone's watching on night three Kyle flew her to Paris I just wish he'd tell me how he feels nine million people were sure she picked Kyle so was I on the final night He got down on one knee. I love you. He said I couldn't take it anymore. I broke my one rule So do I the whole studio gas she stood up and walked right past Kyle. I backed up She kept coming until her face filled the whole screen. She'd never been talking about Kyle She was talking about the guy holding the camera finally. She whispered I choose and the battery died",
+  "source_words_per_sec": 4.98
+}

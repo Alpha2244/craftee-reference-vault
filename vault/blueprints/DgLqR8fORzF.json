@@ -1,0 +1,230 @@
+{
+  "reel_id": "DgLqR8fORzF",
+  "frames_analyzed_count": 621,
+  "analysis_mode": "offline_deterministic_fallback",
+  "hook_formula": "Immediate 0-3s high-stakes action line with crash-in zoom and rapid visual cut",
+  "story_arc": "Fast hook -> rapid escalating micro-beats -> sudden twist -> comedic/dramatic payoff",
+  "pacing": {
+    "words_per_sec": 4.69,
+    "avg_cut_sec": 1.43,
+    "total_cuts": 109
+  },
+  "visual_style": {
+    "environments_seen": [
+      "MusicRow",
+      "TownPool",
+      "Gym",
+      "Street",
+      "School"
+    ],
+    "camera_patterns": [
+      "mcu -> ins -> ws -> low -> ecu -> two"
+    ],
+    "lighting_moods": [
+      "sunny",
+      "bright_day",
+      "sunset"
+    ],
+    "character_archetypes": [
+      {
+        "role": "protagonist",
+        "gender": "male",
+        "outfit_style": "vibrant streetwear",
+        "primary_colors": [
+          "#1e73f2",
+          "#f5c29b"
+        ]
+      },
+      {
+        "role": "sister_or_friend",
+        "gender": "female",
+        "outfit_style": "colorful casual",
+        "primary_colors": [
+          "#ff4f8b",
+          "#f7c7a3"
+        ]
+      }
+    ],
+    "background_crowd_density": "4-6 background NPCs in wide shots",
+    "visual_gags_and_fx": [
+      "crash_in",
+      "whoosh",
+      "boom",
+      "raincloud",
+      "bolt"
+    ]
+  },
+  "shot_rhythm_template": [
+    {
+      "beat": "hook",
+      "target_sec": 1.934,
+      "cam": "mcu",
+      "move": "crash_in",
+      "energy": "high"
+    },
+    {
+      "beat": "hook",
+      "target_sec": 1.333,
+      "cam": "ins",
+      "move": "push",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.633,
+      "cam": "ws",
+      "move": "reveal_push",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "low",
+      "move": "creep",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "ecu",
+      "move": "drift",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "two",
+      "move": "lock",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.333,
+      "cam": "ms",
+      "move": "crash_in",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.633,
+      "cam": "ots",
+      "move": "push",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.3,
+      "cam": "mcu",
+      "move": "reveal_push",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.334,
+      "cam": "ins",
+      "move": "creep",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "ws",
+      "move": "drift",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.266,
+      "cam": "low",
+      "move": "lock",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "ecu",
+      "move": "crash_in",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.734,
+      "cam": "two",
+      "move": "push",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "ms",
+      "move": "reveal_push",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "ots",
+      "move": "creep",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "mcu",
+      "move": "drift",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "ins",
+      "move": "lock",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "ws",
+      "move": "crash_in",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "low",
+      "move": "push",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.333,
+      "cam": "ecu",
+      "move": "reveal_push",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "two",
+      "move": "creep",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 2.4,
+      "cam": "ms",
+      "move": "drift",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "ots",
+      "move": "lock",
+      "energy": "high"
+    }
+  ],
+  "sheets_analyzed_count": 25,
+  "source_transcript": "In this town, there's a monster inside me, and everyone hates me for it. Five years ago, it ate my dad. I never remember it coming out. My skin starts to crack, and then I'm gone. In the morning, I wake up in the rubble, and the whole village is standing around me. They say it's taller than the chapel, made of cracked grey stone, with arms like tree trunks and red glowing eyes. When it beats its chest, every window in the village shatters. The first time, I was seven. It flattened the mill. Then the blacksmiths forged. Then the bridge, the bell tower, half the market. Once, it threw a whole horse cart over the village wall. Every time, they build it all back, and every time, they hate me a little more. Dad was the best hunter in the village. Then one night, I woke up in what was left of our house. The roof was gone. Dad was gone. All that was left of him was his ring, lying in the dirt next to my face. Now kids throw stones at me in the market. Somebody carved monster into our front door. At chapel, people move to the other side. The baker won't sell us bread anymore, so Mom walks two hours to the next village for flour. And the village elder says what everybody thinks. That thing ate its own father. Mom is the only one who still looks at me. Some nights, I hear her upstairs, crying into Dad's old cloak. Every night, she chains me to the cellar wall. Six chains, two locks. She checks everyone and kisses my forehead. And before she goes, I make her say it. If it ever gets out again, you won't let it hurt anyone. I won't, she says. But it's getting stronger. Last week, in the middle of the market, in broad daylight, my arm turned a stone in front of everyone. My eyes went red. The whole market screamed, and mothers grabbed their kids and ran. It took everything I had to push it back down. That night, the village voted. Every hand went up but won. Mom's. At dawn, while I was still human, they were coming down to our cellar to end it for good. Before sunrise, Mom shook me awake. Run to the cliffs, she whispered. There's a boat. I'll meet you there. So I ran through the forest, in the dark, with the hunting horns behind me. Torches between the trees, dogs barking, crossbow bolts hitting the trunks next to my head. One tore through my sleeve. I fell in the river, got up, and kept running. And the whole way, I could feel it, clawing at the inside of my chest. It wanted out. It wanted them. My hands were turning gray. I held it down. I held it down until I couldn't breathe. And then, the trees ended. The sun was just coming up. Far below, the waves were smashing against the rocks. There was no boat. There was only Mom, standing at the edge, holding Dad's old crossbow. And for one second, I thought she'd come to fight them off. Behind me, the hunters came out of the trees. The elder raised his crossbow at my back. I closed my eyes and waited. But the bolt didn't come from behind. Mom's hands were shaking, and she looked me right in the eyes. There was never going to be a boat. She knew what the hunters would do to me. She knew what it would do to them if it got out. She wasn't going to let either of those happen, and she was keeping her promise. I wanted her to. The bolt hit me in the chest. I fell backward off the edge, slowly. Like the air was trying to hold me. I felt the stone fall off my hands like dust. I felt the red go out of my eyes. Above me, the hunters were lowering their crossbows, one by one. And Mom was on her knees at the edge. Looking down at me like I was still her little boy. For five years, everyone looked at me like a monster. The last face I ever saw looked at me like her son. At least now, the village is safe. It will never hurt anyone again.",
+  "source_words_per_sec": 4.69
+}

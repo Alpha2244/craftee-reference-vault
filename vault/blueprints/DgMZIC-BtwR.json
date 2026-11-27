@@ -1,0 +1,230 @@
+{
+  "reel_id": "DgMZIC-BtwR",
+  "frames_analyzed_count": 622,
+  "analysis_mode": "offline_deterministic_fallback",
+  "hook_formula": "Immediate 0-3s high-stakes action line with crash-in zoom and rapid visual cut",
+  "story_arc": "Fast hook -> rapid escalating micro-beats -> sudden twist -> comedic/dramatic payoff",
+  "pacing": {
+    "words_per_sec": 3.38,
+    "avg_cut_sec": 1.54,
+    "total_cuts": 101
+  },
+  "visual_style": {
+    "environments_seen": [
+      "MusicRow",
+      "TownPool",
+      "Gym",
+      "Street",
+      "School"
+    ],
+    "camera_patterns": [
+      "mcu -> ins -> ws -> low -> ecu -> two"
+    ],
+    "lighting_moods": [
+      "sunny",
+      "bright_day",
+      "sunset"
+    ],
+    "character_archetypes": [
+      {
+        "role": "protagonist",
+        "gender": "male",
+        "outfit_style": "vibrant streetwear",
+        "primary_colors": [
+          "#1e73f2",
+          "#f5c29b"
+        ]
+      },
+      {
+        "role": "sister_or_friend",
+        "gender": "female",
+        "outfit_style": "colorful casual",
+        "primary_colors": [
+          "#ff4f8b",
+          "#f7c7a3"
+        ]
+      }
+    ],
+    "background_crowd_density": "4-6 background NPCs in wide shots",
+    "visual_gags_and_fx": [
+      "crash_in",
+      "whoosh",
+      "boom",
+      "raincloud",
+      "bolt"
+    ]
+  },
+  "shot_rhythm_template": [
+    {
+      "beat": "hook",
+      "target_sec": 2.4,
+      "cam": "mcu",
+      "move": "crash_in",
+      "energy": "high"
+    },
+    {
+      "beat": "hook",
+      "target_sec": 1.2,
+      "cam": "ins",
+      "move": "push",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "ws",
+      "move": "reveal_push",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "low",
+      "move": "creep",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.966,
+      "cam": "ecu",
+      "move": "drift",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.7,
+      "cam": "two",
+      "move": "lock",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "ms",
+      "move": "crash_in",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.333,
+      "cam": "ots",
+      "move": "push",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "mcu",
+      "move": "reveal_push",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "ins",
+      "move": "creep",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "ws",
+      "move": "drift",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 2.267,
+      "cam": "low",
+      "move": "lock",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.8,
+      "cam": "ecu",
+      "move": "crash_in",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.766,
+      "cam": "two",
+      "move": "push",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "ms",
+      "move": "reveal_push",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.566,
+      "cam": "ots",
+      "move": "creep",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.5,
+      "cam": "mcu",
+      "move": "drift",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.234,
+      "cam": "ins",
+      "move": "lock",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.6,
+      "cam": "ws",
+      "move": "crash_in",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "low",
+      "move": "push",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "ecu",
+      "move": "reveal_push",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.9,
+      "cam": "two",
+      "move": "creep",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.2,
+      "cam": "ms",
+      "move": "drift",
+      "energy": "high"
+    },
+    {
+      "beat": "escalation",
+      "target_sec": 1.3,
+      "cam": "ots",
+      "move": "lock",
+      "energy": "high"
+    }
+  ],
+  "sheets_analyzed_count": 25,
+  "source_transcript": "In this world, half of humanity moved to space. The other half moved under the ocean. Nobody has lived in the middle for 100 years. You see, 100 years ago, the surface got sick, fires, storms, air you couldn't breathe. So half of us went up, half of us went down, and every kid learns the same warning song. Never go up, never go down, never go back to the middle ground. I live in space. We play zero gravity soccer. The ball never lands. Dinner comes in a tube. Showers are just floating blobs of water you have to chase. And out the window, Earth is just a brown ball. My twin sister Mia lives at the bottom of the sea. I've never met her. When we were born, mom took me up. Dad took Mia down. Just for a little while, they said. That was 13 years ago. Mom never talks about it, but she keeps dad's photo inside her space helmet. Every night at nine, I turn on my radio. Mia, you there? Leo, guess what? I rode a whale to school. You rode a whale? I'd trade my whole room for that. Are you kidding? You get to float. I'd trade my whale for that. At every night, we argued about who had it better. Every night, I fell asleep holding the radio. She said she did, too. Then things got bad. Up here, we were running out of water. Month one, one cup a day. Month three, no more showers. Month five, the station's plants died. Down there, they were running out of air. We breathe in shifts now, Mia whispered. I can only talk for five minutes. Her voice sounded tired, but weird things kept happening. Through my telescope, I saw a tiny green dot on the brown ball. Camera glitch, the adult said. And Mia found something floating down onto her city, a white feather. Fish don't have feathers, she said. So we made a plan. Our 13th birthday. We'd meet in the one place nobody goes, the middle. That night, I snuck into the old escape pod. Mia snuck into a mini sub. Ready, ready. I push the button. Whoosh! Fire outside the window. The whole pod shook. Alarms scream. Down below, Mia's sub creaked and groaned. The pressure was crushing it. Then a whale swam up beside her and pushed her the rest of the way. Splash! My pod hit the water. Then right next to me, her sub came up. I opened my hatch. She opened hers. She had my nose. She laughed exactly like Mom. But her lips were blue. Her air was gone. Don't breathe, I yelled. Leo, she gasped. I have to. She took a breath and smiled. I took one too. It was the sweetest air I'd ever tasted. Then we turned around. And there it was. A beach. Green grass. Trees taller than my station. Birds. Hundreds of birds. The planet healed while everyone was gone. We grabbed our radios. Come home, I said. Everyone. Come home. Half of us went up. Half went down. Nobody thought to check the middle.",
+  "source_words_per_sec": 3.38
+}

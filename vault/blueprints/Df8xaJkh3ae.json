@@ -1,9 +1,7 @@
 {
   "reel_id": "Df8xaJkh3ae",
-  "frames_analyzed_count": 73,
-  "analysis_mode": "offline_deterministic_fallback",
-  "hook_formula": "Immediate 0-3s high-stakes action line with crash-in zoom and rapid visual cut",
-  "story_arc": "Fast hook -> rapid escalating micro-beats -> sudden twist -> comedic/dramatic payoff",
+  "hook_formula": "High-stakes supernatural rule hook: Stating an absurd, impossible condition ('Every boy who asks my crush out gets struck by lightning') paired with immediate visual proof (boy holding flowers getting zapped) and escalating personal consequence ('I've been struck 11 times').",
+  "story_arc": "Setup (supernatural curse on crush striking suitors with lightning) -> Escalation montage (protagonist attempts asking her out with rubber suit, car, bucket, bleacher spectators, hospital visit) -> Detective revelation (discovering the cloud is sentient and in love with her) -> Creative resolution (wingman play: building a pink fog machine girlfriend for the cloud) -> Romantic success & comedic punchline (crush says yes, dad still misses his fog machine).",
   "pacing": {
     "words_per_sec": 5.39,
     "avg_cut_sec": 1.12,
@@ -11,219 +9,173 @@
   },
   "visual_style": {
     "environments_seen": [
-      "MusicRow",
-      "TownPool",
-      "Gym",
-      "Street",
-      "School"
+      "school_courtyard_grass",
+      "hospital_exam_room",
+      "hospital_recovery_ward",
+      "school_hallway_lockers",
+      "neighborhood_street_car",
+      "football_stadium_bleachers",
+      "ticket_booth_entrance",
+      "school_cafeteria",
+      "school_entrance_spring_dance",
+      "evidence_bulletin_board",
+      "summer_camp_cabin",
+      "rooftop_brick_ledge"
     ],
+    "background_details": "Roblox high school exterior with warm yellow brick facade, modern glass windows, neatly trimmed trees, stadium grandstands filled with NPC spectators, cafeteria lunch benches, and rooftop overlooks.",
     "camera_patterns": [
-      "mcu -> ins -> ws -> low -> ecu -> two"
+      "two_shot_medium",
+      "medium_close_up",
+      "low_angle_wide",
+      "dutch_angle_medium",
+      "extreme_wide_satellite",
+      "tracking_medium_shot",
+      "over_the_shoulder_dialogue"
     ],
     "lighting_moods": [
-      "sunny",
-      "bright_day",
-      "sunset"
+      "stormy_dark_sky",
+      "bright_sterile_hospital_indoor",
+      "sunny_high_noon",
+      "twilight_sunset_street",
+      "overcast_rain"
     ],
     "character_archetypes": [
       {
         "role": "protagonist",
         "gender": "male",
-        "outfit_style": "vibrant streetwear",
+        "skin_hex": "#FFE0BD",
+        "hair_style": "spiky",
+        "outfit_style": "green and black horizontally striped long-sleeve sweater, black trousers, charred spiky hair",
         "primary_colors": [
-          "#1e73f2",
-          "#f5c29b"
+          "#36A841",
+          "#1A1A1A"
         ]
       },
       {
-        "role": "sister_or_friend",
+        "role": "crush",
         "gender": "female",
-        "outfit_style": "colorful casual",
+        "skin_hex": "#FFE0BD",
+        "hair_style": "long",
+        "outfit_style": "black blazer uniform with white collared shirt, black pleated skirt, white knee-high socks, carrying a pink parasol umbrella",
         "primary_colors": [
-          "#ff4f8b",
-          "#f7c7a3"
+          "#1C1C1C",
+          "#FF99C8"
+        ]
+      },
+      {
+        "role": "doctor",
+        "gender": "male",
+        "skin_hex": "#FFE0BD",
+        "hair_style": "short",
+        "outfit_style": "white lab coat, blue dress shirt, black tie, stethoscope, dark brown hair and full beard",
+        "primary_colors": [
+          "#FFFFFF",
+          "#3A75C4"
+        ]
+      },
+      {
+        "role": "dad",
+        "gender": "male",
+        "skin_hex": "#FFE0BD",
+        "hair_style": "short",
+        "outfit_style": "brown styled pompadour hair with mustache, dark navy suit jacket and tie",
+        "primary_colors": [
+          "#25303E",
+          "#603A2B"
         ]
       }
     ],
-    "background_crowd_density": "4-6 background NPCs in wide shots",
+    "character_interactions": [
+      "Side-by-side standing interaction within arm reach while girl holds umbrella high",
+      "Protagonist offering bouquet of red roses facing directly toward crush",
+      "Crush turning and smiling as umbrella is snapped shut",
+      "Doctor gesturing sternly toward hospital monitor while boy sits on examination table"
+    ],
     "visual_gags_and_fx": [
-      "crash_in",
-      "whoosh",
-      "boom",
-      "raincloud",
-      "bolt"
+      "Dark sentient storm cloud hovering directly over girl's umbrella",
+      "Lightning strike VFX leaving yellow melted rubber puddle on floor",
+      "Car roof blown off cleanly into convertible by lightning bolt",
+      "Metal bucket smoking on protagonist's head after strike",
+      "Satellite view zoom-out showing lightning bolt visible from outer space",
+      "Evidence pin-board with photographic proof of cloud tracking",
+      "Fog machine pumping thick puffy pink clouds forming a smiling female cloud with red heart eyes"
     ]
   },
   "shot_rhythm_template": [
     {
-      "beat": "hook",
+      "beat": "hook_suitor_struck",
       "target_sec": 1.4,
+      "cam": "two_shot",
+      "move": "static",
+      "energy": "high"
+    },
+    {
+      "beat": "reveal_suitor_collapse",
+      "target_sec": 0.9,
       "cam": "mcu",
       "move": "crash_in",
       "energy": "high"
     },
     {
-      "beat": "hook",
-      "target_sec": 1.2,
-      "cam": "ins",
-      "move": "push",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.2,
-      "cam": "ws",
-      "move": "reveal_push",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.2,
-      "cam": "low",
-      "move": "creep",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.2,
-      "cam": "ecu",
-      "move": "drift",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.2,
-      "cam": "two",
-      "move": "lock",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.266,
-      "cam": "ms",
-      "move": "crash_in",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.434,
-      "cam": "ots",
-      "move": "push",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.433,
+      "beat": "hospital_count_reveal",
+      "target_sec": 1.1,
       "cam": "mcu",
-      "move": "reveal_push",
-      "energy": "high"
+      "move": "tilt_up",
+      "energy": "medium"
     },
     {
-      "beat": "escalation",
-      "target_sec": 1.3,
-      "cam": "ins",
-      "move": "creep",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
+      "beat": "escalation_rubber_suit",
       "target_sec": 1.2,
-      "cam": "ws",
-      "move": "drift",
+      "cam": "medium_shot",
+      "move": "pan_left",
       "energy": "high"
     },
     {
-      "beat": "escalation",
-      "target_sec": 1.233,
-      "cam": "low",
-      "move": "lock",
+      "beat": "escalation_car_roof",
+      "target_sec": 1.4,
+      "cam": "low_angle_tracking",
+      "move": "tracking",
       "energy": "high"
     },
     {
-      "beat": "escalation",
-      "target_sec": 1.2,
-      "cam": "ecu",
-      "move": "crash_in",
+      "beat": "spectacle_space_view",
+      "target_sec": 0.7,
+      "cam": "extreme_wide",
+      "move": "snap_zoom",
       "energy": "high"
     },
     {
-      "beat": "escalation",
-      "target_sec": 1.2,
-      "cam": "two",
-      "move": "push",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.2,
-      "cam": "ms",
-      "move": "reveal_push",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
+      "beat": "investigation_realization",
       "target_sec": 1.5,
-      "cam": "ots",
-      "move": "creep",
+      "cam": "medium_shot",
+      "move": "dolly_in",
+      "energy": "medium"
+    },
+    {
+      "beat": "climax_fog_machine",
+      "target_sec": 1.3,
+      "cam": "two_shot_rooftop",
+      "move": "pedestal_up",
       "energy": "high"
     },
     {
-      "beat": "escalation",
-      "target_sec": 1.2,
+      "beat": "payoff_kiss_and_closure",
+      "target_sec": 1.5,
+      "cam": "two_shot_medium",
+      "move": "slow_dolly_in",
+      "energy": "medium"
+    },
+    {
+      "beat": "punchline_dad_machine",
+      "target_sec": 0.8,
       "cam": "mcu",
-      "move": "drift",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.2,
-      "cam": "ins",
-      "move": "lock",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.4,
-      "cam": "ws",
-      "move": "crash_in",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.2,
-      "cam": "low",
-      "move": "push",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.333,
-      "cam": "ecu",
-      "move": "reveal_push",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.467,
-      "cam": "two",
-      "move": "creep",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.2,
-      "cam": "ms",
-      "move": "drift",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.2,
-      "cam": "ots",
-      "move": "lock",
-      "energy": "high"
+      "move": "static",
+      "energy": "low"
     }
   ],
+  "model_used": "gemini-3.8-flash",
+  "vision_transport": "gemini_files_api_100pct",
+  "frames_analyzed_count": 73,
   "sheets_analyzed_count": 3,
   "source_transcript": "Every boy who asks my crush out gets struck by lightning. I've been struck 11 times. I'm asking her out if it kills me. It's come close. The first time I just asked. My eyebrows grew back in March, so I wore a rubber suit. It melted. I asked from inside my mom's car. Now my mom drives a convertible. I wore a metal bucket on my head. They saw that one from space. By the eighth time, the school was selling tickets. Everyone said she was cursed. She ate lunch alone. Under an umbrella. The dance was Friday. My doctor said one more bolt and my hair would stay like this forever. Then I looked up. It was the same cloud every time. When she went to camp, it cried for a week. It wasn't a curse. The cloud was in love with her. You can't beat a cloud, so I found it a girlfriend. I put my dad's fog machine on the roof. Love it first sight. I asked her again, not a single bolt. She closed her umbrella and said yes. The cloud and the fog are still together. My dad wants his fog machine back.",
   "source_words_per_sec": 5.39

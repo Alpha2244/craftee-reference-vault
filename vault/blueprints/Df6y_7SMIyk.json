@@ -1,9 +1,7 @@
 {
   "reel_id": "Df6y_7SMIyk",
-  "frames_analyzed_count": 329,
-  "analysis_mode": "offline_deterministic_fallback",
-  "hook_formula": "Immediate 0-3s high-stakes action line with crash-in zoom and rapid visual cut",
-  "story_arc": "Fast hook -> rapid escalating micro-beats -> sudden twist -> comedic/dramatic payoff",
+  "hook_formula": "Subverted childhood game nostalgia ('Heads Up, Seven Up') turned into high-stakes psychological horror within 0-3 seconds; immediate visual shock of an ink-black tally-covered giant looming over obediently bowed children.",
+  "story_arc": "Setup: A lethal ritual occurs daily at 3:00 PM where a tally-marked monster presses one thumb to abduct a sixth-grader, while the narrator survives by interlocking pinkies with best friend Nico. Escalation: Class population steadily drops from 30 to 2 as desks pile higher than the school gym; clues surface through Nico's chalk-stained hands and a classmate noting the monster's touch felt warm like a child's finger. Climax & Twist: On the final day with only two kids left, Nico sacrifices himself with a chalk mark, revealing he was forced to choose the victims every day to save the protagonist. Payoff: Protagonist looks up, breaking the fatal rule, as the monster turns toward them while Nico gives one final bittersweet smile.",
   "pacing": {
     "words_per_sec": 4.22,
     "avg_cut_sec": 1.32,
@@ -11,219 +9,135 @@
   },
   "visual_style": {
     "environments_seen": [
-      "MusicRow",
-      "TownPool",
-      "Gym",
-      "Street",
-      "School"
+      "sixth_grade_classroom",
+      "kindergarten_classroom",
+      "school_hallway_exterior_room_6",
+      "school_front_gate_and_crosswalk",
+      "school_backyard_desk_pile",
+      "suburban_neighborhood_street_and_porch"
     ],
+    "background_details": "Tiled school floors, wooden student desks with colorful folders and notebooks, wall-mounted analog clocks pinned at 3:00, green chalkboards with tally marks and math posters, brick exterior school walls, playground climbing sets, and a towering mountain of stacked empty desks.",
     "camera_patterns": [
-      "mcu -> ins -> ws -> low -> ecu -> two"
+      "low_angle_worm_eye_tilt_up",
+      "top_down_birds_eye_grid",
+      "macro_insert_under_desk",
+      "medium_two_shot",
+      "extreme_close_up_facial_reaction",
+      "wide_establishing_exterior"
     ],
     "lighting_moods": [
-      "sunny",
-      "bright_day",
-      "sunset"
+      "sterile_fluorescent_classroom",
+      "sunny_outdoor_daylight",
+      "golden_hour_sunset_shadows",
+      "ominous_dim_indoor_dread"
     ],
     "character_archetypes": [
       {
         "role": "protagonist",
         "gender": "male",
-        "outfit_style": "vibrant streetwear",
+        "skin_hex": "#D2996E",
+        "hair_style": "cap",
+        "outfit_style": "grey hoodie under olive pot helmet, dark pants",
         "primary_colors": [
-          "#1e73f2",
-          "#f5c29b"
+          "#7A7D7E",
+          "#5B5B52"
         ]
       },
       {
-        "role": "sister_or_friend",
-        "gender": "female",
-        "outfit_style": "colorful casual",
+        "role": "best_friend_protector",
+        "gender": "male",
+        "skin_hex": "#D2996E",
+        "hair_style": "short_spiky",
+        "outfit_style": "sage green collared school shirt with dark necktie and brown trousers",
         "primary_colors": [
-          "#ff4f8b",
-          "#f7c7a3"
+          "#5F8A58",
+          "#1D241D"
+        ]
+      },
+      {
+        "role": "chalkboard_entity",
+        "gender": "other",
+        "skin_hex": "#0E0E10",
+        "hair_style": "bald",
+        "outfit_style": "towering pitch-black slender skeleton adorned with glowing white tally marks across limbs and torso",
+        "primary_colors": [
+          "#0E0E10",
+          "#FFFFFF"
+        ]
+      },
+      {
+        "role": "teacher",
+        "gender": "female",
+        "skin_hex": "#9E6845",
+        "hair_style": "long",
+        "outfit_style": "blue buttoned collared uniform blouse with patterned scarf",
+        "primary_colors": [
+          "#688FA3",
+          "#1B1F24"
         ]
       }
     ],
-    "background_crowd_density": "4-6 background NPCs in wide shots",
+    "character_interactions": [
+      "secret pinky hook gesture bridging the aisle gap underneath desktop surfaces",
+      "students with heads slammed onto desks and thumbs extended upward",
+      "giant entity claw hovering directly over bowed student heads and touching thumbs",
+      "entity placing heavy elongated hand onto Nico's shoulder during final confrontation"
+    ],
     "visual_gags_and_fx": [
-      "crash_in",
-      "whoosh",
-      "boom",
-      "raincloud",
-      "bolt"
+      "chalk tally mark accumulations on dark skin textures",
+      "white powdery dot appearing on student thumb tips",
+      "animated analog clock face ticking to 3:00 PM",
+      "stylized 2D cartoon tear streams on panicking parents",
+      "rapid montage of dwindling classroom chairs and growing outdoor desk scrap heap"
     ]
   },
   "shot_rhythm_template": [
     {
-      "beat": "hook",
+      "beat": "hook_monster_reveal",
       "target_sec": 1.2,
-      "cam": "mcu",
-      "move": "crash_in",
+      "cam": "low_angle_full",
+      "move": "static_tilt_up",
       "energy": "high"
     },
     {
-      "beat": "hook",
-      "target_sec": 1.2,
-      "cam": "ins",
-      "move": "push",
+      "beat": "classroom_rule_ritual",
+      "target_sec": 1.4,
+      "cam": "top_down_wide",
+      "move": "slow_push_down",
+      "energy": "medium"
+    },
+    {
+      "beat": "pinky_promise_bond",
+      "target_sec": 0.9,
+      "cam": "insert_macro",
+      "move": "static_punch",
+      "energy": "low"
+    },
+    {
+      "beat": "disappearance_escalation",
+      "target_sec": 1.1,
+      "cam": "wide_angle_exterior",
+      "move": "pedestal_up",
       "energy": "high"
     },
     {
-      "beat": "escalation",
-      "target_sec": 1.2,
-      "cam": "ws",
-      "move": "reveal_push",
+      "beat": "chilling_revelation_twist",
+      "target_sec": 1.8,
+      "cam": "medium_close_up",
+      "move": "slow_dolly_in",
       "energy": "high"
     },
     {
-      "beat": "escalation",
-      "target_sec": 1.2,
-      "cam": "low",
-      "move": "creep",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.2,
-      "cam": "ecu",
-      "move": "drift",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.233,
-      "cam": "two",
-      "move": "lock",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.2,
-      "cam": "ms",
-      "move": "crash_in",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.2,
-      "cam": "ots",
-      "move": "push",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.2,
-      "cam": "mcu",
-      "move": "reveal_push",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.2,
-      "cam": "ins",
-      "move": "creep",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.2,
-      "cam": "ws",
-      "move": "drift",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.2,
-      "cam": "low",
-      "move": "lock",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.2,
-      "cam": "ecu",
-      "move": "crash_in",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.2,
-      "cam": "two",
-      "move": "push",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.2,
-      "cam": "ms",
-      "move": "reveal_push",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.633,
-      "cam": "ots",
-      "move": "creep",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.767,
-      "cam": "mcu",
-      "move": "drift",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.766,
-      "cam": "ins",
-      "move": "lock",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.234,
-      "cam": "ws",
-      "move": "crash_in",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.566,
-      "cam": "low",
-      "move": "push",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.834,
-      "cam": "ecu",
-      "move": "reveal_push",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.433,
-      "cam": "two",
-      "move": "creep",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.2,
-      "cam": "ms",
-      "move": "drift",
-      "energy": "high"
-    },
-    {
-      "beat": "escalation",
-      "target_sec": 1.2,
-      "cam": "ots",
-      "move": "lock",
+      "beat": "tragic_cliffhanger_payoff",
+      "target_sec": 1.5,
+      "cam": "close_up_two_shot",
+      "move": "crash_zoom",
       "energy": "high"
     }
   ],
+  "model_used": "gemini-3.8-flash",
+  "vision_transport": "gemini_files_api_100pct",
+  "frames_analyzed_count": 329,
   "sheets_analyzed_count": 14,
   "source_transcript": "In my school, something walks between the desks every day at three. Everybody puts their head down and their thumb up. It walks up and down the rows, and presses one thumb. Whoever it presses is gone by morning. Whoever looks up is gone right then. And on the last day of school, it always presses one more. It only ever comes for the sixth grade. Nobody knows what it is. It's tall and black like the chalkboard, and it's covered in little white marks, one for every kid it ever took. This year, I'm in sixth grade, and it has never once picked me. Not once, that's because of Nico. In kindergarten, every class practices. The teacher walks the rows, and you learn. Heads down, thumbs up, don't look, no matter what you hear. The first time, I was so scared, I almost looked. The boy at the next desk hooked his little finger around mine, under the desk. We never look, whatever we hear. Promise? And when it was over, he squeezed my finger and whispered, Okay, you can look. We've held fingers every day since. Nico is the funniest kid in school. He can make me laugh in the middle of a math test. Once, he made the whole class laugh so hard, the teacher had to leave the room. When it presses your thumb, it leaves a little white dot, like chalk. Mom's scrub all night. It never comes off. On the first day of sixth grade, the moms cried at the gate, and the dads held on too long. In September, there were 30 desks in my class, by Halloween, 22, by Christmas, 14. Every week, the janitor carried another desk out to the pile behind the school. By March, the pile was taller than the gym. Nico never cried about it. Not once. He'd just look at the empty desk and say, Better than you, that's just Nico. He always knew the exact second it was over. He said he could hear its feet stop. He always had chalk on his fingers. He was on board duty every single day. He volunteered, and some days, in the middle of it, his finger let go of mine for a minute. He said his hand got sweaty. In February, it pressed Mila's thumb. She didn't cry. She just stared at the white dot, and said the weirdest thing. It was warm, like a kid's finger. Everyone said she was just scared. The next morning, her chair was pushed in. Her backpack was still hanging on it. And at three the next day, there was one more white mark on its arm. By spring, six. Then one day in April, I felt it. Something brushed right past my thumb. I almost looked up. Nico's finger squeezed mine so hard it hurt. It pressed the kid behind me instead. That night, Nico walked me home. He didn't make one joke. At my door, he said, it's never going to pick you. I won't let it. And then it was the last day of school, one more three o'clock. Then we'd be in seventh grade, and it could never touch us again. Two desks left, mine and Nico's. The teacher didn't even look at us. Heads down, thumbs up, three o'clock. Its feet came down the aisle and stopped right between us. Nico's finger let go of mine. His chair scraped back. Then I heard him crying. And for the first time in my life, I looked up. Nico was standing in the aisle right next to it. Its long black hand was resting on his shoulder. The tip of his finger was white with chalk. It never picked anyone. Every day, it let Nico choose. As long as he never chose me. Mila, the kid behind me. Twenty-eight kids. For me. And today, there were only two thumbs left. There was a white dot on Nico's. He'd picked himself. But I had looked up. It turned its face to me. Nico grabbed my finger and smiled. The way he did every day when it was over. Okay, you can look.",
   "source_words_per_sec": 4.22
